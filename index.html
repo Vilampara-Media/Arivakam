@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Arivakam Tamil Cultural Academy | Official Website - Your Local Tamil Academy</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  
+  <!-- Bond Academy Typography: 'Exo 2' for Body & 'Roboto' for Headings -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400&family=Roboto:ital,wght@0,300;0,400;0,500;0,700;0,900;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "brand-red": "#ed1c29",
+            "brand-red-dark": "#b1101a",
+            "brand-navy": "#070e1b",
+            "top-dark": "#0d1b2a",
+            "dark-heading": "#2d2d2d",
+            "body-gray": "#5c5c5c",
+            "sub-gray": "#a1a2a4",
+            "bg-light": "#f8f9fa",
+            "paper-white": "#ffffff"
+          },
+          fontFamily: {
+            sans: ["'Exo 2'", "sans-serif"],
+            heading: ["'Roboto'", "sans-serif"],
+            serif: ["'Roboto'", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+  
+  <style>
+    body {
+      font-family: 'Exo 2', sans-serif;
+      color: #5c5c5c;
+      background-color: #ffffff;
+    }
+    h1, h2, h3, h4, h5, h6, .font-heading {
+      font-family: 'Roboto', sans-serif;
+      color: #2d2d2d;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    /* Bond Academy Style Dotted Separator */
+    .bond-dotted-divider {
+      border-bottom: 2px dotted #ed1c29;
+      width: 60px;
+      margin: 12px auto 24px auto;
+    }
+    .bond-dotted-divider-left {
+      border-bottom: 2px dotted #ed1c29;
+      width: 60px;
+      margin: 12px 0 24px 0;
+    }
+    /* Bond Banner Image Overlay Zoom Effect */
+    .bond-banner-card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+    }
+    .bond-banner-card img {
+      transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    }
+    .bond-banner-card:hover img {
+      transform: scale(1.08);
+    }
+    /* Infinite Logo Marquee Animation */
+    @keyframes logoMarquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .logo-marquee-track {
+      display: flex;
+      width: 200%;
+      animation: logoMarquee 25s linear infinite;
+    }
+    .logo-marquee-track:hover {
+      animation-play-state: paused;
+    }
+    /* Custom Desktop Side Padding Override (10rem / 160px) */
+    @media (min-width: 1024px) {
+      .lg\:px-16, .custom-side-padding {
+        padding-left: 10rem !important;
+        padding-right: 10rem !important;
+      }
+    }
+    /* Bond Academy Navigation Menu Exact Typography */
+    .bond-nav-link {
+      font-family: 'Roboto', sans-serif !important;
+      font-weight: 400 !important;
+      font-size: 17px !important;
+      line-height: 1.4 !important;
+      color: #2d2d2d !important;
+      letter-spacing: 0.2px !important;
+      text-transform: none !important;
+    }
+    .bond-nav-link:hover {
+      color: #ed1c29 !important;
+    }
+    .bond-nav-link-active {
+      color: #ed1c29 !important;
+      font-weight: 500 !important;
+    }
+    /* Bond Academy Dropdown Sub-Menu Item Styling */
+    .bond-subnav-link {
+      font-family: 'Roboto', sans-serif !important;
+      font-weight: 400 !important;
+      font-size: 14px !important;
+      line-height: 1.4 !important;
+      color: #2d2d2d !important;
+      letter-spacing: 0px !important;
+      transition: background-color 0.2s ease, color 0.2s ease;
+    }
+    .bond-subnav-link:hover {
+      background-color: #f8f9fa !important;
+      color: #ed1c29 !important;
+    }
+  </style>
+</head>
+<body class="antialiased text-body-gray bg-white">
+
+  <!-- ==========================================
+       1. TOP UTILITY HEADER BAR (Darker Color Scheme)
+       ========================================== -->
+  <header class="w-full z-50">
+    <div class="bg-top-dark border-b border-white/10 text-xs py-2.5 px-6 sm:px-10 lg:px-40 custom-side-padding text-gray-300 font-heading font-normal">
+      <div class="max-w-screen-2xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+        <div class="flex items-center gap-6 flex-wrap justify-center sm:justify-start">
+          <span class="flex items-center gap-1.5 hover:text-brand-red transition-colors">
+            <span class="material-symbols-outlined text-sm text-brand-red">call</span>
+            <a href="tel:4162898800" class="font-medium text-white">(416) 289-8800</a>
+          </span>
+          <span class="flex items-center gap-1.5 hover:text-brand-red transition-colors">
+            <span class="material-symbols-outlined text-sm text-brand-red">mail</span>
+            <a href="mailto:info@arivakam.com" class="font-medium text-white">info@arivakam.com</a>
+          </span>
+          <span class="hidden md:flex items-center gap-1.5 text-gray-300">
+            <span class="material-symbols-outlined text-sm text-brand-red">location_on</span>
+            <span class="font-medium">Scarborough Head Office &amp; 39 Regional Hubs</span>
+          </span>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <span class="text-[11px] font-semibold text-gray-400 uppercase tracking-wider hidden sm:inline">Follow Us:</span>
+          <div class="flex items-center gap-3">
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="w-6 h-6 rounded-full bg-white/10 text-white hover:bg-brand-red hover:text-white transition-colors flex items-center justify-center" aria-label="Facebook">
+              <span class="font-bold text-[11px]">fb</span>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="w-6 h-6 rounded-full bg-white/10 text-white hover:bg-brand-red hover:text-white transition-colors flex items-center justify-center" aria-label="Instagram">
+              <span class="font-bold text-[11px]">ig</span>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="w-6 h-6 rounded-full bg-white/10 text-white hover:bg-brand-red hover:text-white transition-colors flex items-center justify-center" aria-label="YouTube">
+              <span class="font-bold text-[11px]">yt</span>
+            </a>
+          </div>
+          <a href="free-learning-materials.html" class="ml-2 font-bold text-brand-red hover:underline text-xs">FREE Materials</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN NAVIGATION BAR (Bond Academy Header - Logo Merged Seamlessly with White Background) -->
+    <nav class="bg-white shadow-md border-b border-gray-100 sticky top-0 z-50">
+      <div class="max-w-screen-2xl mx-auto px-6 sm:px-10 lg:px-40 custom-side-padding py-3 flex justify-between items-center">
+        
+        <!-- LOGO SEAMLESSLY MERGED WITH WHITE HEADER BACKGROUND (NO BOX / NO BORDER) -->
+        <a href="index.html" class="flex items-center group shrink-0">
+          <img alt="Arivakam Logo" class="h-16 sm:h-20 md:h-24 w-auto object-contain hover:opacity-95 transition-opacity" src="./Arivakam Logo.avif">
+        </a>
+
+        <!-- Desktop Navigation Links (Bond Academy Exact Roboto Font, 300 Weight, 17px, Title Case) -->
+        <div class="hidden lg:flex items-center gap-8 bond-nav-link">
+
+          <!-- Registration Dropdown -->
+          <div class="relative group py-2">
+            <button class="flex items-center gap-1.5 hover:text-brand-red transition-colors py-1 bond-nav-link">
+              <span>Registration</span>
+              <span class="material-symbols-outlined text-[13px] text-gray-400 transition-transform group-hover:rotate-180">expand_more</span>
+            </button>
+            <div class="absolute top-full left-0 hidden group-hover:block bg-white shadow-xl rounded-md border border-gray-100 py-2 w-56 z-50">
+              <a href="student-registration.html" class="block px-4 py-2.5 bond-subnav-link">Student Registration</a>
+              <a href="teach-with-arivakam.html" class="block px-4 py-2.5 bond-subnav-link">Teacher Application</a>
+            </div>
+          </div>
+
+          <!-- Academic Programs Dropdown -->
+          <div class="relative group py-2">
+            <button class="flex items-center gap-1.5 hover:text-brand-red transition-colors py-1 bond-nav-link">
+              <span>Academics</span>
+              <span class="material-symbols-outlined text-[13px] text-gray-400 transition-transform group-hover:rotate-180">expand_more</span>
+            </button>
+            <div class="absolute top-full left-0 hidden group-hover:block bg-white shadow-xl rounded-md border border-gray-100 py-2 w-60 z-50">
+              <a href="index.html#programs-grid" class="block px-4 py-2.5 bond-subnav-link">Preschool (Mazhalai)</a>
+              <a href="index.html#programs-grid" class="block px-4 py-2.5 bond-subnav-link">Primary Tamil (Grades 1-3)</a>
+              <a href="index.html#programs-grid" class="block px-4 py-2.5 bond-subnav-link">Elementary (Grades 4-8)</a>
+              <a href="index.html#programs-grid" class="block px-4 py-2.5 bond-subnav-link">Tamil Literature &amp; Speech</a>
+            </div>
+          </div>
+
+          <!-- Community Dropdown -->
+          <div class="relative group py-2">
+            <button class="flex items-center gap-1.5 hover:text-brand-red transition-colors py-1 bond-nav-link">
+              <span>Community</span>
+              <span class="material-symbols-outlined text-[13px] text-gray-400 transition-transform group-hover:rotate-180">expand_more</span>
+            </button>
+            <div class="absolute top-full left-0 hidden group-hover:block bg-white shadow-xl rounded-md border border-gray-100 py-2 w-52 z-50">
+              <a href="upcoming-events.html" class="block px-4 py-2.5 bond-subnav-link">Upcoming Events</a>
+              <a href="arivakam-community.html" class="block px-4 py-2.5 bond-subnav-link">Photo Gallery</a>
+              <a href="volunteer-with-us.html" class="block px-4 py-2.5 bond-subnav-link">Volunteer With Us</a>
+            </div>
+          </div>
+
+          <a href="index.html#locations-section" class="hover:text-brand-red transition-colors bond-nav-link">Locations</a>
+          <a href="index.html#contact-us-section" class="hover:text-brand-red transition-colors bond-nav-link">Contact</a>
+        </div>
+
+        <!-- Bond Style Primary Action Button (Red Solid #ed1c29) -->
+        <div class="flex items-center gap-3">
+          <a href="student-registration.html" class="bg-brand-red hover:bg-brand-red-dark text-white font-heading font-black text-xs uppercase tracking-wider px-6 py-3.5 rounded shadow-md transition-all whitespace-nowrap">
+            REGISTER NOW
+          </a>
+          <button id="hamburger-btn" class="lg:hidden p-2 text-dark-heading hover:text-brand-red" aria-label="Toggle Mobile Menu">
+            <span class="material-symbols-outlined text-3xl">menu</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- Mobile Menu Drawer -->
+      <div id="mobile-drawer" class="hidden lg:hidden bg-white border-t border-gray-200 px-6 py-4 space-y-3">
+        <a href="student-registration.html" class="block font-heading font-medium text-dark-heading hover:text-brand-red text-sm">Student Registration</a>
+        <a href="teach-with-arivakam.html" class="block font-heading font-medium text-dark-heading hover:text-brand-red text-sm">Teacher Registration</a>
+        <a href="upcoming-events.html" class="block font-heading font-medium text-dark-heading hover:text-brand-red text-sm">Upcoming Events</a>
+        <a href="arivakam-community.html" class="block font-heading font-medium text-dark-heading hover:text-brand-red text-sm">Photo Gallery</a>
+        <a href="free-learning-materials.html" class="block font-heading font-medium text-dark-heading hover:text-brand-red text-sm">FREE Learning Materials</a>
+        <a href="student-registration.html" class="block text-center bg-brand-red text-white font-heading font-bold text-xs uppercase tracking-wider py-3 rounded mt-2">REGISTER NOW</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- ==========================================
+         2. HERO SECTION / CAROUSEL SLIDER (Dynamic Text & Images)
+         ========================================== -->
+    <section id="hero-carousel-section" class="relative bg-dark-heading text-white overflow-hidden min-h-[520px] lg:min-h-[600px] flex items-center">
+      
+      <!-- Slide 1 -->
+      <div class="hero-slide absolute inset-0 opacity-100 transition-opacity duration-1000 z-10 flex items-center">
+        <img class="w-full h-full object-cover opacity-40 absolute inset-0" src="https://static.wixstatic.com/media/13c47c_aaa4324e97b242388ac66a8f19111f0d~mv2.jpg/v1/fit/w_9395,h_515,q_90,enc_avif,quality_auto/13c47c_aaa4324e97b242388ac66a8f19111f0d~mv2.jpg" alt="Arivakam Tamil Cultural Assembly">
+        <div class="relative z-10 w-full max-w-screen-2xl mx-auto px-6 sm:px-10 lg:px-40 custom-side-padding py-16 text-center sm:text-left">
+          <div class="max-w-4xl">
+            <span class="inline-block px-3.5 py-1 bg-brand-red text-white text-xs font-heading font-bold uppercase tracking-wider mb-4 rounded-sm shadow-sm">
+              Est. 2008 • Registered Non-Profit Academy
+            </span>
+            <h1 class="font-heading text-4xl sm:text-6xl lg:text-7xl font-extrabold lg:font-black text-white leading-[1.1] tracking-tight mb-6 drop-shadow-md">
+              Empowering Youth Through <span class="text-brand-red">Tamil Education</span> &amp; Heritage
+            </h1>
+            <p class="font-sans text-base sm:text-xl text-gray-200 mb-8 max-w-2xl leading-relaxed font-normal">
+              Standardized, accredited curriculum designed specifically for North American diaspora youth from Preschool to Grade 8 across 39 verified regional hubs.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
+              <a href="student-registration.html" class="bg-brand-red hover:bg-brand-red-dark text-white font-heading font-black text-xs uppercase tracking-wider px-8 py-4 rounded shadow-lg transition-all text-center">
+                ENROLL YOUR CHILD
+              </a>
+              <a href="teach-with-arivakam.html" class="bg-white/10 hover:bg-white/20 text-white border border-white/30 font-heading font-bold text-xs uppercase tracking-wider px-8 py-4 rounded transition-all text-center">
+                TEACH WITH US
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 pointer-events-none z-10 flex items-center">
+        <img class="w-full h-full object-cover opacity-40 absolute inset-0" src="https://static.wixstatic.com/media/13c47c_a097d89304524e289a7d65cdb54df5b1~mv2.jpg/v1/fill/w_3429,h_1269,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/13c47c_a097d89304524e289a7d65cdb54df5b1~mv2.jpg" alt="Arivakam Classroom Learning">
+        <div class="relative z-10 w-full max-w-screen-2xl mx-auto px-6 sm:px-10 lg:px-40 custom-side-padding py-16 text-center sm:text-left">
+          <div class="max-w-4xl">
+            <span class="inline-block px-3.5 py-1 bg-brand-red text-white text-xs font-heading font-bold uppercase tracking-wider mb-4 rounded-sm shadow-sm">
+              Accredited Curriculum • 39 Regional Hubs
+            </span>
+            <h1 class="font-heading text-4xl sm:text-6xl lg:text-7xl font-extrabold lg:font-black text-white leading-[1.1] tracking-tight mb-6 drop-shadow-md">
+              Fostering Tamil <span class="text-brand-red">Literacy &amp; Academic</span> Excellence
+            </h1>
+            <p class="font-sans text-base sm:text-xl text-gray-200 mb-8 max-w-2xl leading-relaxed font-normal">
+              Engaging, structured learning streams in language, literature, speech, and arts taught by dedicated certified Tamil teachers.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
+              <a href="index.html#programs-grid" class="bg-brand-red hover:bg-brand-red-dark text-white font-heading font-black text-xs uppercase tracking-wider px-8 py-4 rounded shadow-lg transition-all text-center">
+                EXPLORE ACADEMICS
+              </a>
+              <a href="student-registration.html" class="bg-white/10 hover:bg-white/20 text-white border border-white/30 font-heading font-bold text-xs uppercase tracking-wider px-8 py-4 rounded transition-all text-center">
+                REGISTER TODAY
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3 -->
+      <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-1000 pointer-events-none z-10 flex items-center">
+        <img class="w-full h-full object-cover opacity-40 absolute inset-0" src="https://static.wixstatic.com/media/13c47c_d69577ae220d4b1da684a8ea63cb1ba0~mv2.png/v1/fit/w_1790,h_1164,q_90,enc_avif,quality_auto/13c47c_d69577ae220d4b1da684a8ea63cb1ba0~mv2.png" alt="Arivakam Graduation Ceremony">
+        <div class="relative z-10 w-full max-w-screen-2xl mx-auto px-6 sm:px-10 lg:px-40 custom-side-padding py-16 text-center sm:text-left">
+          <div class="max-w-4xl">
+            <span class="inline-block px-3.5 py-1 bg-brand-red text-white text-xs font-heading font-bold uppercase tracking-wider mb-4 rounded-sm shadow-sm">
+              Community &amp; Leadership • 18+ Years Experience
+            </span>
+            <h1 class="font-heading text-4xl sm:text-6xl lg:text-7xl font-extrabold lg:font-black text-white leading-[1.1] tracking-tight mb-6 drop-shadow-md">
+              Building Next-Gen <span class="text-brand-red">Tamil Leaders</span> Across Diaspora
+            </h1>
+            <p class="font-sans text-base sm:text-xl text-gray-200 mb-8 max-w-2xl leading-relaxed font-normal">
+              Celebrate student success with annual literary competitions, speech contests, and cultural assemblies throughout Canada &amp; USA.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center sm:justify-start">
+              <a href="arivakam-community.html" class="bg-brand-red hover:bg-brand-red-dark text-white font-heading font-black text-xs uppercase tracking-wider px-8 py-4 rounded shadow-lg transition-all text-center">
+                VIEW COMMUNITY
+              </a>
+              <a href="volunteer-with-us.html" class="bg-white/10 hover:bg-white/20 text-white border border-white/30 font-heading font-bold text-xs uppercase tracking-wider px-8 py-4 rounded transition-all text-center">
+                JOIN OUR TEAM
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Carousel Navigation Arrows -->
+      <div class="absolute bottom-6 right-6 sm:right-10 z-20 flex items-center gap-2">
+        <button id="hero-prev-btn" class="w-10 h-10 rounded bg-black/50 hover:bg-brand-red text-white flex items-center justify-center transition-colors" aria-label="Previous Slide">
+          <span class="material-symbols-outlined text-lg">chevron_left</span>
+        </button>
+        <button id="hero-next-btn" class="w-10 h-10 rounded bg-black/50 hover:bg-brand-red text-white flex items-center justify-center transition-colors" aria-label="Next Slide">
+          <span class="material-symbols-outlined text-lg">chevron_right</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         3. BOND ACADEMY 5-PROGRAM BANNER CATEGORY GRID
+         ========================================== -->
+    <section id="programs-grid" class="py-10 bg-white border-b border-gray-100">
+      <div class="max-w-screen-2xl mx-auto px-6 sm:px-10 lg:px-20">
+        
+        <div class="grid grid-cols-2 md:grid-cols-5 gap-3">
+          
+          <!-- Program 1: Preschool / Mazhalai -->
+          <a href="student-registration.html" class="bond-banner-card group block aspect-[4/5] bg-dark-heading text-white">
+            <img class="w-full h-full object-cover opacity-80 group-hover:opacity-95" src="https://static.wixstatic.com/media/13c47c_7700a62d3ed34d979eb1b4499ac9640c~mv2.png/v1/fill/w_240,h_240,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fb%20ad%20posts.png" alt="Preschool Mazhalai Program">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent p-4 flex flex-col justify-end">
+              <h5 class="font-heading font-bold text-base sm:text-lg text-white group-hover:text-brand-red transition-colors">Preschool</h5>
+              <span class="text-[11px] text-gray-300">Ages 4-5 • Mazhalai Stream</span>
+            </div>
+          </a>
+
+          <!-- Program 2: Primary (Grades 1-3) -->
+          <a href="student-registration.html" class="bond-banner-card group block aspect-[4/5] bg-dark-heading text-white">
+            <img class="w-full h-full object-cover opacity-80 group-hover:opacity-95" src="https://static.wixstatic.com/media/13c47c_4fcc2896d1784fc5b3cdd36deb65836f~mv2.png/v1/crop/x_364,y_0,w_1166,h_1166/fill/w_240,h_240,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screen%20Shot%202023-03-06%20at%201_56_35%20PM.png" alt="Primary Tamil Program">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent p-4 flex flex-col justify-end">
+              <h5 class="font-heading font-bold text-base sm:text-lg text-white group-hover:text-brand-red transition-colors">Primary</h5>
+              <span class="text-[11px] text-gray-300">Grades 1-3 • Foundation</span>
+            </div>
+          </a>
+
+          <!-- Program 3: Elementary (Grades 4-8) -->
+          <a href="student-registration.html" class="bond-banner-card group block aspect-[4/5] bg-dark-heading text-white">
+            <img class="w-full h-full object-cover opacity-80 group-hover:opacity-95" src="https://static.wixstatic.com/media/13c47c_a097d89304524e289a7d65cdb54df5b1~mv2.jpg/v1/fill/w_3429,h_1269,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/13c47c_a097d89304524e289a7d65cdb54df5b1~mv2.jpg" alt="Elementary Tamil Program">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent p-4 flex flex-col justify-end">
+              <h5 class="font-heading font-bold text-base sm:text-lg text-white group-hover:text-brand-red transition-colors">Elementary</h5>
+              <span class="text-[11px] text-gray-300">Grades 4-8 • Advanced</span>
+            </div>
+          </a>
+
+          <!-- Program 4: Literature & Speech -->
+          <a href="student-registration.html" class="bond-banner-card group block aspect-[4/5] bg-dark-heading text-white">
+            <img class="w-full h-full object-cover opacity-80 group-hover:opacity-95" src="https://static.wixstatic.com/media/13c47c_d0e649703d8c4b179ee763e420b4fc90~mv2.png/v1/fill/w_1180,h_683,al_c,q_90,enc_avif,quality_auto/13c47c_d0e649703d8c4b179ee763e420b4fc90~mv2.png" alt="Literature and Speech Program">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent p-4 flex flex-col justify-end">
+              <h5 class="font-heading font-bold text-base sm:text-lg text-white group-hover:text-brand-red transition-colors">Literature</h5>
+              <span class="text-[11px] text-gray-300">Thirukkural &amp; Oratory</span>
+            </div>
+          </a>
+
+          <!-- Program 5: Summer & Youth Camps -->
+          <a href="student-registration.html" class="bond-banner-card group block aspect-[4/5] bg-dark-heading text-white col-span-2 md:col-span-1">
+            <img class="w-full h-full object-cover opacity-80 group-hover:opacity-95" src="https://static.wixstatic.com/media/13c47c_aaa4324e97b242388ac66a8f19111f0d~mv2.jpg/v1/fit/w_9395,h_515,q_90,enc_avif,quality_auto/13c47c_aaa4324e97b242388ac66a8f19111f0d~mv2.jpg" alt="Summer Camps Program">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent p-4 flex flex-col justify-end">
+              <h5 class="font-heading font-bold text-base sm:text-lg text-white group-hover:text-brand-red transition-colors">Camps</h5>
+              <span class="text-[11px] text-gray-300">Cultural &amp; Summer Hubs</span>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         4. BOND ACADEMY STYLE "WHAT'S ON..." SECTION
+         ========================================== -->
+    <section class="py-14 bg-bg-light">
+      <div class="max-w-screen-2xl mx-auto px-6 sm:px-10 lg:px-20 text-center">
+        
+        <h2 class="font-heading text-2xl sm:text-3xl font-bold text-dark-heading uppercase tracking-wide">
+          WHAT'S ON...
+        </h2>
+        <div class="bond-dotted-divider"></div>
+
+        <!-- Featured Announcement Slide Card -->
+        <div class="max-w-4xl mx-auto bg-white rounded-lg border border-gray-200 overflow-hidden shadow-sm flex flex-col md:flex-row items-center">
+          <div class="w-full md:w-1/2 aspect-video bg-gray-100 overflow-hidden">
+            <img class="w-full h-full object-cover" src="https://static.wixstatic.com/media/13c47c_cd8ff4bcb0924b80b3bf16843b407dda~mv2.jpg/v1/fill/w_3395,h_2263,q_90,enc_avif,quality_auto/13c47c_cd8ff4bcb0924b80b3bf16843b407dda~mv2.jpg" alt="Open House & Registration Event">
+          </div>
+          <div class="w-full md:w-1/2 p-6 sm:p-8 text-left">
+            <span class="px-2.5 py-1 bg-brand-red/10 text-brand-red text-[11px] font-heading font-bold uppercase rounded mb-3 inline-block">
+              Open House &amp; Registration 2026/2027
+            </span>
+            <h3 class="font-heading text-xl font-bold text-dark-heading mb-3">
+              Join Our Regional Information Session
+            </h3>
+            <p class="font-sans text-sm text-body-gray leading-relaxed mb-6">
+              Meet our certified instructors, preview the accredited Preschool to Grade 8 Tamil syllabus, and learn about weekend schedules.
+            </p>
+            <a href="upcoming-events.html" class="bg-brand-red hover:bg-brand-red-dark text-white font-heading font-bold text-xs uppercase tracking-wider px-6 py-3 rounded inline-block transition-colors">
+              VIEW ALL EVENTS
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         5. BOND ACADEMY STYLE "QUICK LINKS" SECTION
+         ========================================== -->
+    <section class="py-14 bg-white border-t border-gray-100">
+      <div class="max-w-screen-2xl mx-auto px-6 sm:px-10 lg:px-20 text-center">
+        
+        <h2 class="font-heading text-2xl sm:text-3xl font-bold text-dark-heading uppercase tracking-wide">
+          QUICK LINKS
+        </h2>
+        <div class="bond-dotted-divider"></div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto text-left">
+          
+          <!-- Box 1: Admissions -->
+          <a href="student-registration.html" class="p-6 rounded border border-gray-200 hover:border-brand-red bg-white hover:shadow-md transition-all flex items-start gap-4 group">
+            <div class="w-12 h-12 rounded bg-brand-red/10 text-brand-red flex items-center justify-center shrink-0 group-hover:bg-brand-red group-hover:text-white transition-colors">
+              <span class="material-symbols-outlined text-2xl">assignment</span>
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-lg text-dark-heading group-hover:text-brand-red transition-colors mb-1">Admissions</h3>
+              <p class="text-xs text-body-gray">Online registration form for Preschool through Grade 8.</p>
+            </div>
+          </a>
+
+          <!-- Box 2: Curriculum & Exams -->
+          <a href="free-learning-materials.html" class="p-6 rounded border border-gray-200 hover:border-brand-red bg-white hover:shadow-md transition-all flex items-start gap-4 group">
+            <div class="w-12 h-12 rounded bg-brand-red/10 text-brand-red flex items-center justify-center shrink-0 group-hover:bg-brand-red group-hover:text-white transition-colors">
+              <span class="material-symbols-outlined text-2xl">menu_book</span>
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-lg text-dark-heading group-hover:text-brand-red transition-colors mb-1">Curriculum &amp; Exam</h3>
+              <p class="text-xs text-body-gray">Accredited Tamil syllabus and evaluation guidelines.</p>
+            </div>
+          </a>
+
+          <!-- Box 3: Scholarships -->
+          <a href="index.html#contact-us-section" class="p-6 rounded border border-gray-200 hover:border-brand-red bg-white hover:shadow-md transition-all flex items-start gap-4 group">
+            <div class="w-12 h-12 rounded bg-brand-red/10 text-brand-red flex items-center justify-center shrink-0 group-hover:bg-brand-red group-hover:text-white transition-colors">
+              <span class="material-symbols-outlined text-2xl">workspace_premium</span>
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-lg text-dark-heading group-hover:text-brand-red transition-colors mb-1">Scholarships</h3>
+              <p class="text-xs text-body-gray">Merit awards for excellence in Thirukkural &amp; speech.</p>
+            </div>
+          </a>
+
+          <!-- Box 4: Extracurricular Arts -->
+          <a href="upcoming-events.html" class="p-6 rounded border border-gray-200 hover:border-brand-red bg-white hover:shadow-md transition-all flex items-start gap-4 group">
+            <div class="w-12 h-12 rounded bg-brand-red/10 text-brand-red flex items-center justify-center shrink-0 group-hover:bg-brand-red group-hover:text-white transition-colors">
+              <span class="material-symbols-outlined text-2xl">theater_comedy</span>
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-lg text-dark-heading group-hover:text-brand-red transition-colors mb-1">Cultural Arts</h3>
+              <p class="text-xs text-body-gray">Traditional drama, public speech, and folk performance.</p>
+            </div>
+          </a>
+
+          <!-- Box 5: Student Account Portal -->
+          <a href="student-registration.html" class="p-6 rounded border border-gray-200 hover:border-brand-red bg-white hover:shadow-md transition-all flex items-start gap-4 group">
+            <div class="w-12 h-12 rounded bg-brand-red/10 text-brand-red flex items-center justify-center shrink-0 group-hover:bg-brand-red group-hover:text-white transition-colors">
+              <span class="material-symbols-outlined text-2xl">account_circle</span>
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-lg text-dark-heading group-hover:text-brand-red transition-colors mb-1">My Account</h3>
+              <p class="text-xs text-body-gray">Student portal for attendance and academic tracking.</p>
+            </div>
+          </a>
+
+          <!-- Box 6: Free Learning Materials -->
+          <a href="free-learning-materials.html" class="p-6 rounded border border-gray-200 hover:border-brand-red bg-white hover:shadow-md transition-all flex items-start gap-4 group">
+            <div class="w-12 h-12 rounded bg-brand-red/10 text-brand-red flex items-center justify-center shrink-0 group-hover:bg-brand-red group-hover:text-white transition-colors">
+              <span class="material-symbols-outlined text-2xl">download</span>
+            </div>
+            <div>
+              <h3 class="font-heading font-bold text-lg text-dark-heading group-hover:text-brand-red transition-colors mb-1">Free Worksheets</h3>
+              <p class="text-xs text-body-gray">Download sample Tamil alphabet &amp; reading guides.</p>
+            </div>
+          </a>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         6. WHY JOIN ARIVAKAM ACADEMY (Bond Structure)
+         ========================================== -->
+    <section class="py-16 bg-white">
+      <div class="max-w-screen-2xl mx-auto px-6 sm:px-10 lg:px-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          
+          <div class="lg:col-span-6">
+            <span class="px-3 py-1 bg-brand-red/10 text-brand-red font-heading font-bold text-xs uppercase tracking-wider rounded">
+              18+ Years of Academic Excellence
+            </span>
+            <h2 class="font-heading text-3xl sm:text-4xl font-bold text-dark-heading mt-3 mb-4 leading-tight">
+              Why Choose Arivakam Tamil Cultural Academy?
+            </h2>
+            <div class="bond-dotted-divider-left"></div>
+            
+            <p class="font-sans text-base text-body-gray leading-relaxed mb-6">
+              Founded in 2008 as a registered non-profit educational institution, Arivakam combines academic rigor with a rich cultural legacy. Our mission is to raise confident, fluent, and culturally grounded diaspora youth across North America.
+            </p>
+
+            <div class="space-y-4 mb-8">
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-brand-red text-xl mt-0.5">check_circle</span>
+                <div>
+                  <h4 class="font-heading font-bold text-dark-heading text-sm">Accredited Non-Profit Curriculum</h4>
+                  <p class="text-xs text-body-gray">Standardized K-8 progression in reading, writing, speech, and literature.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-brand-red text-xl mt-0.5">check_circle</span>
+                <div>
+                  <h4 class="font-heading font-bold text-dark-heading text-sm">350+ Certified Volunteer Teachers</h4>
+                  <p class="text-xs text-body-gray">Background-checked, passionate educators providing individualized attention.</p>
+                </div>
+              </div>
+              <div class="flex items-start gap-3">
+                <span class="material-symbols-outlined text-brand-red text-xl mt-0.5">check_circle</span>
+                <div>
+                  <h4 class="font-heading font-bold text-dark-heading text-sm">39 Regional Campus Hubs</h4>
+                  <p class="text-xs text-body-gray">Convenient weekend classes across GTA, Ontario, Quebec, Western Canada &amp; USA.</p>
+                </div>
+              </div>
+            </div>
+
+            <a href="student-registration.html" class="bg-brand-red hover:bg-brand-red-dark text-white font-heading font-bold text-xs uppercase tracking-wider px-8 py-3.5 rounded inline-block transition-colors shadow">
+              APPLY NOW FOR 2026/2027
+            </a>
+          </div>
+
+          <div class="lg:col-span-6 relative">
+            <div class="relative rounded-lg overflow-hidden border-4 border-white shadow-xl">
+              <img class="w-full h-auto object-cover" src="https://static.wixstatic.com/media/13c47c_a097d89304524e289a7d65cdb54df5b1~mv2.jpg/v1/fill/w_3429,h_1269,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/13c47c_a097d89304524e289a7d65cdb54df5b1~mv2.jpg" alt="Arivakam Classroom Education">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ==========================================
+         8. BOND ACADEMY STYLE "ARIVAKAM GALLERY" (5 Cols x 2 Rows Grid)
+         ========================================== -->
+    <section class="py-16 bg-white">
+      <div class="max-w-screen-2xl mx-auto px-6 sm:px-10 lg:px-40 custom-side-padding text-center">
+        
+        <h2 class="font-heading text-2xl sm:text-3xl font-bold text-dark-heading uppercase tracking-wide">
+          ARIVAKAM GALLERY
+        </h2>
+        <p class="text-xs text-sub-gray mt-1">Explore moments from our Tamil classes, cultural assemblies, and student achievements!</p>
+        <div class="bond-dotted-divider"></div>
+
+        <!-- 5 Columns x 2 Rows Photo Grid Layout (10 Images Total) -->
+        <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3.5">
+          
+          <!-- Row 1, Photo 1 -->
+          <div class="relative group aspect-square rounded-lg overflow-hidden bg-dark-heading shadow-sm">
+            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://static.wixstatic.com/media/13c47c_aaa4324e97b242388ac66a8f19111f0d~mv2.jpg/v1/fit/w_9395,h_515,q_90,enc_avif,quality_auto/13c47c_aaa4324e97b242388ac66a8f19111f0d~mv2.jpg" alt="Arivakam Assembly">
+            <div class="absolute inset-0 bg-brand-red/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+              <span class="material-symbols-outlined text-2xl">open_in_new</span>
+            </div>
+          </div>
+
+          <!-- Row 1, Photo 2 -->
+          <div class="relative group aspect-square rounded-lg overflow-hidden bg-dark-heading shadow-sm">
+            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://static.wixstatic.com/media/13c47c_d0e649703d8c4b179ee763e420b4fc90~mv2.png/v1/fill/w_1180,h_683,al_c,q_90,enc_avif,quality_auto/13c47c_d0e649703d8c4b179ee763e420b4fc90~mv2.png" alt="Student Literature Projects">
+            <div class="absolute inset-0 bg-brand-red/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+              <span class="material-symbols-outlined text-2xl">open_in_new</span>
+            </div>
+          </div>
+
+          <!-- Row 1, Photo 3 -->
+          <div class="relative group aspect-square rounded-lg overflow-hidden bg-dark-heading shadow-sm">
+            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://static.wixstatic.com/media/13c47c_d69577ae220d4b1da684a8ea63cb1ba0~mv2.png/v1/fit/w_1790,h_1164,q_90,enc_avif,quality_auto/13c47c_d69577ae220d4b1da684a8ea63cb1ba0~mv2.png" alt="Annual Awards">
+            <div class="absolute inset-0 bg-brand-red/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+              <span class="material-symbols-outlined text-2xl">open_in_new</span>
+            </div>
+          </div>
+
+          <!-- Row 1, Photo 4 -->
+          <div class="relative group aspect-square rounded-lg overflow-hidden bg-dark-heading shadow-sm">
+            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://static.wixstatic.com/media/13c47c_a097d89304524e289a7d65cdb54df5b1~mv2.jpg/v1/fill/w_3429,h_1269,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/13c47c_a097d89304524e289a7d65cdb54df5b1~mv2.jpg" alt="Classroom Study">
+            <div class="absolute inset-0 bg-brand-red/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+              <span class="material-symbols-outlined text-2xl">open_in_new</span>
+            </div>
+          </div>
+
+          <!-- Row 1, Photo 5 -->
+          <div class="relative group aspect-square rounded-lg overflow-hidden bg-dark-heading shadow-sm">
+            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://static.wixstatic.com/media/13c47c_cd8ff4bcb0924b80b3bf16843b407dda~mv2.jpg/v1/fill/w_3395,h_2263,q_90,enc_avif,quality_auto/13c47c_cd8ff4bcb0924b80b3bf16843b407dda~mv2.jpg" alt="Stage Performance">
+            <div class="absolute inset-0 bg-brand-red/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+              <span class="material-symbols-outlined text-2xl">open_in_new</span>
+            </div>
+          </div>
+
+          <!-- Row 2, Photo 6 -->
+          <div class="relative group aspect-square rounded-lg overflow-hidden bg-dark-heading shadow-sm">
+            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://static.wixstatic.com/media/13c47c_1215248838c041409eb7d7eb0cb50d34~mv2.jpg/v1/fill/w_6601,h_4406,q_90,enc_avif,quality_auto/13c47c_1215248838c041409eb7d7eb0cb50d34~mv2.jpg" alt="Youth Leadership">
+            <div class="absolute inset-0 bg-brand-red/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+              <span class="material-symbols-outlined text-2xl">open_in_new</span>
+            </div>
+          </div>
+
+          <!-- Row 2, Photo 7 -->
+          <div class="relative group aspect-square rounded-lg overflow-hidden bg-dark-heading shadow-sm">
+            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://static.wixstatic.com/media/13c47c_7700a62d3ed34d979eb1b4499ac9640c~mv2.png/v1/fill/w_480,h_480,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fb%20ad%20posts.png" alt="Mazhalai Preschool Activities">
+            <div class="absolute inset-0 bg-brand-red/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+              <span class="material-symbols-outlined text-2xl">open_in_new</span>
+            </div>
+          </div>
+
+          <!-- Row 2, Photo 8 -->
+          <div class="relative group aspect-square rounded-lg overflow-hidden bg-dark-heading shadow-sm">
+            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://static.wixstatic.com/media/13c47c_4fcc2896d1784fc5b3cdd36deb65836f~mv2.png/v1/crop/x_364,y_0,w_1166,h_1166/fill/w_480,h_480,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screen%20Shot%202023-03-06%20at%201_56_35%20PM.png" alt="Tamil Learning Workshop">
+            <div class="absolute inset-0 bg-brand-red/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+              <span class="material-symbols-outlined text-2xl">open_in_new</span>
+            </div>
+          </div>
+
+          <!-- Row 2, Photo 9 -->
+          <div class="relative group aspect-square rounded-lg overflow-hidden bg-dark-heading shadow-sm">
+            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://static.wixstatic.com/media/13c47c_aaa4324e97b242388ac66a8f19111f0d~mv2.jpg/v1/fit/w_9395,h_515,q_90,enc_avif,quality_auto/13c47c_aaa4324e97b242388ac66a8f19111f0d~mv2.jpg" alt="Cultural Celebrations">
+            <div class="absolute inset-0 bg-brand-red/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+              <span class="material-symbols-outlined text-2xl">open_in_new</span>
+            </div>
+          </div>
+
+          <!-- Row 2, Photo 10 -->
+          <div class="relative group aspect-square rounded-lg overflow-hidden bg-dark-heading shadow-sm">
+            <img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://static.wixstatic.com/media/13c47c_d69577ae220d4b1da684a8ea63cb1ba0~mv2.png/v1/fit/w_1790,h_1164,q_90,enc_avif,quality_auto/13c47c_d69577ae220d4b1da684a8ea63cb1ba0~mv2.png" alt="Recitation Winners">
+            <div class="absolute inset-0 bg-brand-red/80 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white">
+              <span class="material-symbols-outlined text-2xl">open_in_new</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="mt-8">
+          <a href="arivakam-community.html" class="inline-block bg-dark-heading hover:bg-brand-red text-white font-heading font-bold text-xs uppercase tracking-wider px-8 py-3.5 rounded transition-colors shadow">
+            VIEW FULL GALLERY
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ==========================================
+         9. PARENT FAQ ACCORDION (Bond Style Clean Questions)
+         ========================================== -->
+    <section class="py-16 bg-bg-light border-t border-gray-200">
+      <div class="max-w-screen-lg mx-auto px-6 sm:px-10">
+        <div class="text-center mb-10">
+          <h2 class="font-heading text-2xl sm:text-3xl font-bold text-dark-heading uppercase tracking-wide">
+            FREQUENTLY ASKED QUESTIONS
+          </h2>
+          <div class="bond-dotted-divider"></div>
+        </div>
+
+        <div class="space-y-4">
+          <details class="group bg-white rounded border border-gray-200 p-2 transition-all">
+            <summary class="flex items-center justify-between p-4 cursor-pointer font-heading font-bold text-dark-heading text-base group-open:text-brand-red">
+              <span>How do I register my child for classes?</span>
+              <span class="material-symbols-outlined text-brand-red transition-transform group-open:rotate-180">expand_more</span>
+            </summary>
+            <div class="px-4 pb-4 pt-2 text-body-gray text-sm leading-relaxed border-t border-gray-100 mt-2">
+              You can easily register online through our <a href="student-registration.html" class="text-brand-red font-bold underline">Student Registration Form</a> during open enrollment, or visit any of our 39 regional campus hubs.
+            </div>
+          </details>
+
+          <details class="group bg-white rounded border border-gray-200 p-2 transition-all">
+            <summary class="flex items-center justify-between p-4 cursor-pointer font-heading font-bold text-dark-heading text-base group-open:text-brand-red">
+              <span>What is the starting age for Preschool (Mazhalai) level?</span>
+              <span class="material-symbols-outlined text-brand-red transition-transform group-open:rotate-180">expand_more</span>
+            </summary>
+            <div class="px-4 pb-4 pt-2 text-body-gray text-sm leading-relaxed border-t border-gray-100 mt-2">
+              Children must be at least 4 years old by December 31st of the academic school year to enter our Preschool (Mazhalai) stream.
+            </div>
+          </details>
+
+          <details class="group bg-white rounded border border-gray-200 p-2 transition-all">
+            <summary class="flex items-center justify-between p-4 cursor-pointer font-heading font-bold text-dark-heading text-base group-open:text-brand-red">
+              <span>Are classes available for beginners with no prior Tamil exposure?</span>
+              <span class="material-symbols-outlined text-brand-red transition-transform group-open:rotate-180">expand_more</span>
+            </summary>
+            <div class="px-4 pb-4 pt-2 text-body-gray text-sm leading-relaxed border-t border-gray-100 mt-2">
+              Yes! We offer supportive introductory streams designed specifically for diaspora children starting with zero prior language exposure.
+            </div>
+          </details>
+        </div>
+
+    </section>
+
+    <!-- ==========================================
+         7. 39 REGIONAL HUBS, CONTACT FORM & INTERACTIVE MAP (MOVED BEFORE LOGO CAROUSEL)
+         ========================================== -->
+    <section id="locations-section" class="py-16 bg-bg-light border-t border-gray-200">
+      <div class="max-w-screen-2xl mx-auto px-6 sm:px-10 lg:px-40 custom-side-padding">
+        <div class="text-center mb-10">
+          <h2 class="font-heading text-2xl sm:text-3xl font-bold text-dark-heading uppercase tracking-wide">
+            FIND AN ACADEMY HUB NEAR YOU
+          </h2>
+          <p class="text-xs text-sub-gray mt-1">39 Verified Regional Centers Across Canada &amp; United States • Direct Campus Inquiry Form</p>
+          <div class="bond-dotted-divider"></div>
+        </div>
+
+        <div class="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden flex flex-col lg:flex-row">
+          
+          <!-- Left Selector & Interactive Contact Form Panel -->
+          <div class="lg:w-5/12 p-6 sm:p-8 bg-white border-r border-gray-200 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-2">
+                <label for="quick-city-select" class="block font-heading font-bold text-xs text-dark-heading uppercase tracking-wider">⚡ Jump to City (39 Centers)</label>
+              </div>
+              <select id="quick-city-select" class="w-full py-2.5 px-3 rounded border border-gray-300 text-dark-heading font-sans text-xs font-semibold focus:border-brand-red focus:outline-none mb-4 shadow-sm">
+                <option value="">-- Select a Campus Location --</option>
+                <optgroup label="GTA &amp; Toronto">
+                  <option value="Scarborough Town Centre Toronto ON Canada">Scarborough, ON (Head Office)</option>
+                  <option value="Downtown Toronto ON Canada">Downtown Toronto, ON</option>
+                  <option value="North York Toronto ON Canada">North York, ON</option>
+                  <option value="Markham ON Canada">Markham, ON</option>
+                  <option value="Richmond Hill ON Canada">Richmond Hill, ON</option>
+                  <option value="Mississauga ON Canada">Mississauga, ON</option>
+                  <option value="Brampton ON Canada">Brampton, ON</option>
+                </optgroup>
+                <optgroup label="Durham &amp; Ontario">
+                  <option value="Ajax ON Canada">Ajax, ON</option>
+                  <option value="Whitby ON Canada">Whitby, ON</option>
+                  <option value="Oshawa ON Canada">Oshawa, ON</option>
+                  <option value="London ON Canada">London, ON</option>
+                  <option value="Ottawa ON Canada">Ottawa, ON</option>
+                </optgroup>
+                <optgroup label="Quebec &amp; Western Canada">
+                  <option value="Montreal QC Canada">Montreal, QC</option>
+                  <option value="Calgary AB Canada">Calgary, AB</option>
+                  <option value="Vancouver BC Canada">Vancouver, BC</option>
+                </optgroup>
+                <optgroup label="United States">
+                  <option value="Edison New Jersey USA">New Jersey, USA (Tri-State Hub)</option>
+                  <option value="Pittsburgh Pennsylvania USA">Pittsburgh, PA, USA</option>
+                </optgroup>
+              </select>
+
+              <!-- Interactive Contact / Registration Inquiry Form -->
+              <div class="bg-gray-50 p-4 rounded-lg border border-gray-200 mb-4">
+                <h4 class="font-heading font-bold text-xs uppercase tracking-wider text-dark-heading mb-3 flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-brand-red text-base">edit_note</span>
+                  Campus Inquiry &amp; Registration Form
+                </h4>
+                <form class="space-y-3" onsubmit="event.preventDefault(); alert('Thank you! Your inquiry for the selected campus has been submitted.');">
+                  <div>
+                    <input type="text" placeholder="Parent / Student Full Name *" required class="w-full text-xs p-2.5 rounded border border-gray-300 focus:border-brand-red focus:outline-none bg-white">
+                  </div>
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-2">
+                    <input type="tel" placeholder="Phone Number *" required class="w-full text-xs p-2.5 rounded border border-gray-300 focus:border-brand-red focus:outline-none bg-white">
+                    <input type="email" placeholder="Email Address *" required class="w-full text-xs p-2.5 rounded border border-gray-300 focus:border-brand-red focus:outline-none bg-white">
+                  </div>
+                  <div>
+                    <select required class="w-full text-xs p-2.5 rounded border border-gray-300 text-dark-heading focus:border-brand-red focus:outline-none bg-white">
+                      <option value="">-- Select Academic Program --</option>
+                      <option value="Preschool Mazhalai">Preschool (Mazhalai Level)</option>
+                      <option value="Primary Tamil">Primary Tamil (Grades 1-3)</option>
+                      <option value="Elementary Tamil">Elementary Tamil (Grades 4-8)</option>
+                      <option value="Literature & Speech">Tamil Literature &amp; Speech</option>
+                    </select>
+                  </div>
+                  <div>
+                    <textarea rows="2" placeholder="Message or specific questions for this campus..." class="w-full text-xs p-2.5 rounded border border-gray-300 focus:border-brand-red focus:outline-none bg-white resize-none"></textarea>
+                  </div>
+                  <button type="submit" class="w-full bg-brand-red hover:bg-brand-red-dark text-white font-heading font-bold text-xs uppercase tracking-wider py-3 rounded text-center transition-colors shadow">
+                    SUBMIT CAMPUS INQUIRY
+                  </button>
+                </form>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Right Map Iframe -->
+          <div class="lg:w-7/12 min-h-[460px] bg-gray-100 relative">
+            <iframe id="location-map-iframe" class="w-full h-full min-h-[460px] border-0" src="https://maps.google.com/maps?q=Scarborough+Town+Centre+Toronto+ON+Canada&t=&z=13&ie=UTF8&iwloc=&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Arivakam Academy Locations Map"></iframe>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================
+         10. BOND ACADEMY STYLE CLIENT / PARTNER LOGO CAROUSEL (WHITE BG RIGHT BEFORE FOOTER)
+         ========================================== -->
+    <section class="py-12 bg-white border-t border-gray-200 overflow-hidden">
+      <div class="max-w-screen-2xl mx-auto px-6 sm:px-10 lg:px-40 custom-side-padding text-center mb-8">
+        <h3 class="font-heading text-xl font-bold text-dark-heading uppercase tracking-wide">
+          ACCREDITED PARTNERS &amp; AFFILIATION LOGOS
+        </h3>
+        <p class="text-xs text-sub-gray mt-1">Recognized by educational boards &amp; non-profit registries across North America</p>
+        <div class="bond-dotted-divider"></div>
+      </div>
+
+      <!-- Bond Academy Style White Infinite Marquee Carousel Track -->
+      <div class="relative overflow-hidden w-full max-w-screen-2xl mx-auto py-3">
+        <div class="logo-marquee-track items-center gap-10 sm:gap-14">
+          
+          <!-- Logo 1: IELTS -->
+          <div class="bg-white px-6 py-3 rounded-lg border border-gray-200 shadow-sm hover:border-brand-red hover:shadow-md transition-all shrink-0 flex items-center justify-center min-w-[140px]">
+            <img src="./IELTS_logo.svg-e1706035729570.png" alt="IELTS Certification" class="h-10 sm:h-12 md:h-14 w-auto object-contain max-h-14">
+          </div>
+
+          <!-- Logo 2: AP (Advanced Placement) -->
+          <div class="bg-white px-6 py-3 rounded-lg border border-gray-200 shadow-sm hover:border-brand-red hover:shadow-md transition-all shrink-0 flex items-center justify-center min-w-[140px]">
+            <img src="./AP-removebg-preview-e1706036409320.webp" alt="AP Advanced Placement" class="h-10 sm:h-12 md:h-14 w-auto object-contain max-h-14">
+          </div>
+
+          <!-- Logo 3: OurKids Accreditation -->
+          <div class="bg-white px-6 py-3 rounded-lg border border-gray-200 shadow-sm hover:border-brand-red hover:shadow-md transition-all shrink-0 flex items-center justify-center min-w-[140px]">
+            <img src="./OurKids-e1706037022790.png" alt="OurKids Private School Registry" class="h-10 sm:h-12 md:h-14 w-auto object-contain max-h-14">
+          </div>
+
+          <!-- Logo 4: BEG (Bond Education Group) -->
+          <div class="bg-white px-6 py-3 rounded-lg border border-gray-200 shadow-sm hover:border-brand-red hover:shadow-md transition-all shrink-0 flex items-center justify-center min-w-[140px]">
+            <img src="./BEG-Logo-e1706036908720.png" alt="Bond Education Group" class="h-10 sm:h-12 md:h-14 w-auto object-contain max-h-14">
+          </div>
+
+          <!-- Logo 5: BIC (Bond International College) -->
+          <div class="bg-white px-6 py-3 rounded-lg border border-gray-200 shadow-sm hover:border-brand-red hover:shadow-md transition-all shrink-0 flex items-center justify-center min-w-[140px]">
+            <img src="./BIC-e1706037439785.png" alt="Bond International College" class="h-10 sm:h-12 md:h-14 w-auto object-contain max-h-14">
+          </div>
+
+          <!-- Duplicate Items for Infinite Seamless Loop -->
+          <div class="bg-white px-6 py-3 rounded-lg border border-gray-200 shadow-sm hover:border-brand-red hover:shadow-md transition-all shrink-0 flex items-center justify-center min-w-[140px]">
+            <img src="./IELTS_logo.svg-e1706035729570.png" alt="IELTS Certification" class="h-10 sm:h-12 md:h-14 w-auto object-contain max-h-14">
+          </div>
+
+          <div class="bg-white px-6 py-3 rounded-lg border border-gray-200 shadow-sm hover:border-brand-red hover:shadow-md transition-all shrink-0 flex items-center justify-center min-w-[140px]">
+            <img src="./AP-removebg-preview-e1706036409320.webp" alt="AP Advanced Placement" class="h-10 sm:h-12 md:h-14 w-auto object-contain max-h-14">
+          </div>
+
+          <div class="bg-white px-6 py-3 rounded-lg border border-gray-200 shadow-sm hover:border-brand-red hover:shadow-md transition-all shrink-0 flex items-center justify-center min-w-[140px]">
+            <img src="./OurKids-e1706037022790.png" alt="OurKids Private School Registry" class="h-10 sm:h-12 md:h-14 w-auto object-contain max-h-14">
+          </div>
+
+          <div class="bg-white px-6 py-3 rounded-lg border border-gray-200 shadow-sm hover:border-brand-red hover:shadow-md transition-all shrink-0 flex items-center justify-center min-w-[140px]">
+            <img src="./BEG-Logo-e1706036908720.png" alt="Bond Education Group" class="h-10 sm:h-12 md:h-14 w-auto object-contain max-h-14">
+          </div>
+
+          <div class="bg-white px-6 py-3 rounded-lg border border-gray-200 shadow-sm hover:border-brand-red hover:shadow-md transition-all shrink-0 flex items-center justify-center min-w-[140px]">
+            <img src="./BIC-e1706037439785.png" alt="Bond International College" class="h-10 sm:h-12 md:h-14 w-auto object-contain max-h-14">
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================
+       11. BOND ACADEMY STYLE FOOTER (Big Logo, Address, Programs, Email Box, Social Icons)
+       ========================================== -->
+  <!-- ==========================================
+       11. BOND ACADEMY STYLE FOOTER (Big Logo, Address, Email Box, Social Icons)
+       ========================================== -->
+  <footer class="bg-[#181c24] text-gray-300 font-sans border-t-4 border-brand-red">
+    <div class="max-w-screen-2xl mx-auto px-6 sm:px-10 lg:px-40 custom-side-padding py-14">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-14 pb-12 border-b border-white/10">
+        
+        <!-- Col 1: Logo Merged Seamlessly with Dark Background & Social Buttons (Bond Academy Col 1) -->
+        <div>
+          <a href="index.html" class="inline-block mb-4 group">
+            <img alt="Arivakam Academy Logo" class="h-20 sm:h-24 w-auto object-contain hover:opacity-95 transition-opacity" src="./Arivakam Logo.avif">
+          </a>
+          <p class="text-xs text-gray-300 leading-relaxed mb-5">
+            Arivakam Tamil Cultural Academy is a registered non-profit educational institution preserving Tamil language &amp; heritage across North America.
+          </p>
+          <!-- Social Icons -->
+          <div class="flex items-center gap-3">
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-red text-white flex items-center justify-center transition-colors shadow-sm" aria-label="Instagram">
+              <span class="font-bold text-xs">ig</span>
+            </a>
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-red text-white flex items-center justify-center transition-colors shadow-sm" aria-label="Facebook">
+              <span class="font-bold text-xs">fb</span>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/10 hover:bg-brand-red text-white flex items-center justify-center transition-colors shadow-sm" aria-label="YouTube">
+              <span class="font-bold text-xs">yt</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- Col 2: Scarborough HQ Address & Contact Info (Bond Academy Col 2) -->
+        <div>
+          <h3 class="font-heading font-bold text-white text-sm uppercase tracking-wider mb-4 border-b border-brand-red/40 pb-2 inline-block">
+            Campus Contact
+          </h3>
+          <ul class="space-y-3 text-xs text-gray-300">
+            <li class="flex items-start gap-2.5">
+              <span class="material-symbols-outlined text-brand-red text-base shrink-0 mt-0.5">location_on</span>
+              <span>Scarborough Head Office Hub<br>Toronto, ON, Canada</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <span class="material-symbols-outlined text-brand-red text-base shrink-0">schedule</span>
+              <span>Sat &amp; Sun: 9:00a.m. - 1:00p.m.</span>
+            </li>
+            <li class="flex items-center gap-2.5">
+              <span class="material-symbols-outlined text-brand-red text-base shrink-0">call</span>
+              <a href="tel:4162898800" class="hover:text-brand-red transition-colors font-medium text-white">(416) 289-8800</a>
+            </li>
+            <li class="flex items-start gap-2.5">
+              <span class="material-symbols-outlined text-brand-red text-base shrink-0 mt-0.5">mail</span>
+              <div>
+                <a href="mailto:info@arivakam.com" class="hover:text-brand-red transition-colors font-medium text-white">info@arivakam.com</a>
+                <div class="text-[11px] text-gray-400">Official OSR &amp; Student Inquiries</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Contact Us / Email Subscription Box (Bond Academy Col 3) -->
+        <div>
+          <h3 class="font-heading font-bold text-white text-sm uppercase tracking-wider mb-4 border-b border-brand-red/40 pb-2 inline-block">
+            Contact Us
+          </h3>
+          <p class="text-xs text-gray-300 leading-relaxed mb-4">
+            Subscribe to receive open enrollment announcements, exam schedules, and cultural event alerts:
+          </p>
+          <form class="flex items-center bg-white/10 rounded-md border border-white/20 p-1.5 focus-within:border-brand-red transition-all">
+            <input type="email" placeholder="Your mail here" class="bg-transparent text-white text-xs px-3 py-2 w-full focus:outline-none placeholder-gray-400 font-sans" required>
+            <button type="submit" class="bg-brand-red hover:bg-brand-red-dark text-white px-4 py-2 rounded transition-colors flex items-center justify-center shrink-0" aria-label="Submit Mail">
+              <span class="material-symbols-outlined text-sm">send</span>
+            </button>
+          </form>
+        </div>
+
+      </div>
+
+      <!-- Copyright & Bottom Links -->
+      <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-400 gap-4">
+        <div>© 2026 Arivakam Tamil Cultural Academy. All Rights Reserved.</div>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-white transition-colors">Terms of Use</a>
+          <a href="#" class="hover:text-white transition-colors">Privacy Policy</a>
+          <a href="#" class="hover:text-white transition-colors">Accessibility</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Basic Interactivity JavaScript -->
+  <script>
+    // Hero Carousel Script
+    const heroSlides = document.querySelectorAll('.hero-slide');
+    const heroPrevBtn = document.getElementById('hero-prev-btn');
+    const heroNextBtn = document.getElementById('hero-next-btn');
+    let currentHeroSlide = 0;
+
+    function showHeroSlide(index) {
+      heroSlides.forEach((slide, i) => {
+        if (i === index) {
+          slide.style.opacity = '1';
+          slide.classList.remove('pointer-events-none');
+        } else {
+          slide.style.opacity = '0';
+          slide.classList.add('pointer-events-none');
+        }
+      });
+    }
+
+    if (heroPrevBtn && heroNextBtn) {
+      heroPrevBtn.addEventListener('click', () => {
+        currentHeroSlide = (currentHeroSlide - 1 + heroSlides.length) % heroSlides.length;
+        showHeroSlide(currentHeroSlide);
+      });
+      heroNextBtn.addEventListener('click', () => {
+        currentHeroSlide = (currentHeroSlide + 1) % heroSlides.length;
+        showHeroSlide(currentHeroSlide);
+      });
+      setInterval(() => {
+        currentHeroSlide = (currentHeroSlide + 1) % heroSlides.length;
+        showHeroSlide(currentHeroSlide);
+      }, 5000);
+    }
+
+    // Mobile Hamburger Drawer Toggle
+    const hamburgerBtn = document.getElementById('hamburger-btn');
+    const mobileDrawer = document.getElementById('mobile-drawer');
+    if (hamburgerBtn && mobileDrawer) {
+      hamburgerBtn.addEventListener('click', () => {
+        mobileDrawer.classList.toggle('hidden');
+      });
+    }
+
+    // Quick City Dropdown Location Handler
+    const quickCitySelect = document.getElementById('quick-city-select');
+    const locationMapIframe = document.getElementById('location-map-iframe');
+    if (quickCitySelect && locationMapIframe) {
+      quickCitySelect.addEventListener('change', (e) => {
+        const val = e.target.value;
+        if (val) {
+          locationMapIframe.src = `https://maps.google.com/maps?q=${encodeURIComponent(val)}&t=&z=13&ie=UTF8&iwloc=&output=embed`;
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
