@@ -752,7 +752,7 @@
         <div class="reveal-on-scroll delay-75 bg-slate-50 border border-gray-200/80 rounded-3xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 flex flex-col justify-between">
           <div>
             <div class="aspect-[4/3] rounded-2xl overflow-hidden mb-4 border border-gray-200 relative">
-              <img src="./img/speach.avif" alt="Tamil Speech Contest" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+              <img src="./speach.avif" alt="Tamil Speech Contest" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
               <span class="absolute top-2 left-2 bg-amber-500 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase shadow">
                 Public Speaking
               </span>
@@ -774,7 +774,7 @@
         <div class="reveal-on-scroll delay-150 bg-slate-50 border border-gray-200/80 rounded-3xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 flex flex-col justify-between">
           <div>
             <div class="aspect-[4/3] rounded-2xl overflow-hidden mb-4 border border-gray-200 relative">
-              <img src="./img/art.avif" alt="Student Painting Competition" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+              <img src="./art.avif" alt="Student Painting Competition" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
               <span class="absolute top-2 left-2 bg-blue-500 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase shadow">
                 Art &amp; Heritage
               </span>
@@ -796,7 +796,7 @@
         <div class="reveal-on-scroll delay-225 bg-slate-50 border border-gray-200/80 rounded-3xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 flex flex-col justify-between">
           <div>
             <div class="aspect-[4/3] rounded-2xl overflow-hidden mb-4 border border-gray-200 relative">
-              <img src="./img/drama.avif" alt="Cultural Drama Showcase" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+              <img src="./drama.avif" alt="Cultural Drama Showcase" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
               <span class="absolute top-2 left-2 bg-rose-500 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase shadow">
                 Theatre &amp; Song
               </span>
@@ -818,7 +818,7 @@
         <div class="reveal-on-scroll delay-300 bg-slate-50 border border-gray-200/80 rounded-3xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 flex flex-col justify-between">
           <div>
             <div class="aspect-[4/3] rounded-2xl overflow-hidden mb-4 border border-gray-200 relative">
-              <img src="./img/festivals.avif" alt="Summer Sports & Festivals" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+              <img src="./festivals.avif" alt="Summer Sports & Festivals" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
               <span class="absolute top-2 left-2 bg-emerald-500 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase shadow">
                 Outdoors &amp; Games
               </span>
@@ -1290,18 +1290,18 @@
     // 3. Soundboard Data & Vowels Logic
     // ----------------------------------------------------
     const vowelsData = [
-      { letter: 'அ', name: 'A', type: 'Short (குறில்)', word: 'அணில் (Anil)', meaning: 'Squirrel 🐿️', note: 'First letter of the Tamil alphabet', audio: 'audio/vowel_0.mp3', freq: 523.25 },
-      { letter: 'ஆ', name: 'Aa', type: 'Long (நெடில்)', word: 'ஆலமரம் (Aalamaram)', meaning: 'Banyan Tree 🌳', note: 'Majestic sacred tree', audio: 'audio/vowel_1.mp3', freq: 587.33 },
-      { letter: 'இ', name: 'I', type: 'Short (குறில்)', word: 'இலை (Ilai)', meaning: 'Leaf 🍃', note: 'Symbol of nature and growth', audio: 'audio/vowel_2.mp3', freq: 659.25 },
-      { letter: 'ஈ', name: 'Ee', type: 'Long (நெடில்)', word: 'ஈட்டி (Eetti)', meaning: 'Spear 🗡️', note: 'Ancient instrument of courage', audio: 'audio/vowel_3.mp3', freq: 698.46 },
-      { letter: 'உ', name: 'U', type: 'Short (குறில்)', word: 'உடுக்கை (Udukkai)', meaning: 'Drum 🪘', note: 'Traditional folk percussion instrument', audio: 'audio/vowel_4.mp3', freq: 783.99 },
-      { letter: 'ஊ', name: 'Oo', type: 'Long (நெடில்)', word: 'ஊஞ்சல் (Oonjal)', meaning: 'Swing 🎠', note: 'Traditional courtyard swing', audio: 'audio/vowel_5.mp3', freq: 880.00 },
-      { letter: 'எ', name: 'E', type: 'Short (குறில்)', word: 'எறும்பு (Erumbu)', meaning: 'Ant 🐜', note: 'Symbol of industry and hard work', audio: 'audio/vowel_6.mp3', freq: 987.77 },
-      { letter: 'ஏ', name: 'Ae', type: 'Long (நெடில்)', word: 'ஏணி (Eani)', meaning: 'Ladder 🪜', note: 'Symbol of climbing to wisdom', audio: 'audio/vowel_7.mp3', freq: 1046.50 },
-      { letter: 'ஐ', name: 'Ai', type: 'Diphthong', word: 'ஐந்து (Ainthu)', meaning: 'Five 🖐️', note: 'The number five (five elements/lands)', audio: 'audio/vowel_8.mp3', freq: 1174.66 },
-      { letter: 'ஒ', name: 'O', type: 'Short (குறில்)', word: 'ஒட்டகம் (Ottagam)', meaning: 'Camel 🐪', note: 'Patient desert wanderer', audio: 'audio/vowel_9.mp3', freq: 1318.51 },
-      { letter: 'ஓ', name: 'Oo', type: 'Long (நெடில்)', word: 'ஓடம் (Oadam)', meaning: 'Boat ⛵', note: 'Ancient river watercraft', audio: 'audio/vowel_10.mp3', freq: 1396.91 },
-      { letter: 'ஔ', name: 'Au', type: 'Diphthong', word: 'ஔவையார் (Avvaiyar)', meaning: 'Great Poetess 📜', note: 'Beloved poet of Aathichudi', audio: 'audio/vowel_11.mp3', freq: 1567.98 }
+      { letter: 'அ', name: 'A', type: 'Short (குறில்)', word: 'அணில் (Anil)', meaning: 'Squirrel 🐿️', note: 'First letter of the Tamil alphabet', audio: '/vowel_0.mp3', freq: 523.25 },
+      { letter: 'ஆ', name: 'Aa', type: 'Long (நெடில்)', word: 'ஆலமரம் (Aalamaram)', meaning: 'Banyan Tree 🌳', note: 'Majestic sacred tree', audio: '/vowel_1.mp3', freq: 587.33 },
+      { letter: 'இ', name: 'I', type: 'Short (குறில்)', word: 'இலை (Ilai)', meaning: 'Leaf 🍃', note: 'Symbol of nature and growth', audio: '/vowel_2.mp3', freq: 659.25 },
+      { letter: 'ஈ', name: 'Ee', type: 'Long (நெடில்)', word: 'ஈட்டி (Eetti)', meaning: 'Spear 🗡️', note: 'Ancient instrument of courage', audio: '/vowel_3.mp3', freq: 698.46 },
+      { letter: 'உ', name: 'U', type: 'Short (குறில்)', word: 'உடுக்கை (Udukkai)', meaning: 'Drum 🪘', note: 'Traditional folk percussion instrument', audio: '/vowel_4.mp3', freq: 783.99 },
+      { letter: 'ஊ', name: 'Oo', type: 'Long (நெடில்)', word: 'ஊஞ்சல் (Oonjal)', meaning: 'Swing 🎠', note: 'Traditional courtyard swing', audio: '/vowel_5.mp3', freq: 880.00 },
+      { letter: 'எ', name: 'E', type: 'Short (குறில்)', word: 'எறும்பு (Erumbu)', meaning: 'Ant 🐜', note: 'Symbol of industry and hard work', audio: '/vowel_6.mp3', freq: 987.77 },
+      { letter: 'ஏ', name: 'Ae', type: 'Long (நெடில்)', word: 'ஏணி (Eani)', meaning: 'Ladder 🪜', note: 'Symbol of climbing to wisdom', audio: '/vowel_7.mp3', freq: 1046.50 },
+      { letter: 'ஐ', name: 'Ai', type: 'Diphthong', word: 'ஐந்து (Ainthu)', meaning: 'Five 🖐️', note: 'The number five (five elements/lands)', audio: '/vowel_8.mp3', freq: 1174.66 },
+      { letter: 'ஒ', name: 'O', type: 'Short (குறில்)', word: 'ஒட்டகம் (Ottagam)', meaning: 'Camel 🐪', note: 'Patient desert wanderer', audio: '/vowel_9.mp3', freq: 1318.51 },
+      { letter: 'ஓ', name: 'Oo', type: 'Long (நெடில்)', word: 'ஓடம் (Oadam)', meaning: 'Boat ⛵', note: 'Ancient river watercraft', audio: '/vowel_10.mp3', freq: 1396.91 },
+      { letter: 'ஔ', name: 'Au', type: 'Diphthong', word: 'ஔவையார் (Avvaiyar)', meaning: 'Great Poetess 📜', note: 'Beloved poet of Aathichudi', audio: '/vowel_11.mp3', freq: 1567.98 }
     ];
 
     let currentSelectedVowel = vowelsData[0];
