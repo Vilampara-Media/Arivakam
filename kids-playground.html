@@ -1,0 +1,1764 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Kids &amp; Parents Interactive Playground | Arivakam Tamil Cultural Academy</title>
+  <meta name="description" content="Explore the interactive Tamil learning playground by Arivakam Tamil Cultural Academy. Fun games, letter sounds, memory match, Thirukkural wisdom, and student life showcase for kids and parents.">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&family=Outfit:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/myriad-pro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <!-- High-Performance Inertial Smooth Scrolling (Lenis) -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+  <!-- Confetti library for celebration animations -->
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "brand-red": "#ed1c29",
+            "brand-red-dark": "#b1101a",
+            "btn-red": "#BF0000",
+            "btn-red-dark": "#990000",
+            "brand-navy": "#070e1b",
+            "top-dark": "#0d1b2a",
+            "dark-heading": "#2d2d2d",
+            "body-gray": "#5c5c5c",
+            "sub-gray": "#a1a2a4",
+            "bg-light": "#f8f9fa",
+            "paper-white": "#ffffff"
+          },
+          "fontFamily": {
+            "sans": ["Inter", "sans-serif"],
+            "title": ["'Myriad Pro Bold'", "'MyriadPro-Bold'", "'Myriad Pro'", "'Myriad'", "Outfit", "Inter", "sans-serif"],
+            "fun": ["'Outfit'", "Inter", "sans-serif"],
+            "serif": ["'Myriad Pro Bold'", "'MyriadPro-Bold'", "'Myriad Pro'", "'MyriadPro'", "'Myriad'", "-apple-system", "BlinkMacSystemFont", "'Segoe UI'", "Roboto", "Helvetica", "Arial", "sans-serif"],
+            "myriad": ["'Myriad Pro Bold'", "'MyriadPro-Bold'", "'Myriad Pro'", "'MyriadPro'", "'Myriad'", "-apple-system", "BlinkMacSystemFont", "'Segoe UI'", "Roboto", "Helvetica", "Arial", "sans-serif"],
+            "body-md": ["Inter", "sans-serif"],
+            "headline-sm": ["'Myriad Pro Bold'", "'MyriadPro-Bold'", "'Myriad Pro'", "'MyriadPro'", "'Myriad'", "-apple-system", "BlinkMacSystemFont", "'Segoe UI'", "Roboto", "Helvetica", "Arial", "sans-serif"],
+            "headline-md": ["'Myriad Pro Bold'", "'MyriadPro-Bold'", "'Myriad Pro'", "'MyriadPro'", "'Myriad'", "-apple-system", "BlinkMacSystemFont", "'Segoe UI'", "Roboto", "Helvetica", "Arial", "sans-serif"],
+            "label-sm": ["Inter", "sans-serif"],
+            "label-md": ["Inter", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"]
+          },
+          "fontSize": {
+            "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+            "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "700" }],
+            "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "700" }],
+            "label-sm": ["12px", { "lineHeight": "1", "fontWeight": "500" }],
+            "label-md": ["14px", { "lineHeight": "1", "letterSpacing": "0.02em", "fontWeight": "600" }],
+            "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Title Fonts: Myriad Pro Bold Family & Weights (Bold 700) */
+    h1, h2, h3, h4, h5, h6,
+    .font-serif, .font-title, .font-myriad {
+        font-family: 'Myriad Pro Bold', 'MyriadPro-Bold', 'Myriad Pro', 'MyriadPro', 'Myriad', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+        font-weight: 700 !important;
+    }
+    /* Ultra-Smooth Inertial Scrolling (Lenis) */
+    html.lenis, html.lenis body {
+      height: auto;
+    }
+    .lenis.lenis-smooth {
+      scroll-behavior: auto !important;
+    }
+    .lenis.lenis-smooth [data-lenis-prevent] {
+      overscroll-behavior: contain;
+    }
+    .lenis.lenis-stopped {
+      overflow: hidden;
+    }
+    .lenis.lenis-scrolling iframe {
+      pointer-events: none;
+    }
+
+    .reveal-on-scroll {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal-on-scroll.is-visible {
+      opacity: 1;
+      transform: translateY(0);
+      will-change: auto;
+    }
+
+    .reveal-scale {
+      opacity: 0;
+      transform: scale(0.92);
+      transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+      will-change: opacity, transform;
+    }
+    .reveal-scale.is-visible {
+      opacity: 1;
+      transform: scale(1);
+      will-change: auto;
+    }
+
+    /* Staggered Delays */
+    .delay-75 { transition-delay: 75ms; }
+    .delay-150 { transition-delay: 150ms; }
+    .delay-225 { transition-delay: 225ms; }
+    .delay-300 { transition-delay: 300ms; }
+
+    /* Button Shimmer Sweep Effect */
+    .btn-shimmer-sweep {
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-shimmer-sweep::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent);
+      transform: translateX(-100%);
+    }
+    .btn-shimmer-sweep:hover::after {
+      animation: shimmer-sweep 1.2s ease-in-out infinite;
+    }
+    @keyframes shimmer-sweep {
+      100% { transform: translateX(100%); }
+    }
+
+    /* Floating Cultural Letters Animation */
+    @keyframes float-slow {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(-12px) rotate(3deg); }
+    }
+    @keyframes float-reverse {
+      0%, 100% { transform: translateY(0px) rotate(0deg); }
+      50% { transform: translateY(10px) rotate(-3deg); }
+    }
+    .animate-float-slow {
+      animation: float-slow 6s ease-in-out infinite;
+    }
+    .animate-float-reverse {
+      animation: float-reverse 7s ease-in-out infinite;
+    }
+
+    /* Card Flip 3D for Memory Match */
+    .perspective-1000 {
+      perspective: 1000px;
+    }
+    .transform-style-3d {
+      transform-style: preserve-3d;
+    }
+    .backface-hidden {
+      backface-visibility: hidden;
+    }
+    .rotate-y-180 {
+      transform: rotateY(180deg);
+    }
+
+    /* Pulse Glow */
+    @keyframes pulse-ring {
+      0% { transform: scale(0.95); opacity: 0.8; }
+      50% { transform: scale(1.05); opacity: 0.4; }
+      100% { transform: scale(0.95); opacity: 0.8; }
+    }
+    .animate-pulse-ring {
+      animation: pulse-ring 3s ease-in-out infinite;
+    }
+
+    /* Running Border Animation (Optional showcase) */
+    @property --border-angle {
+      syntax: '<angle>';
+      inherits: false;
+      initial-value: 0deg;
+    }
+    @keyframes run-border {
+      0% { --border-angle: 0deg; }
+      100% { --border-angle: 360deg; }
+    }
+    .running-border-card {
+      position: relative;
+    }
+    .running-border-card::before {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      border-radius: inherit;
+      padding: 2px;
+      background: conic-gradient(from var(--border-angle, 0deg), transparent 25%, #ed1c29 50%, #ff8088 65%, #ed1c29 80%, transparent 95%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      pointer-events: none;
+      z-index: 10;
+      animation: run-border 3.5s linear infinite;
+    }
+    .running-border-card:hover::before {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body class="bg-[#FFFDF9] text-dark-heading font-sans antialiased pt-20 relative selection:bg-brand-red selection:text-white">
+
+  <!-- Top Reading Scroll Progress Bar -->
+  <div id="scroll-progress-bar" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-brand-red via-amber-400 to-emerald-400 z-[60] transition-all duration-150 ease-out" style="width: 0%;"></div>
+
+  <!-- Floating Back-to-Top Button -->
+  <button id="back-to-top" aria-label="Back to Top" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-brand-red text-white flex items-center justify-center shadow-xl hover:bg-brand-red-dark hover:scale-110 active:scale-95 transition-all duration-300 opacity-0 pointer-events-none translate-y-4">
+    <span class="material-symbols-outlined text-2xl">arrow_upward</span>
+  </button>
+
+  <!-- TopNavBar Component -->
+  <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300 ease-in-out border-b border-gray-200">
+    <div class="flex justify-between items-center px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24 py-4 max-w-screen-2xl mx-auto">
+      <div class="flex items-center">
+        <a href="index.html" class="transition-transform hover:scale-105 duration-300">
+          <img alt="Arivakam Logo" class="h-14 w-auto object-contain" src="./Arivakam Logo.avif">
+        </a>
+      </div>
+
+      <!-- Desktop Navigation links with clean dropdowns -->
+      <div class="hidden lg:flex gap-6 items-center">
+        <a class="text-dark-heading font-label-md text-label-md hover:text-brand-red transition-colors pb-1" href="index.html">Home</a>
+        
+        <!-- Registration Dropdown -->
+        <div class="relative group py-2">
+          <button class="flex items-center gap-1 text-dark-heading font-label-md text-label-md hover:text-brand-red transition-colors pb-1">
+            <span>Registration</span>
+            <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+          </button>
+          <div class="absolute top-full left-0 hidden group-hover:block bg-white shadow-lg rounded-xl border border-gray-200 py-2 w-52 z-50">
+            <a class="block px-4 py-2 text-sm text-dark-heading hover:bg-bg-light hover:text-brand-red transition-colors" href="student-registration.html">Student Registration</a>
+            <a class="block px-4 py-2 text-sm text-dark-heading hover:bg-bg-light hover:text-brand-red transition-colors" href="teach-with-arivakam.html">Teacher Registration</a>
+          </div>
+        </div>
+
+        <!-- Community Dropdown (Active for Kids Playground) -->
+        <div class="relative group py-2">
+          <button class="flex items-center gap-1 text-dark-heading font-label-md text-label-md text-brand-red font-semibold pb-1 border-b-2 border-brand-red">
+            <span>Community</span>
+            <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+          </button>
+          <div class="absolute top-full left-0 hidden group-hover:block bg-white shadow-lg rounded-xl border border-gray-200 py-2 w-52 z-50">
+            <a class="block px-4 py-2 text-sm text-brand-red font-semibold bg-bg-light" href="kids-playground.html">🎮 Kids Playground</a>
+            <a class="block px-4 py-2 text-sm text-dark-heading hover:bg-bg-light hover:text-brand-red transition-colors" href="upcoming-events.html">Upcoming Events</a>
+            <a class="block px-4 py-2 text-sm text-dark-heading hover:bg-bg-light hover:text-brand-red transition-colors" href="arivakam-community.html">Our Pictures</a>
+          </div>
+        </div>
+
+        <!-- Get Involved Dropdown -->
+        <div class="relative group py-2">
+          <button class="flex items-center gap-1 text-dark-heading font-label-md text-label-md hover:text-brand-red transition-colors pb-1">
+            <span>Get Involved</span>
+            <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+          </button>
+          <div class="absolute top-full left-0 hidden group-hover:block bg-white shadow-lg rounded-xl border border-gray-200 py-2 w-56 z-50">
+            <a class="block px-4 py-2 text-sm text-dark-heading hover:bg-bg-light hover:text-brand-red transition-colors" href="volunteer-with-us.html">Volunteer With Us</a>
+            <a class="block px-4 py-2 text-sm text-dark-heading hover:bg-bg-light hover:text-brand-red transition-colors" href="advertise-your-business.html">Advertise Business</a>
+          </div>
+        </div>
+
+        <!-- FREE Materials Direct Link -->
+        <a class="text-dark-heading font-label-md text-label-md hover:text-brand-red transition-colors pb-1" href="free-learning-materials.html">FREE Materials</a>
+      </div>
+
+      <!-- Action Buttons & Hamburger Menu -->
+      <div class="flex items-center gap-4">
+        <a href="teach-with-arivakam.html" class="hidden sm:block border border-dark-heading text-dark-heading px-5 py-2 rounded-full font-label-md text-label-md hover:bg-bg-light hover:border-brand-red hover:text-brand-red transition-all duration-300 whitespace-nowrap shadow-sm hover:shadow-md">
+          Become a Teacher
+        </a>
+        <a href="student-registration.html" class="bg-btn-red hover:bg-btn-red-dark text-white px-5 py-2 rounded-full font-label-md text-label-md font-bold transition-all shadow-md hover:shadow-lg whitespace-nowrap hover:scale-105 active:scale-95 duration-200 btn-shimmer-sweep">
+          Register Now
+        </a>
+        <button id="hamburger-btn" class="lg:hidden flex items-center text-dark-heading hover:text-brand-red" aria-label="Toggle Navigation">
+          <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobile-drawer" class="hidden lg:hidden w-full bg-white border-t border-gray-200 py-4 px-6 sm:px-10 md:px-16 shadow-inner">
+      <div class="flex flex-col gap-4">
+        <a class="text-dark-heading font-label-md text-label-md hover:text-brand-red py-2 transition-colors border-b border-gray-100" href="index.html">Home</a>
+        <a class="text-dark-heading font-label-md text-label-md text-brand-red font-bold py-2 transition-colors border-b border-gray-100 flex items-center justify-between" href="kids-playground.html"><span>🎮 Kids Playground</span><span class="bg-amber-400 text-slate-900 text-[10px] px-2 py-0.5 rounded-full font-bold uppercase">Fun</span></a>
+        <a class="text-dark-heading font-label-md text-label-md hover:text-brand-red py-2 transition-colors border-b border-gray-100" href="student-registration.html">Student Registration</a>
+        <a class="text-dark-heading font-label-md text-label-md hover:text-brand-red py-2 transition-colors border-b border-gray-100" href="teach-with-arivakam.html">Teacher Registration</a>
+        <a class="text-dark-heading font-label-md text-label-md hover:text-brand-red py-2 transition-colors border-b border-gray-100" href="upcoming-events.html">Upcoming Events</a>
+        <a class="text-dark-heading font-label-md text-label-md hover:text-brand-red py-2 transition-colors border-b border-gray-100" href="arivakam-community.html">Our Pictures</a>
+        <a class="text-dark-heading font-label-md text-label-md hover:text-brand-red py-2 transition-colors border-b border-gray-100" href="free-learning-materials.html">FREE Materials</a>
+        <a class="text-dark-heading font-label-md text-label-md hover:text-brand-red py-2 transition-colors border-b border-gray-100" href="volunteer-with-us.html">Volunteer With Us</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============================================== -->
+  <!-- HERO SECTION: Discovery Playground Arena -->
+  <!-- ============================================== -->
+  <header class="relative bg-gradient-to-br from-brand-navy via-[#0d1b2a] to-[#1a1c2e] text-white overflow-hidden py-16 md:py-24 px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24">
+    <!-- Animated Floating Cultural Glyphs in Background -->
+    <div class="absolute inset-0 pointer-events-none select-none overflow-hidden opacity-10">
+      <span class="absolute top-10 left-[8%] text-8xl font-black font-title text-amber-300 animate-float-slow">அ</span>
+      <span class="absolute top-48 left-[2%] text-6xl font-black font-title text-rose-300 animate-float-reverse">ஆ</span>
+      <span class="absolute bottom-20 left-[18%] text-7xl font-black font-title text-blue-300 animate-float-slow">இ</span>
+      <span class="absolute top-12 right-[12%] text-9xl font-black font-title text-emerald-300 animate-float-reverse">ழ</span>
+      <span class="absolute bottom-16 right-[8%] text-8xl font-black font-title text-yellow-300 animate-float-slow">ற</span>
+      <span class="absolute top-52 right-[25%] text-7xl font-black font-title text-purple-300 animate-float-reverse">ன</span>
+    </div>
+
+    <!-- Soft Radial Ambient Light Glows -->
+    <div class="absolute top-0 right-1/4 w-96 h-96 bg-brand-red/20 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute bottom-0 left-1/4 w-96 h-96 bg-emerald-500/15 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-screen-2xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Left Column: Compelling Copy & Attraction CTAs -->
+      <div class="lg:col-span-7 space-y-6 text-left">
+        <div class="reveal-on-scroll inline-flex items-center gap-2.5 bg-white/10 backdrop-blur-md border border-white/20 px-4 py-2 rounded-full shadow-lg">
+          <span class="flex h-3 w-3 relative">
+            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+          </span>
+          <span class="text-xs font-bold uppercase tracking-wider text-amber-300">Arivakam Kids &amp; Parents Discovery Arena</span>
+        </div>
+
+        <h1 class="reveal-on-scroll delay-75 text-4xl sm:text-5xl lg:text-6xl font-extrabold font-title tracking-tight leading-tight">
+          Where Tamil Comes Alive <br>
+          <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-rose-300 to-emerald-300">Through Joy, Play &amp; Heritage</span>
+        </h1>
+
+        <p class="reveal-on-scroll delay-150 text-gray-200 text-base sm:text-lg max-w-2xl leading-relaxed">
+          Welcome to our interactive digital discovery hub! Designed for curious children (Ages 4–14) and discerning parents, experience how Arivakam turns Tamil language learning into an inspiring adventure with games, soundboards, and moral wisdom.
+        </p>
+
+        <!-- Quick Jump Playground Buttons -->
+        <div class="reveal-on-scroll delay-225 flex flex-wrap gap-3.5 pt-2">
+          <a href="#letter-soundboard" class="bg-brand-red hover:bg-brand-red-dark text-white font-bold px-6 py-3.5 rounded-full text-sm shadow-xl hover:shadow-brand-red/40 transition-all flex items-center gap-2 group hover:scale-105 active:scale-95 btn-shimmer-sweep">
+            <span class="material-symbols-outlined text-lg">volume_up</span>
+            <span>Try Letter Sounds</span>
+          </a>
+          <a href="#memory-match-game" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold px-6 py-3.5 rounded-full text-sm shadow-xl transition-all flex items-center gap-2 group hover:scale-105 active:scale-95">
+            <span class="material-symbols-outlined text-lg">extension</span>
+            <span>Play Memory Match</span>
+          </a>
+          <a href="#explorer-quiz" class="bg-emerald-600 hover:bg-emerald-700 text-white font-bold px-6 py-3.5 rounded-full text-sm shadow-xl transition-all flex items-center gap-2 group hover:scale-105 active:scale-95">
+            <span class="material-symbols-outlined text-lg">emoji_events</span>
+            <span>Take 60s Quiz</span>
+          </a>
+        </div>
+
+        <!-- Academic Reassurance Micro-Badges for Parents -->
+        <div class="reveal-on-scroll delay-300 pt-4 flex flex-wrap items-center gap-6 text-xs text-gray-300 border-t border-white/10">
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-emerald-400 text-base">verified</span>
+            <span>Preschool to Grade 8 Structure</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-amber-300 text-base">public</span>
+            <span>Taught across 14 Countries</span>
+          </div>
+          <div class="flex items-center gap-2">
+            <span class="material-symbols-outlined text-rose-300 text-base">groups</span>
+            <span>500+ Active Students</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Interactive Showcase Card & Live Feature Preview -->
+      <div class="reveal-scale delay-225 lg:col-span-5">
+        <div class="relative bg-white/10 backdrop-blur-xl border border-white/20 p-6 md:p-8 rounded-[2.5rem] shadow-2xl">
+          <div class="flex items-center justify-between border-b border-white/10 pb-4 mb-6">
+            <div class="flex items-center gap-3">
+              <div class="w-10 h-10 rounded-2xl bg-amber-400 text-slate-900 flex items-center justify-center font-black text-xl shadow-md">
+                அ
+              </div>
+              <div>
+                <div class="text-sm font-bold text-white font-title">Interactive Quick Spotlight</div>
+                <div class="text-xs text-gray-300">Tap below to sample a Tamil sound!</div>
+              </div>
+            </div>
+            <span class="bg-emerald-500/20 text-emerald-300 border border-emerald-400/30 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider">
+              Live Demo
+            </span>
+          </div>
+
+          <!-- Mini Live Sampler Box -->
+          <div class="bg-white/5 rounded-2xl p-5 border border-white/10 text-center space-y-4">
+            <div class="text-5xl font-extrabold text-amber-300 font-title transition-transform duration-300 hover:scale-110 cursor-pointer" id="hero-sample-letter" onclick="playHeroLetter()">
+              அ
+            </div>
+            <div>
+              <div class="text-base font-bold text-white" id="hero-sample-word">அணில் (Anil) • Squirrel</div>
+              <p class="text-xs text-gray-300 mt-1">First vowel of the Tamil language (உயிர் எழுத்து)</p>
+            </div>
+            <button onclick="playHeroLetter()" class="w-full bg-gradient-to-r from-brand-red to-rose-600 hover:from-brand-red-dark hover:to-rose-700 text-white font-bold py-2.5 px-4 rounded-xl text-xs transition-all flex items-center justify-center gap-2 shadow-lg hover:scale-[1.02] active:scale-95">
+              <span class="material-symbols-outlined text-sm">play_circle</span>
+              <span id="hero-sound-label">Click to Hear Letter "அ"</span>
+            </button>
+          </div>
+
+          <!-- Bottom Direct Registration Link -->
+          <div class="mt-6 pt-4 border-t border-white/10 flex items-center justify-between text-xs text-gray-300">
+            <span>Ready for full enrollment?</span>
+            <a href="student-registration.html" class="text-amber-300 hover:text-white font-bold flex items-center gap-1 group">
+              <span>Register Child</span>
+              <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+
+  <!-- ============================================== -->
+  <!-- MODULE 1: Interactive Tamil Letter Soundboard -->
+  <!-- ============================================== -->
+  <section class="py-16 md:py-24 px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24 bg-white relative overflow-hidden" id="letter-soundboard">
+    <div class="max-w-screen-2xl mx-auto">
+      
+      <!-- Section Header -->
+      <div class="reveal-on-scroll text-center max-w-3xl mx-auto mb-14">
+        <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-brand-red bg-brand-red/10 px-4 py-1.5 rounded-full border border-brand-red/20 mb-3">
+          🔊 Fun Phonetics &amp; Sounds
+        </span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-dark-heading font-title">
+          Uyir Letters <span class="text-brand-red">Soundboard &amp; Word Discovery</span>
+        </h2>
+        <p class="text-body-gray text-sm md:text-base leading-relaxed mt-2">
+          Click any of the 12 Tamil vowels (உயிர் எழுத்துகள்) below to hear its pronunciation, see an illustrated companion word, and discover how our foundational curriculum builds native fluency effortlessly!
+        </p>
+      </div>
+
+      <!-- Live Active Selected Letter Showcase Banner -->
+      <div class="reveal-scale delay-75 mb-10 bg-gradient-to-r from-amber-50 via-rose-50 to-orange-50 border-2 border-amber-200/80 rounded-3xl p-6 md:p-8 shadow-sm flex flex-col md:flex-row items-center justify-between gap-6">
+        <div class="flex items-center gap-6">
+          <div class="w-20 h-20 md:w-24 md:h-24 rounded-2xl bg-gradient-to-br from-brand-red to-rose-600 text-white flex items-center justify-center font-title text-4xl md:text-5xl font-black shadow-lg shadow-brand-red/25 transform transition-transform duration-300" id="showcase-letter">
+            அ
+          </div>
+          <div>
+            <div class="flex items-center gap-2">
+              <span class="text-xs uppercase font-extrabold tracking-wider bg-brand-red text-white px-2.5 py-0.5 rounded-full" id="showcase-index">Letter 1 of 12</span>
+              <span class="text-xs font-semibold text-gray-500" id="showcase-phonetic">Short Vowel (குறில்)</span>
+            </div>
+            <h3 class="text-2xl md:text-3xl font-extrabold text-dark-heading font-title mt-1" id="showcase-tamil-word">
+              அணில் (Anil)
+            </h3>
+            <p class="text-sm text-body-gray font-medium" id="showcase-english-meaning">
+              Meaning: Squirrel • The lively forest animal famous in Tamil lore!
+            </p>
+          </div>
+        </div>
+
+        <button onclick="playActiveLetterVoice()" class="bg-brand-red hover:bg-brand-red-dark text-white font-bold px-7 py-3 rounded-full text-sm shadow-md hover:shadow-lg transition-all flex items-center gap-2 group hover:scale-105 active:scale-95 btn-shimmer-sweep shrink-0">
+          <span class="material-symbols-outlined text-xl">volume_up</span>
+          <span>Speak Letter Pronunciation</span>
+        </button>
+      </div>
+
+      <!-- 12 Letters Interactive Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4" id="vowels-grid">
+        <!-- Vowels will be dynamically rendered / loaded with high responsiveness -->
+      </div>
+
+      <div class="mt-8 text-center text-xs text-body-gray">
+        💡 <strong>Teacher Tip:</strong> At Arivakam, preschoolers learn all 12 Uyir and 18 Mei letters through interactive songs, physical storytelling, and handwriting workbooks.
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================== -->
+  <!-- MODULE 2: Tamil Memory Match Mini-Game -->
+  <!-- ============================================== -->
+  <section class="py-16 md:py-24 px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24 bg-gradient-to-b from-[#FFFDF9] to-amber-50/40 relative overflow-hidden" id="memory-match-game">
+    <div class="max-w-screen-2xl mx-auto">
+      
+      <!-- Section Header -->
+      <div class="reveal-on-scroll text-center max-w-3xl mx-auto mb-12">
+        <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-amber-700 bg-amber-100 px-4 py-1.5 rounded-full border border-amber-200 mb-3">
+          🎮 Interactive Brain Game
+        </span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-dark-heading font-title">
+          Tamil Word &amp; Picture <span class="text-amber-600">Memory Match</span>
+        </h2>
+        <p class="text-body-gray text-sm md:text-base leading-relaxed mt-2">
+          Can you match the Tamil words with their cultural and nature illustrations? Flip the cards to find matching pairs in fewer moves!
+        </p>
+      </div>
+
+      <!-- Game Controller Bar -->
+      <div class="reveal-on-scroll delay-75 max-w-2xl mx-auto bg-white p-4 rounded-2xl shadow-md border border-gray-200/90 flex items-center justify-between mb-8">
+        <div class="flex items-center gap-6">
+          <div class="text-xs">
+            <span class="text-gray-400 font-bold uppercase">Moves:</span>
+            <span class="text-lg font-extrabold text-dark-heading ml-1" id="game-moves-count">0</span>
+          </div>
+          <div class="text-xs">
+            <span class="text-gray-400 font-bold uppercase">Pairs Found:</span>
+            <span class="text-lg font-extrabold text-emerald-600 ml-1" id="game-pairs-count">0 / 4</span>
+          </div>
+        </div>
+
+        <button onclick="resetMemoryGame()" class="bg-amber-500 hover:bg-amber-600 text-slate-950 font-bold text-xs px-4 py-2 rounded-xl transition-all flex items-center gap-1.5 shadow hover:scale-105 active:scale-95">
+          <span class="material-symbols-outlined text-sm">refresh</span>
+          <span>Restart Game</span>
+        </button>
+      </div>
+
+      <!-- Memory Game Grid (8 Cards: 4 Pairs) -->
+      <div class="max-w-3xl mx-auto grid grid-cols-2 sm:grid-cols-4 gap-4 perspective-1000" id="memory-cards-container">
+        <!-- Dynamically injected cards -->
+      </div>
+
+      <!-- Victory Celebration Card (Hidden initially) -->
+      <div id="memory-victory-modal" class="hidden mt-8 max-w-xl mx-auto bg-emerald-50 border-2 border-emerald-400 rounded-3xl p-6 text-center shadow-xl animate-bounce">
+        <div class="w-14 h-14 bg-emerald-500 text-white rounded-full flex items-center justify-center mx-auto mb-3 text-3xl shadow-lg">
+          🎉
+        </div>
+        <h4 class="text-2xl font-extrabold text-emerald-900 font-title">Vetri (வெற்றி)! Outstanding Memory!</h4>
+        <p class="text-xs text-emerald-800 mt-1 max-w-md mx-auto">
+          You matched all Tamil pairs! In our classrooms, game-based learning helps kids retain vocabulary 3x faster than rote methods.
+        </p>
+        <div class="mt-4 flex justify-center gap-3">
+          <button onclick="resetMemoryGame()" class="bg-emerald-600 text-white font-bold text-xs px-5 py-2.5 rounded-full hover:bg-emerald-700 transition shadow">
+            Play Again
+          </button>
+          <a href="student-registration.html" class="bg-brand-red text-white font-bold text-xs px-5 py-2.5 rounded-full hover:bg-brand-red-dark transition shadow">
+            Enroll for Full Classes
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================== -->
+  <!-- MODULE 3: Thirukkural Daily Wisdom for Kids -->
+  <!-- ============================================== -->
+  <section class="py-16 md:py-24 px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24 bg-white relative overflow-hidden" id="thirukkural-wisdom">
+    <div class="max-w-screen-2xl mx-auto">
+      
+      <!-- Section Header -->
+      <div class="reveal-on-scroll text-center max-w-3xl mx-auto mb-12">
+        <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-emerald-700 bg-emerald-100 px-4 py-1.5 rounded-full border border-emerald-200 mb-3">
+          📜 Moral Values &amp; Heritage
+        </span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-dark-heading font-title">
+          Kids' Thirukkural <span class="text-emerald-600">Wisdom Compass</span>
+        </h2>
+        <p class="text-body-gray text-sm md:text-base leading-relaxed mt-2">
+          Written over 2,000 years ago by Saint Thiruvalluvar, Thirukkural teaches universal ethics. Explore friendly bite-sized couplets explaining friendship, education, kindness, and truth!
+        </p>
+      </div>
+
+      <!-- Theme Selectors -->
+      <div class="reveal-on-scroll delay-75 flex flex-wrap justify-center gap-3 mb-8">
+        <button onclick="selectKuralCategory('friendship')" id="btn-kural-friendship" class="kural-cat-btn bg-emerald-600 text-white font-bold text-xs px-5 py-2.5 rounded-full shadow transition-all flex items-center gap-1.5">
+          <span>🤝 Friendship (நட்பு)</span>
+        </button>
+        <button onclick="selectKuralCategory('education')" id="btn-kural-education" class="kural-cat-btn bg-gray-100 text-gray-700 font-bold text-xs px-5 py-2.5 rounded-full hover:bg-gray-200 transition-all flex items-center gap-1.5">
+          <span>📚 Education (கல்வி)</span>
+        </button>
+        <button onclick="selectKuralCategory('kindness')" id="btn-kural-kindness" class="kural-cat-btn bg-gray-100 text-gray-700 font-bold text-xs px-5 py-2.5 rounded-full hover:bg-gray-200 transition-all flex items-center gap-1.5">
+          <span>🌿 Love &amp; Kindness (அன்பு)</span>
+        </button>
+        <button onclick="selectKuralCategory('truth')" id="btn-kural-truth" class="kural-cat-btn bg-gray-100 text-gray-700 font-bold text-xs px-5 py-2.5 rounded-full hover:bg-gray-200 transition-all flex items-center gap-1.5">
+          <span>🦁 Courage &amp; Truth (வாய்மை)</span>
+        </button>
+      </div>
+
+      <!-- Active Thirukkural Display Card -->
+      <div class="reveal-scale delay-150 max-w-3xl mx-auto bg-gradient-to-br from-emerald-50/70 via-white to-teal-50/50 border-2 border-emerald-200 rounded-3xl p-8 md:p-10 shadow-xl relative">
+        <div class="flex items-center justify-between border-b border-emerald-100 pb-4 mb-6">
+          <div class="flex items-center gap-2">
+            <span class="w-8 h-8 rounded-full bg-emerald-600 text-white flex items-center justify-center font-bold text-xs">
+              📜
+            </span>
+            <span class="text-xs font-bold uppercase tracking-wider text-emerald-800" id="kural-chapter-title">
+              Chapter: Friendship (அதிகாரம்: நட்பு)
+            </span>
+          </div>
+          <span class="text-xs font-extrabold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full" id="kural-number-badge">
+            Kural #782
+          </span>
+        </div>
+
+        <!-- Couplet in Big Tamil Type -->
+        <blockquote class="text-xl md:text-2xl font-extrabold text-dark-heading font-title leading-relaxed mb-6 text-center" id="kural-tamil-couplet">
+          செயற்கரிய யாவுள நட்பின் அதுபோல்<br>
+          வினைக்கரிய யாவுள காப்பு.
+        </blockquote>
+
+        <div class="bg-white/80 rounded-2xl p-5 border border-emerald-100 space-y-3">
+          <div>
+            <div class="text-[11px] font-bold uppercase tracking-wider text-gray-400">Simple Kid Translation:</div>
+            <p class="text-sm font-semibold text-dark-heading leading-relaxed" id="kural-english-meaning">
+              "What is so difficult to acquire as true friendship? What is such a noble shield against harm?"
+            </p>
+          </div>
+
+          <div class="pt-2 border-t border-gray-100 flex items-start gap-2.5">
+            <span class="text-emerald-600 text-lg">💡</span>
+            <div>
+              <div class="text-[11px] font-bold uppercase tracking-wider text-emerald-700">Kid's Daily Moral Action:</div>
+              <p class="text-xs text-body-gray" id="kural-daily-action">
+                Be a loyal, encouraging companion to your classmate or sibling today. True friends lift each other up!
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+          <button onclick="spinNextKural()" class="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs px-6 py-3 rounded-full transition shadow flex items-center justify-center gap-2 group hover:scale-105 active:scale-95">
+            <span class="material-symbols-outlined text-sm group-hover:rotate-180 transition-transform duration-500">casino</span>
+            <span>Discover Another Couplet</span>
+          </button>
+          <div class="text-[11px] text-gray-400 text-center sm:text-right">
+            Our students master 30+ Kurals by Grade 8 graduation!
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================== -->
+  <!-- MODULE 4: 60-Second "Tamil Explorer" Mini-Quiz -->
+  <!-- ============================================== -->
+  <section class="py-16 md:py-24 px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24 bg-gradient-to-br from-[#070e1b] via-[#0d1b2a] to-[#16233b] text-white relative overflow-hidden" id="explorer-quiz">
+    <!-- Ambient decorative light glow -->
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-brand-red/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <div class="max-w-screen-2xl mx-auto relative z-10">
+      
+      <!-- Section Header -->
+      <div class="reveal-on-scroll text-center max-w-3xl mx-auto mb-12">
+        <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-amber-300 bg-amber-400/10 px-4 py-1.5 rounded-full border border-amber-300/20 mb-3">
+          🏆 Challenge &amp; Win
+        </span>
+        <h2 class="text-3xl md:text-4xl font-extrabold font-title">
+          60-Second <span class="text-transparent bg-clip-text bg-gradient-to-r from-amber-300 via-rose-300 to-emerald-300">Junior Tamil Explorer Quiz</span>
+        </h2>
+        <p class="text-gray-300 text-sm md:text-base leading-relaxed mt-2">
+          Test your child's (and family's!) Tamil curiosity with 3 quick, fun questions. Score 3/3 to unlock the digital Junior Scholar Badge!
+        </p>
+      </div>
+
+      <!-- Quiz Engine Card -->
+      <div class="reveal-scale delay-75 max-w-2xl mx-auto bg-white/10 backdrop-blur-xl border border-white/20 rounded-3xl p-8 md:p-10 shadow-2xl relative" id="quiz-card-box">
+        
+        <!-- Question Progress Header -->
+        <div class="flex items-center justify-between border-b border-white/15 pb-4 mb-6" id="quiz-header">
+          <div class="flex items-center gap-2">
+            <span class="text-xs font-bold text-amber-300 uppercase tracking-wider" id="quiz-progress-text">Question 1 of 3</span>
+          </div>
+          <div class="flex items-center gap-1 text-xs text-gray-300">
+            <span>Score:</span>
+            <span class="font-extrabold text-emerald-400" id="quiz-score-display">0</span>
+          </div>
+        </div>
+
+        <!-- Question Body Area -->
+        <div id="quiz-question-container" class="space-y-6">
+          <h3 class="text-xl md:text-2xl font-bold font-title text-white" id="quiz-question-title">
+            Loading question...
+          </h3>
+
+          <div class="space-y-3" id="quiz-options-container">
+            <!-- Options dynamically populated -->
+          </div>
+        </div>
+
+        <!-- Quiz Completion Screen (Hidden) -->
+        <div id="quiz-result-container" class="hidden text-center space-y-6 py-4">
+          <div class="w-20 h-20 rounded-full bg-gradient-to-tr from-amber-400 to-yellow-300 text-slate-900 flex items-center justify-center mx-auto text-4xl shadow-xl shadow-amber-400/30">
+            🏅
+          </div>
+          <div>
+            <span class="text-xs font-extrabold uppercase tracking-widest text-amber-300 bg-amber-400/20 px-3 py-1 rounded-full">
+              Achievement Unlocked
+            </span>
+            <h3 class="text-2xl md:text-3xl font-extrabold font-title mt-2">
+              Junior Tamil Scholar Award!
+            </h3>
+            <p class="text-sm text-gray-200 mt-2 max-w-md mx-auto" id="quiz-result-message">
+              You scored 3 out of 3! You have a wonderful natural affinity for the Tamil language.
+            </p>
+          </div>
+
+          <!-- Digital Badge Card Mockup -->
+          <div class="bg-white/10 border border-white/25 rounded-2xl p-5 max-w-md mx-auto text-left flex items-center gap-4">
+            <div class="w-14 h-14 rounded-xl bg-brand-red flex items-center justify-center text-white text-2xl font-black shrink-0 shadow-md">
+              அ
+            </div>
+            <div>
+              <div class="text-xs uppercase font-bold text-rose-300">Arivakam Cultural Academy</div>
+              <div class="text-sm font-bold text-white font-title">Certified Junior Explorer 2026/2027</div>
+              <div class="text-[11px] text-gray-300">Preschool to Grade 8 Readiness Certificate</div>
+            </div>
+          </div>
+
+          <div class="flex flex-col sm:flex-row justify-center gap-4 pt-2">
+            <button onclick="restartQuiz()" class="bg-white/15 hover:bg-white/25 text-white font-bold text-xs px-6 py-3 rounded-full transition shadow">
+              Retake Quiz
+            </button>
+            <a href="student-registration.html" class="bg-brand-red hover:bg-brand-red-dark text-white font-bold text-xs px-7 py-3 rounded-full transition shadow-lg hover:scale-105 active:scale-95 btn-shimmer-sweep">
+              Register Student for Classes
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================== -->
+  <!-- MODULE 5: Student Life & Cultural Carnival -->
+  <!-- ============================================== -->
+  <section class="py-16 md:py-24 px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24 bg-white relative overflow-hidden" id="student-carnival">
+    <div class="max-w-screen-2xl mx-auto">
+      
+      <!-- Section Header -->
+      <div class="reveal-on-scroll text-center max-w-3xl mx-auto mb-14">
+        <span class="inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-brand-red bg-brand-red/10 px-4 py-1.5 rounded-full border border-brand-red/20 mb-3">
+          🎪 Real Student Excitement
+        </span>
+        <h2 class="text-3xl md:text-4xl font-extrabold text-dark-heading font-title">
+          Beyond the Classroom: <span class="text-brand-red">The Arivakam Carnival</span>
+        </h2>
+        <p class="text-body-gray text-sm md:text-base leading-relaxed mt-2">
+          At Arivakam, language is celebrated on grand stages! From North American speech championships to vibrant Pongal harvest dances, see what our students experience each year.
+        </p>
+      </div>
+
+      <!-- 4 Showcase Activity Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Event 1: Speech Contests -->
+        <div class="reveal-on-scroll delay-75 bg-slate-50 border border-gray-200/80 rounded-3xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 flex flex-col justify-between">
+          <div>
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden mb-4 border border-gray-200 relative">
+              <img src="./img/speach.avif" alt="Tamil Speech Contest" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+              <span class="absolute top-2 left-2 bg-amber-500 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase shadow">
+                Public Speaking
+              </span>
+            </div>
+            <h3 class="text-lg font-bold text-dark-heading font-title mb-1.5">
+              Speech Contests (பேச்சுப் போட்டி)
+            </h3>
+            <p class="text-xs text-body-gray leading-relaxed">
+              Kids develop fearless stage presence and North American championship oratory in front of 300+ community audience members.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-gray-200/80 text-[11px] font-semibold text-brand-red flex items-center gap-1">
+            <span class="material-symbols-outlined text-xs">mic</span>
+            <span>Annual Regional Stage</span>
+          </div>
+        </div>
+
+        <!-- Event 2: Creative Art Bees -->
+        <div class="reveal-on-scroll delay-150 bg-slate-50 border border-gray-200/80 rounded-3xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 flex flex-col justify-between">
+          <div>
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden mb-4 border border-gray-200 relative">
+              <img src="./img/art.avif" alt="Student Painting Competition" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+              <span class="absolute top-2 left-2 bg-blue-500 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase shadow">
+                Art &amp; Heritage
+              </span>
+            </div>
+            <h3 class="text-lg font-bold text-dark-heading font-title mb-1.5">
+              Art Bees (ஓவியப் போட்டி)
+            </h3>
+            <p class="text-xs text-body-gray leading-relaxed">
+              Expressing Tamil heritage, Thirukkural couplets, and nature through watercolors, canvas drawings, and historic models.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-gray-200/80 text-[11px] font-semibold text-blue-600 flex items-center gap-1">
+            <span class="material-symbols-outlined text-xs">palette</span>
+            <span>Creative Heritage Showcase</span>
+          </div>
+        </div>
+
+        <!-- Event 3: Cultural Drama & Music -->
+        <div class="reveal-on-scroll delay-225 bg-slate-50 border border-gray-200/80 rounded-3xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 flex flex-col justify-between">
+          <div>
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden mb-4 border border-gray-200 relative">
+              <img src="./img/drama.avif" alt="Cultural Drama Showcase" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+              <span class="absolute top-2 left-2 bg-rose-500 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase shadow">
+                Theatre &amp; Song
+              </span>
+            </div>
+            <h3 class="text-lg font-bold text-dark-heading font-title mb-1.5">
+              Vaakai Stage &amp; Drama
+            </h3>
+            <p class="text-xs text-body-gray leading-relaxed">
+              Living Tamil history brought to life with vibrant costumes, Silambam martial arts, classical dance, and folk musical performances.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-gray-200/80 text-[11px] font-semibold text-rose-600 flex items-center gap-1">
+            <span class="material-symbols-outlined text-xs">theater_comedy</span>
+            <span>Annual Grand Concert</span>
+          </div>
+        </div>
+
+        <!-- Event 4: Summer Sports & Games -->
+        <div class="reveal-on-scroll delay-300 bg-slate-50 border border-gray-200/80 rounded-3xl p-5 shadow-sm hover:shadow-xl transition-all duration-300 group hover:-translate-y-2 flex flex-col justify-between">
+          <div>
+            <div class="aspect-[4/3] rounded-2xl overflow-hidden mb-4 border border-gray-200 relative">
+              <img src="./img/festivals.avif" alt="Summer Sports & Festivals" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700">
+              <span class="absolute top-2 left-2 bg-emerald-500 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full uppercase shadow">
+                Outdoors &amp; Games
+              </span>
+            </div>
+            <h3 class="text-lg font-bold text-dark-heading font-title mb-1.5">
+              Traditional Sports Meets
+            </h3>
+            <p class="text-xs text-body-gray leading-relaxed">
+              Kabaddi, traditional outdoor games, summer family picnics, and athletic tracks fostering lifelong friendship among diaspora families.
+            </p>
+          </div>
+          <div class="mt-4 pt-3 border-t border-gray-200/80 text-[11px] font-semibold text-emerald-600 flex items-center gap-1">
+            <span class="material-symbols-outlined text-xs">sports_soccer</span>
+            <span>Community Summer Fun</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================== -->
+  <!-- MODULE 6: Parent Reassurance & Academic Pathway -->
+  <!-- ============================================== -->
+  <section class="py-16 md:py-24 px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24 bg-gradient-to-b from-[#FFFDF9] to-slate-50 relative overflow-hidden" id="academic-assurance">
+    <div class="max-w-screen-2xl mx-auto">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Column: The 3-Tier Milestone Pathway -->
+        <div class="lg:col-span-7 space-y-6">
+          <div class="reveal-on-scroll inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-widest text-emerald-700 bg-emerald-100 px-4 py-1.5 rounded-full border border-emerald-200">
+            🛡️ Parent Peace of Mind
+          </div>
+
+          <h2 class="reveal-on-scroll delay-75 text-3xl md:text-4xl font-extrabold text-dark-heading font-title leading-tight">
+            Academic Excellence You Can Trust: <br>
+            <span class="text-brand-red">Preschool to Grade 8 Milestones</span>
+          </h2>
+
+          <p class="reveal-on-scroll delay-150 text-body-gray text-sm md:text-base leading-relaxed">
+            While children experience learning through play, parents benefit from an internationally vetted syllabus recognized in 14 countries. Here is how your child progresses year by year:
+          </p>
+
+          <div class="space-y-4 pt-2">
+            <!-- Stage 1 -->
+            <div class="reveal-on-scroll delay-75 bg-white p-5 rounded-2xl border border-gray-200 shadow-sm flex items-start gap-4 hover:shadow-md transition">
+              <div class="w-10 h-10 rounded-xl bg-amber-100 text-amber-700 flex items-center justify-center font-bold text-sm shrink-0">
+                1
+              </div>
+              <div>
+                <div class="flex items-center justify-between">
+                  <h3 class="text-base font-bold text-dark-heading font-title">Preschool &amp; Kindergarten (Ages 4–6)</h3>
+                  <span class="text-[10px] font-bold text-amber-600 bg-amber-50 px-2 py-0.5 rounded-full">Foundation Stage</span>
+                </div>
+                <p class="text-xs text-body-gray mt-1 leading-relaxed">
+                  Focus on phonics, picture flashcards, alphabet recognition, conversational Tamil at home, and cultural rhymes.
+                </p>
+              </div>
+            </div>
+
+            <!-- Stage 2 -->
+            <div class="reveal-on-scroll delay-150 bg-white p-5 rounded-2xl border border-gray-200 shadow-sm flex items-start gap-4 hover:shadow-md transition">
+              <div class="w-10 h-10 rounded-xl bg-brand-red/10 text-brand-red flex items-center justify-center font-bold text-sm shrink-0">
+                2
+              </div>
+              <div>
+                <div class="flex items-center justify-between">
+                  <h3 class="text-base font-bold text-dark-heading font-title">Primary Grades 1 to 5 (Ages 6–11)</h3>
+                  <span class="text-[10px] font-bold text-brand-red bg-rose-50 px-2 py-0.5 rounded-full">Milestone Exam 1</span>
+                </div>
+                <p class="text-xs text-body-gray mt-1 leading-relaxed">
+                  Sentence construction, grammar rules, spelling bee mastery, storytelling, reading fluency, and Grade 3 oral/written evaluation.
+                </p>
+              </div>
+            </div>
+
+            <!-- Stage 3 -->
+            <div class="reveal-on-scroll delay-225 bg-white p-5 rounded-2xl border border-gray-200 shadow-sm flex items-start gap-4 hover:shadow-md transition">
+              <div class="w-10 h-10 rounded-xl bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold text-sm shrink-0">
+                3
+              </div>
+              <div>
+                <div class="flex items-center justify-between">
+                  <h3 class="text-base font-bold text-dark-heading font-title">Middle School Grades 6 to 8 (Ages 11–14)</h3>
+                  <span class="text-[10px] font-bold text-emerald-700 bg-emerald-50 px-2 py-0.5 rounded-full">Diploma Graduation</span>
+                </div>
+                <p class="text-xs text-body-gray mt-1 leading-relaxed">
+                  Classical Thirukkural analysis, formal speeches, Tamil creative essays, and prestigious Grade 8 Graduation Diploma award.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Parent Assurance Box -->
+        <div class="reveal-scale delay-150 lg:col-span-5">
+          <div class="bg-gradient-to-br from-brand-navy to-[#0f1d3a] text-white p-8 md:p-10 rounded-3xl shadow-2xl space-y-6 border border-white/10">
+            <span class="text-xs font-extrabold uppercase tracking-widest text-amber-300">
+              Parent Assurance Guarantee
+            </span>
+            <h3 class="text-2xl font-bold font-title">
+              "What if we only speak English at home?"
+            </h3>
+            <p class="text-xs text-gray-300 leading-relaxed">
+              <strong>Do not worry!</strong> Over 70% of our incoming students begin with limited conversational exposure. Our educators are bilingual in English and Tamil, creating a warm, zero-pressure atmosphere where kids gain confidence within the first 4 weeks.
+            </p>
+
+            <div class="space-y-3 pt-2 text-xs">
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-emerald-400">check_circle</span>
+                <span>Both In-Person School Centers &amp; Online Zoom options</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-emerald-400">check_circle</span>
+                <span>Small batch ratios ensuring personal teacher attention</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="material-symbols-outlined text-emerald-400">check_circle</span>
+                <span>Regular parent progress reports &amp; student celebrations</span>
+              </div>
+            </div>
+
+            <div class="pt-4 border-t border-white/10">
+              <a href="student-registration.html" class="w-full bg-brand-red hover:bg-brand-red-dark text-white font-bold py-3.5 px-6 rounded-full text-sm transition-all flex items-center justify-center gap-2 shadow-lg hover:scale-105 active:scale-95 btn-shimmer-sweep">
+                <span>Start Student Registration</span>
+                <span class="material-symbols-outlined text-sm">arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================== -->
+  <!-- MODULE 7: Free Printable Activity Kits Teaser -->
+  <!-- ============================================== -->
+  <section class="py-16 md:py-20 px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24 bg-white border-t border-gray-200/80">
+    <div class="max-w-screen-2xl mx-auto flex flex-col md:flex-row items-center justify-between gap-8 bg-gradient-to-r from-amber-50/70 via-rose-50/50 to-orange-50/60 p-8 md:p-12 rounded-3xl border border-amber-200/70 shadow-sm">
+      <div class="space-y-2 max-w-xl">
+        <span class="inline-block text-xs font-bold uppercase tracking-wider text-amber-700 bg-amber-200/60 px-3 py-1 rounded-full">
+          Free Printable Downloads
+        </span>
+        <h3 class="text-2xl md:text-3xl font-extrabold text-dark-heading font-title">
+          Get Free Tamil Activity Sheets for Home!
+        </h3>
+        <p class="text-body-gray text-xs md:text-sm leading-relaxed">
+          Download printable letter-tracing worksheets, festival coloring sheets, and Thirukkural flashcards for your child to enjoy right away.
+        </p>
+      </div>
+
+      <a href="free-learning-materials.html" class="bg-dark-heading hover:bg-slate-900 text-white font-bold px-8 py-4 rounded-full text-sm shadow-lg hover:shadow-xl transition-all flex items-center gap-2 group hover:scale-105 active:scale-95 shrink-0">
+        <span class="material-symbols-outlined">download</span>
+        <span>Browse Free Materials</span>
+      </a>
+    </div>
+  </section>
+
+
+  <!-- Standardized Footer (Matching index.html & teach-with-arivakam.html) -->
+  <footer class="bg-brand-navy text-white pt-16 pb-8 border-t border-gray-800">
+    <div class="max-w-screen-2xl mx-auto px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-gray-800">
+        <div>
+          <img src="./Arivakam Logo.avif" alt="Arivakam Logo" class="h-12 w-auto mb-4 object-contain">
+          <p class="text-xs text-gray-400 leading-relaxed mb-4">
+            Arivakam Tamil Cultural Academy is a registered non-profit educational institution dedicated to Tamil language, literature, arts, and cultural heritage across North America since 2008.
+          </p>
+          <div class="flex items-center gap-2 text-xs text-brand-red font-semibold mb-3">
+            <span class="material-symbols-outlined text-sm">verified_user</span>
+            <span>Non-Profit Cultural Academy Reg. No. 13C47C</span>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-gray-300 hover:bg-brand-red hover:text-white transition-all border border-white/15 hover:scale-110" aria-label="Facebook">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-gray-300 hover:bg-brand-red hover:text-white transition-all border border-white/15 hover:scale-110" aria-label="Instagram">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-gray-300 hover:bg-brand-red hover:text-white transition-all border border-white/15 hover:scale-110" aria-label="YouTube">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-gray-300 hover:bg-brand-red hover:text-white transition-all border border-white/15 hover:scale-110" aria-label="LinkedIn">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-gray-300 hover:bg-brand-red hover:text-white transition-all border border-white/15 hover:scale-110" aria-label="TikTok">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M12.525.02c1.31-.02 2.61-.01 3.91-.02.08 1.53.63 3.09 1.75 4.17 1.12 1.11 2.7 1.62 4.24 1.79v4.03c-1.44-.05-2.89-.35-4.2-.97-.57-.26-1.1-.59-1.62-.93-.01 2.92.01 5.84-.02 8.75-.08 1.4-.54 2.79-1.35 3.94-1.31 1.92-3.58 3.17-5.91 3.21-1.43.08-2.86-.31-4.08-1.03-2.02-1.19-3.44-3.37-3.65-5.71-.02-.5-.03-1-.01-1.49.18-1.9 1.12-3.72 2.58-4.96 1.66-1.44 3.98-2.13 6.15-1.72.02 1.48-.04 2.96-.04 4.44-.99-.32-2.15-.23-3.02.37-.82.57-1.31 1.56-1.27 2.56.02.82.4 1.61 1.05 2.12.78.61 1.83.82 2.78.58 1.11-.27 2.05-1.14 2.37-2.22.18-.58.21-1.2.2-1.81V.02z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-l-2 border-brand-red pl-2">Quick Links</h4>
+          <ul class="space-y-2 text-xs text-gray-300">
+            <li><a href="index.html" class="hover:text-brand-red transition-colors">Home</a></li>
+            <li><a href="kids-playground.html" class="text-brand-red font-bold">🎮 Kids Playground</a></li>
+            <li><a href="student-registration.html" class="hover:text-brand-red transition-colors">Student Registration</a></li>
+            <li><a href="teach-with-arivakam.html" class="hover:text-brand-red transition-colors">Become a Teacher</a></li>
+            <li><a href="upcoming-events.html" class="hover:text-brand-red transition-colors">Upcoming Events</a></li>
+            <li><a href="free-learning-materials.html" class="hover:text-brand-red transition-colors">FREE Learning Materials</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-l-2 border-brand-red pl-2">Community &amp; Partners</h4>
+          <ul class="space-y-2 text-xs text-gray-300">
+            <li><a href="arivakam-community.html" class="hover:text-brand-red transition-colors">Our Pictures &amp; Gallery</a></li>
+            <li><a href="photo-albums.html" class="hover:text-brand-red transition-colors">Photo Albums</a></li>
+            <li><a href="volunteer-with-us.html" class="hover:text-brand-red transition-colors">Volunteer With Us</a></li>
+            <li><a href="advertise-your-business.html" class="hover:text-brand-red transition-colors">Sponsor Our Events</a></li>
+            <li><a href="tamil-school-sponsors.html" class="hover:text-brand-red transition-colors">Our Sponsors</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-l-2 border-brand-red pl-2">Head Office</h4>
+          <div class="text-xs text-gray-300 space-y-2">
+            <p>Scarborough, ON M1H 2X1, Canada</p>
+            <p>Tel: 416-849-9890 | Fax: 416-613-1890</p>
+            <p>Email: <a href="mailto:info@arivakam.org" class="text-brand-red underline">info@arivakam.org</a></p>
+            <div class="pt-2">
+              <a href="privacy-policy.html" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 gap-4">
+        <div>2026 © Arivakam Tamil Cultural Academy. All Rights Reserved.</div>
+        <div class="flex gap-4">
+          <a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- ============================================== -->
+  <!-- CLIENT JAVASCRIPT: Games & Interactivity Logic -->
+  <!-- ============================================== -->
+  <script>
+    // ----------------------------------------------------
+    // ----------------------------------------------------
+    // 1. Navigation & High-Performance Smooth Scroll (Lenis)
+    // ----------------------------------------------------
+    document.addEventListener('DOMContentLoaded', () => {
+      // Premium Butter-Smooth Scrolling Engine (Lenis)
+      let lenis = null;
+      if (typeof Lenis !== "undefined") {
+        lenis = new Lenis({
+          duration: 1.0,
+          easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+          orientation: 'vertical',
+          gestureOrientation: 'vertical',
+          smoothWheel: true,
+          syncTouch: false,
+          wheelMultiplier: 1.0,
+          touchMultiplier: 1.0,
+          infinite: false
+        });
+
+        window.arivakamLenis = lenis;
+
+        function raf(time) {
+          lenis.raf(time);
+          requestAnimationFrame(raf);
+        }
+        requestAnimationFrame(raf);
+
+        // Smooth scroll for internal hash links with header offset
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", (e) => {
+            const targetId = anchor.getAttribute("href");
+            if (targetId && targetId !== "#") {
+              const targetEl = document.querySelector(targetId);
+              if (targetEl) {
+                e.preventDefault();
+                lenis.scrollTo(targetEl, { offset: -70, duration: 1.1 });
+                const mobileDrawerEl = document.getElementById("mobile-drawer");
+                if (mobileDrawerEl && !mobileDrawerEl.classList.contains("hidden")) {
+                  mobileDrawerEl.classList.add("hidden");
+                }
+              }
+            }
+          });
+        });
+      }
+
+      const hamburgerBtn = document.getElementById('hamburger-btn');
+      const mobileDrawer = document.getElementById('mobile-drawer');
+      if (hamburgerBtn && mobileDrawer) {
+        hamburgerBtn.addEventListener('click', () => mobileDrawer.classList.toggle('hidden'));
+      }
+
+      const navbar = document.querySelector("nav");
+      const progressBar = document.getElementById("scroll-progress-bar");
+      const backToTopBtn = document.getElementById("back-to-top");
+      let lastScrollY = window.scrollY;
+
+      if (backToTopBtn) {
+        backToTopBtn.addEventListener("click", (e) => {
+          e.preventDefault();
+          if (lenis) {
+            lenis.scrollTo(0, { duration: 1.2 });
+          } else {
+            window.scrollTo({ top: 0, behavior: "smooth" });
+          }
+        });
+      }
+
+      function updateScrollUI(scrollY, scrollProgress, scrollDirection) {
+        const isDrawerOpen = mobileDrawer && !mobileDrawer.classList.contains("hidden");
+
+        if (navbar) {
+          if (scrollY > 120 && scrollDirection > 0 && !isDrawerOpen) {
+            navbar.classList.add("-translate-y-full");
+          } else if (scrollDirection < 0 || scrollY <= 120) {
+            navbar.classList.remove("-translate-y-full");
+          }
+        }
+
+        // Reading Progress Bar - pure RAF calculation, zero layout thrashing
+        if (progressBar) {
+          progressBar.style.width = Math.min(100, Math.max(0, scrollProgress * 100)) + "%";
+        }
+
+        // Back to top visibility
+        if (backToTopBtn) {
+          if (scrollY > 350) {
+            backToTopBtn.classList.remove("opacity-0", "pointer-events-none", "translate-y-4");
+            backToTopBtn.classList.add("opacity-100", "translate-y-0");
+          } else {
+            backToTopBtn.classList.add("opacity-0", "pointer-events-none", "translate-y-4");
+            backToTopBtn.classList.remove("opacity-100", "translate-y-0");
+          }
+        }
+      }
+
+      if (lenis) {
+        lenis.on('scroll', (e) => {
+          updateScrollUI(e.scroll, e.progress, e.direction);
+        });
+      } else {
+        window.addEventListener("scroll", () => {
+          const currentScrollY = window.scrollY;
+          const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
+          const progress = totalHeight > 0 ? (currentScrollY / totalHeight) : 0;
+          const direction = currentScrollY > lastScrollY ? 1 : -1;
+          updateScrollUI(currentScrollY, progress, direction);
+          lastScrollY = currentScrollY;
+        }, { passive: true });
+      }
+
+      // Scroll Reveal Observer (Decoupled, releases GPU layers immediately)
+      const observer = new IntersectionObserver((entries, obs) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            obs.unobserve(entry.target);
+          }
+        });
+      }, { rootMargin: '0px 0px -40px 0px', threshold: 0.08 });
+
+      document.querySelectorAll('.reveal-on-scroll, .reveal-scale').forEach(el => observer.observe(el));
+      
+      initSoundboard();
+      initMemoryGame();
+      initQuiz();
+    });
+
+
+    // ----------------------------------------------------
+    // 2. Professional Studio Audio & Sound Engine
+    // ----------------------------------------------------
+    let sharedAudioCtx = null;
+    let currentActiveAudio = null;
+
+    // Singleton Web Audio Context with auto-resume on user click
+    function getAudioContext() {
+      if (!sharedAudioCtx) {
+        const AudioContextClass = window.AudioContext || window.webkitAudioContext;
+        if (AudioContextClass) {
+          sharedAudioCtx = new AudioContextClass();
+        }
+      }
+      if (sharedAudioCtx && sharedAudioCtx.state === 'suspended') {
+        sharedAudioCtx.resume();
+      }
+      return sharedAudioCtx;
+    }
+
+    // Polyphonic Harmonic Musical Chime (Always plays instantly on click)
+    function playMusicalChime(baseFreq = 523.25, duration = 0.35, type = 'sine') {
+      try {
+        const ctx = getAudioContext();
+        if (!ctx) return;
+        const now = ctx.currentTime;
+
+        // Primary fundamental note
+        const osc1 = ctx.createOscillator();
+        const gain1 = ctx.createGain();
+        osc1.type = type;
+        osc1.frequency.setValueAtTime(baseFreq, now);
+        gain1.gain.setValueAtTime(0.28, now);
+        gain1.gain.exponentialRampToValueAtTime(0.001, now + duration);
+        osc1.connect(gain1);
+        gain1.connect(ctx.destination);
+        osc1.start(now);
+        osc1.stop(now + duration);
+
+        // Musical harmonic overtone (gives a rich marimba/chime timbre)
+        const osc2 = ctx.createOscillator();
+        const gain2 = ctx.createGain();
+        osc2.type = 'triangle';
+        osc2.frequency.setValueAtTime(baseFreq * 2.0, now);
+        gain2.gain.setValueAtTime(0.12, now);
+        gain2.gain.exponentialRampToValueAtTime(0.001, now + (duration * 0.7));
+        osc2.connect(gain2);
+        gain2.connect(ctx.destination);
+        osc2.start(now);
+        osc2.stop(now + (duration * 0.7));
+      } catch (e) {
+        console.warn('Synth chime error:', e);
+      }
+    }
+
+    // User-gesture audio unlock for mobile and browser autoplay policies
+    function unlockAudioOnFirstInteraction() {
+      getAudioContext();
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.getVoices();
+      }
+      document.removeEventListener('click', unlockAudioOnFirstInteraction);
+      document.removeEventListener('touchstart', unlockAudioOnFirstInteraction);
+    }
+    document.addEventListener('click', unlockAudioOnFirstInteraction, { passive: true });
+    document.addEventListener('touchstart', unlockAudioOnFirstInteraction, { passive: true });
+
+    // Play Studio Native Spoken MP3 Audio with Instant Chime & Fallback
+    function playStudioAudio(filePath, fallbackFreq = 520, fallbackText = '') {
+      // 1. Instant delightful musical feedback via Web Audio synthesizer
+      playMusicalChime(fallbackFreq);
+
+      // 2. Normalize path to explicit relative path ./audio/...
+      const normalizedPath = filePath.startsWith('./') || filePath.startsWith('http') ? filePath : './' + filePath;
+
+      // 3. Play high-fidelity studio voice recording
+      try {
+        if (currentActiveAudio) {
+          currentActiveAudio.pause();
+          currentActiveAudio.currentTime = 0;
+        }
+        currentActiveAudio = new Audio(normalizedPath);
+        currentActiveAudio.volume = 1.0;
+        const playPromise = currentActiveAudio.play();
+        if (playPromise !== undefined) {
+          playPromise.catch(err => {
+            console.warn(`[Audio Notice] Could not play "${normalizedPath}". Make sure the "audio" directory was committed and pushed to GitHub!`, err);
+            if (fallbackText) speakFallbackText(fallbackText);
+          });
+        }
+      } catch (e) {
+        console.warn('[Audio Init Error]', e);
+        if (fallbackText) speakFallbackText(fallbackText);
+      }
+    }
+
+    // Backup Speech Synthesis
+    function speakFallbackText(text) {
+      if ('speechSynthesis' in window) {
+        window.speechSynthesis.cancel();
+        const utterance = new SpeechSynthesisUtterance(text);
+        utterance.rate = 0.85;
+        const voices = window.speechSynthesis.getVoices();
+        const tamilVoice = voices.find(v => v.lang && (v.lang.includes('ta') || v.lang.includes('ta-IN') || v.lang.includes('ta_LK')));
+        if (tamilVoice) utterance.voice = tamilVoice;
+        window.speechSynthesis.speak(utterance);
+      }
+    }
+
+    // ----------------------------------------------------
+    // 3. Soundboard Data & Vowels Logic
+    // ----------------------------------------------------
+    const vowelsData = [
+      { letter: 'அ', name: 'A', type: 'Short (குறில்)', word: 'அணில் (Anil)', meaning: 'Squirrel 🐿️', note: 'First letter of the Tamil alphabet', audio: 'audio/vowel_0.mp3', freq: 523.25 },
+      { letter: 'ஆ', name: 'Aa', type: 'Long (நெடில்)', word: 'ஆலமரம் (Aalamaram)', meaning: 'Banyan Tree 🌳', note: 'Majestic sacred tree', audio: 'audio/vowel_1.mp3', freq: 587.33 },
+      { letter: 'இ', name: 'I', type: 'Short (குறில்)', word: 'இலை (Ilai)', meaning: 'Leaf 🍃', note: 'Symbol of nature and growth', audio: 'audio/vowel_2.mp3', freq: 659.25 },
+      { letter: 'ஈ', name: 'Ee', type: 'Long (நெடில்)', word: 'ஈட்டி (Eetti)', meaning: 'Spear 🗡️', note: 'Ancient instrument of courage', audio: 'audio/vowel_3.mp3', freq: 698.46 },
+      { letter: 'உ', name: 'U', type: 'Short (குறில்)', word: 'உடுக்கை (Udukkai)', meaning: 'Drum 🪘', note: 'Traditional folk percussion instrument', audio: 'audio/vowel_4.mp3', freq: 783.99 },
+      { letter: 'ஊ', name: 'Oo', type: 'Long (நெடில்)', word: 'ஊஞ்சல் (Oonjal)', meaning: 'Swing 🎠', note: 'Traditional courtyard swing', audio: 'audio/vowel_5.mp3', freq: 880.00 },
+      { letter: 'எ', name: 'E', type: 'Short (குறில்)', word: 'எறும்பு (Erumbu)', meaning: 'Ant 🐜', note: 'Symbol of industry and hard work', audio: 'audio/vowel_6.mp3', freq: 987.77 },
+      { letter: 'ஏ', name: 'Ae', type: 'Long (நெடில்)', word: 'ஏணி (Eani)', meaning: 'Ladder 🪜', note: 'Symbol of climbing to wisdom', audio: 'audio/vowel_7.mp3', freq: 1046.50 },
+      { letter: 'ஐ', name: 'Ai', type: 'Diphthong', word: 'ஐந்து (Ainthu)', meaning: 'Five 🖐️', note: 'The number five (five elements/lands)', audio: 'audio/vowel_8.mp3', freq: 1174.66 },
+      { letter: 'ஒ', name: 'O', type: 'Short (குறில்)', word: 'ஒட்டகம் (Ottagam)', meaning: 'Camel 🐪', note: 'Patient desert wanderer', audio: 'audio/vowel_9.mp3', freq: 1318.51 },
+      { letter: 'ஓ', name: 'Oo', type: 'Long (நெடில்)', word: 'ஓடம் (Oadam)', meaning: 'Boat ⛵', note: 'Ancient river watercraft', audio: 'audio/vowel_10.mp3', freq: 1396.91 },
+      { letter: 'ஔ', name: 'Au', type: 'Diphthong', word: 'ஔவையார் (Avvaiyar)', meaning: 'Great Poetess 📜', note: 'Beloved poet of Aathichudi', audio: 'audio/vowel_11.mp3', freq: 1567.98 }
+    ];
+
+    let currentSelectedVowel = vowelsData[0];
+
+    function initSoundboard() {
+      const container = document.getElementById('vowels-grid');
+      if (!container) return;
+      container.innerHTML = '';
+
+      vowelsData.forEach((item, idx) => {
+        const card = document.createElement('button');
+        card.className = `p-4 rounded-2xl border-2 transition-all duration-300 text-center flex flex-col items-center justify-center gap-1 group hover:-translate-y-1.5 shadow-sm hover:shadow-md cursor-pointer ${idx === 0 ? 'border-brand-red bg-rose-50/50' : 'border-gray-200 bg-white hover:border-brand-red/50'}`;
+        card.id = `vowel-btn-${idx}`;
+        card.onclick = () => selectVowel(idx);
+        card.innerHTML = `
+          <div class="text-3xl font-extrabold text-dark-heading font-title group-hover:text-brand-red transition-colors group-hover:scale-110 duration-200">
+            ${item.letter}
+          </div>
+          <div class="text-[11px] font-bold text-gray-500 uppercase tracking-wider">
+            ${item.name}
+          </div>
+          <div class="text-[10px] text-gray-400">
+            ${item.word.split(' ')[0]}
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    }
+
+    function selectVowel(index) {
+      currentSelectedVowel = vowelsData[index];
+      
+      // Update UI active states
+      vowelsData.forEach((_, idx) => {
+        const btn = document.getElementById(`vowel-btn-${idx}`);
+        if (btn) {
+          if (idx === index) {
+            btn.className = "p-4 rounded-2xl border-2 transition-all duration-300 text-center flex flex-col items-center justify-center gap-1 group hover:-translate-y-1.5 shadow-md border-brand-red bg-rose-50/60 ring-2 ring-brand-red/20 cursor-pointer";
+          } else {
+            btn.className = "p-4 rounded-2xl border-2 transition-all duration-300 text-center flex flex-col items-center justify-center gap-1 group hover:-translate-y-1.5 shadow-sm border-gray-200 bg-white hover:border-brand-red/50 cursor-pointer";
+          }
+        }
+      });
+
+      // Update Showcase Card
+      const showcaseLetter = document.getElementById('showcase-letter');
+      showcaseLetter.textContent = currentSelectedVowel.letter;
+      showcaseLetter.classList.add('scale-110');
+      setTimeout(() => showcaseLetter.classList.remove('scale-110'), 250);
+
+      document.getElementById('showcase-index').textContent = `Letter ${index + 1} of 12`;
+      document.getElementById('showcase-phonetic').textContent = currentSelectedVowel.type;
+      document.getElementById('showcase-tamil-word').textContent = currentSelectedVowel.word;
+      document.getElementById('showcase-english-meaning').textContent = `Meaning: ${currentSelectedVowel.meaning} • ${currentSelectedVowel.note}`;
+
+      playActiveLetterVoice();
+    }
+
+    function playActiveLetterVoice() {
+      playStudioAudio(currentSelectedVowel.audio, currentSelectedVowel.freq, `${currentSelectedVowel.letter}, ${currentSelectedVowel.word.split(' ')[0]}`);
+    }
+
+    function playHeroLetter() {
+      playStudioAudio('audio/hero_sample.mp3', 523.25, 'அ, அணில்');
+    }
+
+
+    // ----------------------------------------------------
+    // 4. Memory Match Game Logic
+    // ----------------------------------------------------
+    const memoryItems = [
+      { id: 1, name: 'மயில் (Peacock)', icon: '🦚', desc: 'Mayil', audio: 'audio/word_mayil.mp3', freq: 523.25 },
+      { id: 2, name: 'சூரியன் (Sun)', icon: '☀️', desc: 'Sooriyan', audio: 'audio/word_sooriyan.mp3', freq: 659.25 },
+      { id: 3, name: 'தாமரை (Lotus)', icon: '🌸', desc: 'Thamarai', audio: 'audio/word_thamarai.mp3', freq: 783.99 },
+      { id: 4, name: 'யானை (Elephant)', icon: '🐘', desc: 'Yaanai', audio: 'audio/word_yaanai.mp3', freq: 880.00 }
+    ];
+
+    let gameCards = [];
+    let flippedCards = [];
+    let matchedPairs = 0;
+    let moves = 0;
+    let lockBoard = false;
+
+    function initMemoryGame() {
+      const container = document.getElementById('memory-cards-container');
+      if (!container) return;
+      
+      // Duplicate 4 items to make 8 cards (4 pairs)
+      gameCards = [...memoryItems, ...memoryItems].map((item, index) => ({
+        ...item,
+        uniqueId: index
+      }));
+
+      // Shuffle cards
+      gameCards.sort(() => Math.random() - 0.5);
+
+      container.innerHTML = '';
+      flippedCards = [];
+      matchedPairs = 0;
+      moves = 0;
+      lockBoard = false;
+
+      document.getElementById('game-moves-count').textContent = '0';
+      document.getElementById('game-pairs-count').textContent = '0 / 4';
+      document.getElementById('memory-victory-modal').classList.add('hidden');
+
+      gameCards.forEach((card) => {
+        const cardEl = document.createElement('div');
+        cardEl.className = "h-32 sm:h-36 relative cursor-pointer group";
+        cardEl.dataset.uniqueId = card.uniqueId;
+        cardEl.dataset.itemId = card.id;
+        cardEl.onclick = () => handleCardClick(cardEl, card);
+
+        cardEl.innerHTML = `
+          <div class="card-inner w-full h-full duration-500 transform-style-3d relative transition-transform">
+            <!-- Front Face (Hidden initially) -->
+            <div class="card-front absolute inset-0 bg-white rounded-2xl border-2 border-amber-300 shadow-md p-3 flex flex-col items-center justify-center gap-1 backface-hidden rotate-y-180">
+              <span class="text-3xl sm:text-4xl">${card.icon}</span>
+              <span class="text-xs font-bold text-dark-heading text-center font-title">${card.name}</span>
+              <span class="text-[10px] text-gray-500">${card.desc}</span>
+            </div>
+            <!-- Back Face (Shown initially) -->
+            <div class="card-back absolute inset-0 bg-gradient-to-br from-amber-400 to-amber-500 text-slate-900 rounded-2xl shadow-md p-3 flex flex-col items-center justify-center gap-1 backface-hidden group-hover:scale-105 transition-transform">
+              <span class="text-3xl font-black font-title">அ</span>
+              <span class="text-[10px] font-extrabold uppercase tracking-wider text-amber-900">Arivakam</span>
+            </div>
+          </div>
+        `;
+        container.appendChild(cardEl);
+      });
+    }
+
+    function handleCardClick(cardEl, cardData) {
+      if (lockBoard) return;
+      if (flippedCards.includes(cardEl)) return;
+      if (cardEl.classList.contains('is-matched')) return;
+
+      const inner = cardEl.querySelector('.card-inner');
+      inner.classList.add('rotate-y-180');
+      flippedCards.push(cardEl);
+      playMusicalChime(440, 0.15); // Friendly card flip chime
+
+      if (flippedCards.length === 2) {
+        moves++;
+        document.getElementById('game-moves-count').textContent = moves;
+        checkMatch();
+      }
+    }
+
+    function checkMatch() {
+      lockBoard = true;
+      const [card1, card2] = flippedCards;
+      const isMatch = card1.dataset.itemId === card2.dataset.itemId;
+
+      if (isMatch) {
+        const itemInfo = memoryItems.find(m => m.id == card1.dataset.itemId);
+        if (itemInfo && itemInfo.audio) {
+          playStudioAudio(itemInfo.audio, itemInfo.freq || 784, itemInfo.name);
+        } else {
+          playMusicalChime(784, 0.3);
+        }
+
+        card1.classList.add('is-matched');
+        card2.classList.add('is-matched');
+        matchedPairs++;
+        document.getElementById('game-pairs-count').textContent = `${matchedPairs} / 4`;
+        flippedCards = [];
+        lockBoard = false;
+
+        if (matchedPairs === 4) {
+          setTimeout(() => {
+            playStudioAudio('audio/victory.mp3', 880, 'வெற்றி! வாழ்த்துகள்!');
+            triggerConfetti();
+            document.getElementById('memory-victory-modal').classList.remove('hidden');
+          }, 450);
+        }
+      } else {
+        setTimeout(() => {
+          card1.querySelector('.card-inner').classList.remove('rotate-y-180');
+          card2.querySelector('.card-inner').classList.remove('rotate-y-180');
+          flippedCards = [];
+          lockBoard = false;
+        }, 900);
+      }
+    }
+
+    function resetMemoryGame() {
+      initMemoryGame();
+    }
+
+
+    // ----------------------------------------------------
+    // 5. Thirukkural Wisdom Compass Logic
+    // ----------------------------------------------------
+    const kuralCollection = {
+      friendship: [
+        {
+          num: 782,
+          chapter: 'Friendship (அதிகாரம்: நட்பு)',
+          tamil: 'செயற்கரிய யாவுள நட்பின் அதுபோல்<br>வினைக்கரிய யாவுள காப்பு.',
+          english: '"What is so difficult to acquire as true friendship? What is such a noble shield against harm?"',
+          action: 'Be a loyal, encouraging companion to your classmate or sibling today. True friends lift each other up!'
+        },
+        {
+          num: 785,
+          chapter: 'Friendship (அதிகாரம்: நட்பு)',
+          tamil: 'புணர்ச்சி பழகுதல் வேண்டா உணர்ச்சிதான்<br>நட்பாங் கிழமை தரும்.',
+          english: '"Long familiarity is not required for friendship; mutual understanding alone establishes true camaraderie."',
+          action: 'Reach out with kindness to a new child in class. Even a simple smile can build a lifelong bond.'
+        }
+      ],
+      education: [
+        {
+          num: 391,
+          chapter: 'Education (அதிகாரம்: கல்வி)',
+          tamil: 'கற்க கசடறக் கற்பவை கற்றபின்<br>நிற்க அதற்குத் தக.',
+          english: '"Learn thoroughly what ought to be learned; having learned, let your conduct strictly reflect that wisdom."',
+          action: 'Do your school and Tamil homework with honesty and curiosity today. Knowledge shapes noble character.'
+        },
+        {
+          num: 397,
+          chapter: 'Education (அதிகாரம்: கல்வி)',
+          tamil: 'யாதானும் நாடாமால் ஊராமால் என்னொருவன்<br>சாந்துணையுங் கல்லாத வாறு.',
+          english: '"To a learned mind, every land is their country and every city their home. Why then should anyone refuse to learn?"',
+          action: 'Ask questions freely! Learning Tamil opens doors across diaspora communities worldwide.'
+        }
+      ],
+      kindness: [
+        {
+          num: 71,
+          chapter: 'Love & Kindness (அதிகாரம்: அன்புடைமை)',
+          tamil: 'அன்பிற்கும் உண்டோ அடைக்குந்தாழ் ஆர்வலர்<br>புன்கணீர் பூசல் தரும்.',
+          english: '"Can any bolt bar love? The gentle tear of affection in one’s eye proclaims it to the whole world."',
+          action: 'Show gratitude to your parents, grandparents, and teachers today. Tell them you appreciate their love.'
+        },
+        {
+          num: 92,
+          chapter: 'Pleasant Words (அதிகாரம்: இனியவை கூறல்)',
+          tamil: 'அகன்அமர்ந்து ஈதலின் நன்றே முகனமர்ந்து<br>இன்சொலன் ஆகப் பெறின்.',
+          english: '"Better than a gift given with a reluctant heart is a warm smile and gentle, encouraging speech."',
+          action: 'Practice speaking courteous words like ‘Thank you’ and ‘Vanakkam’. Pleasant words spread joy.'
+        }
+      ],
+      truth: [
+        {
+          num: 291,
+          chapter: 'Truthfulness (அதிகாரம்: வாய்மை)',
+          tamil: 'வாய்மை எனப்படுவது யாதெனின் யாதொன்றும்<br>தீமை இலாத சொலல்.',
+          english: '"Truthfulness is defined as the speech that brings no harm to any living creature."',
+          action: 'Always be honest, but always speak with compassion. Truth without malice makes you courageous.'
+        }
+      ]
+    };
+
+    let activeCategory = 'friendship';
+    let kuralIndex = 0;
+
+    function selectKuralCategory(category) {
+      activeCategory = category;
+      kuralIndex = 0;
+
+      // Update button highlights
+      ['friendship', 'education', 'kindness', 'truth'].forEach(cat => {
+        const btn = document.getElementById(`btn-kural-${cat}`);
+        if (btn) {
+          if (cat === category) {
+            btn.className = "kural-cat-btn bg-emerald-600 text-white font-bold text-xs px-5 py-2.5 rounded-full shadow transition-all flex items-center gap-1.5 ring-2 ring-emerald-300";
+          } else {
+            btn.className = "kural-cat-btn bg-gray-100 text-gray-700 font-bold text-xs px-5 py-2.5 rounded-full hover:bg-gray-200 transition-all flex items-center gap-1.5";
+          }
+        }
+      });
+
+      playStudioAudio(`audio/kural_${category}.mp3`, 659.25, `திருக்குறள் அதிகாரம்: ${category}`);
+      renderActiveKural();
+    }
+
+    function spinNextKural() {
+      const kurals = kuralCollection[activeCategory];
+      kuralIndex = (kuralIndex + 1) % kurals.length;
+      playMusicalChime(587.33, 0.25);
+      renderActiveKural();
+    }
+
+    function renderActiveKural() {
+      const kural = kuralCollection[activeCategory][kuralIndex];
+      if (!kural) return;
+
+      document.getElementById('kural-chapter-title').textContent = kural.chapter;
+      document.getElementById('kural-number-badge').textContent = `Kural #${kural.num}`;
+      document.getElementById('kural-tamil-couplet').innerHTML = kural.tamil;
+      document.getElementById('kural-english-meaning').textContent = kural.english;
+      document.getElementById('kural-daily-action').textContent = kural.action;
+    }
+
+
+    // ----------------------------------------------------
+    // 6. 60-Second "Junior Tamil Explorer" Quiz Logic
+    // ----------------------------------------------------
+    const quizQuestions = [
+      {
+        question: '1. What does the respectful Tamil greeting "வணக்கம்" (Vanakkam) signify?',
+        options: [
+          'Hello / Greetings / I honor you',
+          'Good night only',
+          'Delicious dinner',
+          'Run fast'
+        ],
+        correct: 0,
+        explanation: '"Vanakkam" is the traditional Tamil greeting of warmth, respect, and welcome!'
+      },
+      {
+        question: '2. Which magnificent bird with iridescent feathers is celebrated in Tamil literature as "மயில்" (Mayil)?',
+        options: [
+          'Sparrow (சிட்டுக்குருவி)',
+          'Peacock (மயில்)',
+          'Parrot (கிளி)',
+          'Eagle (கழுகு)'
+        ],
+        correct: 1,
+        explanation: '"மயில்" (Mayil) is the proud peacock, celebrated in Sangam poetry and festivals!'
+      },
+      {
+        question: '3. How many primary vowel letters (உயிர் எழுத்துகள்) form the foundation of Tamil?',
+        options: [
+          '5 vowels',
+          '8 vowels',
+          '12 vowels (அ to ஔ)',
+          '26 vowels'
+        ],
+        correct: 2,
+        explanation: 'There are exactly 12 vowels (உயிர் எழுத்துகள்) starting from அ (A) to ஔ (Au)!'
+      }
+    ];
+
+    let currentQuestionIdx = 0;
+    let quizScore = 0;
+
+    function initQuiz() {
+      currentQuestionIdx = 0;
+      quizScore = 0;
+      document.getElementById('quiz-score-display').textContent = '0';
+      document.getElementById('quiz-header').classList.remove('hidden');
+      document.getElementById('quiz-question-container').classList.remove('hidden');
+      document.getElementById('quiz-result-container').classList.add('hidden');
+      renderQuestion();
+    }
+
+    function renderQuestion() {
+      const q = quizQuestions[currentQuestionIdx];
+      document.getElementById('quiz-progress-text').textContent = `Question ${currentQuestionIdx + 1} of ${quizQuestions.length}`;
+      document.getElementById('quiz-question-title').textContent = q.question;
+
+      const optsContainer = document.getElementById('quiz-options-container');
+      optsContainer.innerHTML = '';
+
+      q.options.forEach((opt, idx) => {
+        const btn = document.createElement('button');
+        btn.className = "w-full text-left bg-white/5 hover:bg-white/15 border border-white/15 p-4 rounded-2xl text-xs md:text-sm text-gray-100 font-semibold transition-all duration-200 flex items-center justify-between group hover:scale-[1.01] cursor-pointer";
+        btn.onclick = () => handleQuizAnswer(idx, btn);
+        btn.innerHTML = `
+          <span>${opt}</span>
+          <span class="w-6 h-6 rounded-full border border-white/20 flex items-center justify-center text-[10px] text-gray-400 group-hover:border-amber-300 group-hover:text-amber-300">
+            ${String.fromCharCode(65 + idx)}
+          </span>
+        `;
+        optsContainer.appendChild(btn);
+      });
+    }
+
+    function handleQuizAnswer(selectedIdx, clickedBtn) {
+      const q = quizQuestions[currentQuestionIdx];
+      const allBtns = document.getElementById('quiz-options-container').querySelectorAll('button');
+      allBtns.forEach(b => b.disabled = true);
+
+      if (selectedIdx === q.correct) {
+        clickedBtn.classList.remove('bg-white/5', 'border-white/15');
+        clickedBtn.classList.add('bg-emerald-600/60', 'border-emerald-400', 'text-white');
+        quizScore++;
+        document.getElementById('quiz-score-display').textContent = quizScore;
+        playStudioAudio('audio/quiz_correct.mp3', 659.25, 'மிகச் சரி!');
+      } else {
+        clickedBtn.classList.remove('bg-white/5', 'border-white/15');
+        clickedBtn.classList.add('bg-rose-600/60', 'border-rose-400', 'text-white');
+        allBtns[q.correct].classList.add('bg-emerald-600/40', 'border-emerald-400');
+        playStudioAudio('audio/quiz_wrong.mp3', 329.63, 'நல்ல முயற்சி!');
+      }
+
+      setTimeout(() => {
+        currentQuestionIdx++;
+        if (currentQuestionIdx < quizQuestions.length) {
+          renderQuestion();
+        } else {
+          showQuizResults();
+        }
+      }, 1200);
+    }
+
+    function showQuizResults() {
+      document.getElementById('quiz-header').classList.add('hidden');
+      document.getElementById('quiz-question-container').classList.add('hidden');
+      const resultContainer = document.getElementById('quiz-result-container');
+      resultContainer.classList.remove('hidden');
+
+      const message = document.getElementById('quiz-result-message');
+      if (quizScore === 3) {
+        message.textContent = `Magnificent 3/3 score! Your child has an extraordinary ear for Tamil phonetics and cultural symbols.`;
+        playStudioAudio('audio/victory.mp3', 880, 'வெற்றி!');
+        triggerConfetti();
+      } else {
+        message.textContent = `You scored ${quizScore} out of 3! A great first exploration. Regular structured classes at Arivakam quickly turn curiosity into lifelong mastery.`;
+        playMusicalChime(523.25, 0.4);
+      }
+    }
+
+    function restartQuiz() {
+      initQuiz();
+    }
+
+    function triggerConfetti() {
+      if (typeof confetti === 'function') {
+        confetti({
+          particleCount: 80,
+          spread: 70,
+          origin: { y: 0.6 }
+        });
+        setTimeout(() => {
+          confetti({
+            particleCount: 50,
+            angle: 60,
+            spread: 55,
+            origin: { x: 0 }
+          });
+          confetti({
+            particleCount: 50,
+            angle: 120,
+            spread: 55,
+            origin: { x: 1 }
+          });
+        }, 300);
+      }
+    }
+  </script>
+</body>
+</html>
