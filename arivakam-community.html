@@ -121,9 +121,9 @@
     }
   </script>
   <style>
-    /* ── Lenis Performance & Smooth Fixes ── */
+    /* ── Ultra-Smooth 120fps Native & Inertial Scroll Engine ── */
     html {
-      scroll-behavior: auto !important;
+      scroll-behavior: smooth;
     }
     html.lenis, html.lenis body {
       height: auto;
@@ -139,6 +139,22 @@
     }
     .lenis.lenis-scrolling iframe {
       pointer-events: none;
+    }
+
+    /* GPU-Composited Hardware Acceleration for 120fps Scrolling */
+    .gallery-item {
+      transform: translateZ(0);
+      backface-visibility: hidden;
+      contain: paint layout;
+    }
+    .gallery-item img {
+      transform: translateZ(0);
+      backface-visibility: hidden;
+    }
+
+    #scroll-progress-bar {
+      transform-origin: left;
+      will-change: transform;
     }
 
     /* ── Title Font ── */
@@ -290,7 +306,7 @@
 <body class="bg-white text-dark-heading font-body-md antialiased pt-20 relative">
 
   <!-- ── Top Reading Scroll Progress Bar ── -->
-  <div id="scroll-progress-bar" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-brand-red via-rose-500 to-amber-400 z-[60] transition-all duration-150 ease-out" style="width: 0%;"></div>
+  <div id="scroll-progress-bar" class="fixed top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-red via-rose-500 to-amber-400 z-[60] origin-left pointer-events-none transform-gpu" style="transform: scaleX(0);"></div>
 
   <!-- ── Floating Back-to-Top Button ── -->
   <button id="back-to-top" aria-label="Back to Top" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-brand-red text-white flex items-center justify-center shadow-xl hover:bg-brand-red-dark hover:scale-110 active:scale-95 transition-all duration-300 opacity-0 pointer-events-none translate-y-4">
@@ -298,11 +314,11 @@
   </button>
 
   <!-- ── TopNavBar ── -->
-  <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300 ease-in-out border-b border-gray-200">
+  <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm transition-transform duration-300 ease-out border-b border-gray-200 will-change-transform">
     <div class="flex justify-between items-center px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24 py-4 max-w-screen-2xl mx-auto">
       <div class="flex items-center">
         <a href="index.html" class="transition-transform hover:scale-105 duration-300">
-          <img alt="Arivakam Logo" class="h-14 w-auto object-contain" src="./Arivakam Logo.avif">
+          <img alt="Arivakam Logo" class="h-14 w-auto object-contain" src="./Arivakam Logo.avif" decoding="async">
         </a>
       </div>
 
@@ -499,7 +515,7 @@
           
           <!-- 0: Cultural - Vaakai Drama -->
           <div data-category="cultural" onclick="openLightbox(0)" class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer border border-gray-200 bg-gray-100 hover:shadow-xl transition-all duration-300">
-            <img src="./img/drama.avif" alt="Vaakai Youth Cultural Drama" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <img src="./img/drama.avif" alt="Vaakai Youth Cultural Drama" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
               <span class="text-xs text-brand-red font-bold uppercase">Cultural Fest</span>
               <span class="font-bold text-sm">Vaakai Youth Drama &amp; Theater</span>
@@ -508,7 +524,7 @@
 
           <!-- 1: Cultural - Pongal Festival -->
           <div data-category="cultural" onclick="openLightbox(1)" class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer border border-gray-200 bg-gray-100 hover:shadow-xl transition-all duration-300">
-            <img src="./img/festivals.avif" alt="Annual Pongal Festival" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <img src="./img/festivals.avif" alt="Annual Pongal Festival" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
               <span class="text-xs text-brand-red font-bold uppercase">Heritage Festival</span>
               <span class="font-bold text-sm">Annual Pongal Celebration</span>
@@ -517,7 +533,7 @@
 
           <!-- 2: Cultural - Vaakai Grand Stage -->
           <div data-category="cultural" onclick="openLightbox(2)" class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer border border-gray-200 bg-gray-100 hover:shadow-xl transition-all duration-300">
-            <img src="./img/13c47c_9f6b9614bb1a4a17ba41b1551511c872~mv2.avif" alt="Vaakai Grand Stage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <img src="./img/13c47c_9f6b9614bb1a4a17ba41b1551511c872~mv2.avif" alt="Vaakai Grand Stage" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
               <span class="text-xs text-brand-red font-bold uppercase">Vaakai Showcase</span>
               <span class="font-bold text-sm">Vaakai Grand Stage Production</span>
@@ -526,7 +542,7 @@
 
           <!-- 3: Cultural - Traditional Dance -->
           <div data-category="cultural" onclick="openLightbox(3)" class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer border border-gray-200 bg-gray-100 hover:shadow-xl transition-all duration-300">
-            <img src="./img/13c47c_3e5b906418d44fbdbd6f95bc91d1156d~mv2.avif" alt="Traditional Dance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <img src="./img/13c47c_3e5b906418d44fbdbd6f95bc91d1156d~mv2.avif" alt="Traditional Dance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
               <span class="text-xs text-brand-red font-bold uppercase">Cultural Fest</span>
               <span class="font-bold text-sm">Traditional Costumes &amp; Dance</span>
@@ -535,7 +551,7 @@
 
           <!-- 4: Cultural - Choir Orchestra -->
           <div data-category="cultural" onclick="openLightbox(4)" class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer border border-gray-200 bg-gray-100 hover:shadow-xl transition-all duration-300">
-            <img src="./img/13c47c_244a2e29ccc047c8b71583b63a2bd126~mv2.avif" alt="Choir Orchestra" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <img src="./img/13c47c_244a2e29ccc047c8b71583b63a2bd126~mv2.avif" alt="Choir Orchestra" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
               <span class="text-xs text-brand-red font-bold uppercase">Music &amp; Song</span>
               <span class="font-bold text-sm">Youth Choir &amp; Orchestra Gala</span>
@@ -544,7 +560,7 @@
 
           <!-- 5: Cultural - Folk Dance Ensembles -->
           <div data-category="cultural" onclick="openLightbox(5)" class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer border border-gray-200 bg-gray-100 hover:shadow-xl transition-all duration-300">
-            <img src="./img/13c47c_716c8e7ff1b541698708c1d572a73dd4~mv2.avif" alt="Folk Dance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <img src="./img/13c47c_716c8e7ff1b541698708c1d572a73dd4~mv2.avif" alt="Folk Dance" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
               <span class="text-xs text-brand-red font-bold uppercase">Folk Arts</span>
               <span class="font-bold text-sm">Tamil Folk Dance Ensembles</span>
@@ -553,7 +569,7 @@
 
           <!-- 6: Cultural - Community Summit -->
           <div data-category="cultural" onclick="openLightbox(6)" class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer border border-gray-200 bg-gray-100 hover:shadow-xl transition-all duration-300">
-            <img src="./img/13c47c_fe698e764fe741859bec2bee6ed036c1~mv2.avif" alt="Community Summit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <img src="./img/13c47c_fe698e764fe741859bec2bee6ed036c1~mv2.avif" alt="Community Summit" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
               <span class="text-xs text-brand-red font-bold uppercase">Annual Assembly</span>
               <span class="font-bold text-sm">Grand Diaspora Community Summit</span>
@@ -562,7 +578,7 @@
 
           <!-- 7: Cultural - Gala Evening -->
           <div data-category="cultural" onclick="openLightbox(7)" class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer border border-gray-200 bg-gray-100 hover:shadow-xl transition-all duration-300">
-            <img src="./img/13c47c_7999feaba51f4b59b335534681ecb073~mv2.avif" alt="Gala Evening" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <img src="./img/13c47c_7999feaba51f4b59b335534681ecb073~mv2.avif" alt="Gala Evening" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
               <span class="text-xs text-brand-red font-bold uppercase">Gala Evening</span>
               <span class="font-bold text-sm">Youth Celebration &amp; Banquet</span>
@@ -571,7 +587,7 @@
 
           <!-- 8: Contest - Speech Contest -->
           <div data-category="contest" onclick="openLightbox(8)" class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer border border-gray-200 bg-gray-100 hover:shadow-xl transition-all duration-300">
-            <img src="./img/speach.avif" alt="Youth Speech Contest" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <img src="./img/speach.avif" alt="Youth Speech Contest" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
               <span class="text-xs text-brand-red font-bold uppercase">Speech &amp; Oratory</span>
               <span class="font-bold text-sm">Youth Public Speaking Contest</span>
@@ -580,7 +596,7 @@
 
           <!-- 9: Contest - Student Art Exhibition -->
           <div data-category="contest" onclick="openLightbox(9)" class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer border border-gray-200 bg-gray-100 hover:shadow-xl transition-all duration-300">
-            <img src="./img/art.avif" alt="Student Art Exhibition" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <img src="./img/art.avif" alt="Student Art Exhibition" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
               <span class="text-xs text-brand-red font-bold uppercase">Visual Arts</span>
               <span class="font-bold text-sm">Student Painting &amp; Poster Contest</span>
@@ -589,7 +605,7 @@
 
           <!-- 10: Contest - Speech Finals Podium -->
           <div data-category="contest" onclick="openLightbox(10)" class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer border border-gray-200 bg-gray-100 hover:shadow-xl transition-all duration-300">
-            <img src="./img/13c47c_0fd4050dfa914999a053ed9e379fc63e~mv2.avif" alt="Speech Finals Podium" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <img src="./img/13c47c_0fd4050dfa914999a053ed9e379fc63e~mv2.avif" alt="Speech Finals Podium" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
               <span class="text-xs text-brand-red font-bold uppercase">Oratory Finals</span>
               <span class="font-bold text-sm">Regional Speech Finalists</span>
@@ -598,7 +614,7 @@
 
           <!-- 11: Contest - Thirukkural Recitation -->
           <div data-category="contest" onclick="openLightbox(11)" class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer border border-gray-200 bg-gray-100 hover:shadow-xl transition-all duration-300">
-            <img src="./img/13c47c_1c21a73e2b4f4b8cac529b4ad6d97049~mv2.avif" alt="Thirukkural Recitation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <img src="./img/13c47c_1c21a73e2b4f4b8cac529b4ad6d97049~mv2.avif" alt="Thirukkural Recitation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
               <span class="text-xs text-brand-red font-bold uppercase">Literature Challenge</span>
               <span class="font-bold text-sm">Thirukkural Recitation Contest</span>
@@ -607,7 +623,7 @@
 
           <!-- 12: Contest - Tamil Elocution Contest -->
           <div data-category="contest" onclick="openLightbox(12)" class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer border border-gray-200 bg-gray-100 hover:shadow-xl transition-all duration-300">
-            <img src="./img/13c47c_1c928bf57051469a8320c18e4f94af61~mv2.avif" alt="Tamil Elocution" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <img src="./img/13c47c_1c928bf57051469a8320c18e4f94af61~mv2.avif" alt="Tamil Elocution" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
               <span class="text-xs text-brand-red font-bold uppercase">Youth Leadership</span>
               <span class="font-bold text-sm">Tamil Elocution &amp; Eloquence</span>
@@ -616,7 +632,7 @@
 
           <!-- 13: Contest - Spelling Bee -->
           <div data-category="contest" onclick="openLightbox(13)" class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer border border-gray-200 bg-gray-100 hover:shadow-xl transition-all duration-300">
-            <img src="./img/13c47c_31e888d7f6f14b8584888447fc36e305~mv2.avif" alt="Spelling Bee" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <img src="./img/13c47c_31e888d7f6f14b8584888447fc36e305~mv2.avif" alt="Spelling Bee" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
               <span class="text-xs text-brand-red font-bold uppercase">Tamil Bee</span>
               <span class="font-bold text-sm">Annual Tamil Spelling Bee</span>
@@ -625,7 +641,7 @@
 
           <!-- 14: Contest - Trophy Presentation -->
           <div data-category="contest" onclick="openLightbox(14)" class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer border border-gray-200 bg-gray-100 hover:shadow-xl transition-all duration-300">
-            <img src="./img/13c47c_505e45075b1e41bea86a5458adeeedf5~mv2.avif" alt="Trophy Presentation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <img src="./img/13c47c_505e45075b1e41bea86a5458adeeedf5~mv2.avif" alt="Trophy Presentation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
               <span class="text-xs text-brand-red font-bold uppercase">Podium Honors</span>
               <span class="font-bold text-sm">Speech Contest Trophy Laureates</span>
@@ -634,7 +650,7 @@
 
           <!-- 15: Contest - Calligraphy & Poster Showcase -->
           <div data-category="contest" onclick="openLightbox(15)" class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer border border-gray-200 bg-gray-100 hover:shadow-xl transition-all duration-300">
-            <img src="./img/13c47c_5b697dbd28024dcbb93bea68dfce7c75~mv2.avif" alt="Calligraphy Showcase" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <img src="./img/13c47c_5b697dbd28024dcbb93bea68dfce7c75~mv2.avif" alt="Calligraphy Showcase" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
               <span class="text-xs text-brand-red font-bold uppercase">Student Craft</span>
               <span class="font-bold text-sm">Tamil Script &amp; Calligraphy Gallery</span>
@@ -643,7 +659,7 @@
 
           <!-- 16: Academic - Smart Digital Classroom -->
           <div data-category="academic" onclick="openLightbox(16)" class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer border border-gray-200 bg-gray-100 hover:shadow-xl transition-all duration-300">
-            <img src="./img/interactive.avif" alt="Interactive Classroom" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <img src="./img/interactive.avif" alt="Interactive Classroom" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
               <span class="text-xs text-brand-red font-bold uppercase">Interactive Labs</span>
               <span class="font-bold text-sm">Smart Digital Tamil Classroom</span>
@@ -652,7 +668,7 @@
 
           <!-- 17: Academic - Preschool Mazhalai Pod -->
           <div data-category="academic" onclick="openLightbox(17)" class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer border border-gray-200 bg-gray-100 hover:shadow-xl transition-all duration-300">
-            <img src="./img/preschool.avif" alt="Preschool Pod" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <img src="./img/preschool.avif" alt="Preschool Pod" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
               <span class="text-xs text-brand-red font-bold uppercase">Early Childhood</span>
               <span class="font-bold text-sm">Mazhalai Play-Based Learning Pod</span>
@@ -661,7 +677,7 @@
 
           <!-- 18: Academic - Primary Reading Circle -->
           <div data-category="academic" onclick="openLightbox(18)" class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer border border-gray-200 bg-gray-100 hover:shadow-xl transition-all duration-300">
-            <img src="./img/primary.avif" alt="Primary Classroom" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <img src="./img/primary.avif" alt="Primary Classroom" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
               <span class="text-xs text-brand-red font-bold uppercase">Elementary Pod</span>
               <span class="font-bold text-sm">Primary Tamil Reading Circle</span>
@@ -670,7 +686,7 @@
 
           <!-- 19: Academic - Intermediate Literature -->
           <div data-category="academic" onclick="openLightbox(19)" class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer border border-gray-200 bg-gray-100 hover:shadow-xl transition-all duration-300">
-            <img src="./img/intermediate.avif" alt="Intermediate Literature" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <img src="./img/intermediate.avif" alt="Intermediate Literature" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
               <span class="text-xs text-brand-red font-bold uppercase">Literature &amp; Grammar</span>
               <span class="font-bold text-sm">Intermediate Literature &amp; Essay Writing</span>
@@ -679,7 +695,7 @@
 
           <!-- 20: Academic - Faculty Conference -->
           <div data-category="academic" onclick="openLightbox(20)" class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer border border-gray-200 bg-gray-100 hover:shadow-xl transition-all duration-300">
-            <img src="./img/teachers.avif" alt="Faculty Conference" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <img src="./img/teachers.avif" alt="Faculty Conference" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
               <span class="text-xs text-brand-red font-bold uppercase">Educator Seminars</span>
               <span class="font-bold text-sm">Faculty Academic Conference</span>
@@ -688,7 +704,7 @@
 
           <!-- 21: Academic - Student Activity Workshop -->
           <div data-category="academic" onclick="openLightbox(21)" class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer border border-gray-200 bg-gray-100 hover:shadow-xl transition-all duration-300">
-            <img src="./img/13c47c_08da53c7daa946b5a25af1481fe42074~mv2.avif" alt="Student Activity Workshop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <img src="./img/13c47c_08da53c7daa946b5a25af1481fe42074~mv2.avif" alt="Student Activity Workshop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
               <span class="text-xs text-brand-red font-bold uppercase">Campus Hub</span>
               <span class="font-bold text-sm">Collaborative Student Workshop</span>
@@ -697,7 +713,7 @@
 
           <!-- 22: Academic - Small-Group Reading Mentorship -->
           <div data-category="academic" onclick="openLightbox(22)" class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer border border-gray-200 bg-gray-100 hover:shadow-xl transition-all duration-300">
-            <img src="./img/13c47c_123fb81b9f8a4e0c8003cb1c769e05ba~mv2.avif" alt="Small-Group Mentorship" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <img src="./img/13c47c_123fb81b9f8a4e0c8003cb1c769e05ba~mv2.avif" alt="Small-Group Mentorship" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
               <span class="text-xs text-brand-red font-bold uppercase">Peer Learning</span>
               <span class="font-bold text-sm">Small-Group Reading Mentorship</span>
@@ -706,7 +722,7 @@
 
           <!-- 23: Academic - Teacher Training Seminar -->
           <div data-category="academic" onclick="openLightbox(23)" class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer border border-gray-200 bg-gray-100 hover:shadow-xl transition-all duration-300">
-            <img src="./img/13c47c_660c535da9af4e2fbd14f86298a502b8~mv2.avif" alt="Teacher Seminar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <img src="./img/13c47c_660c535da9af4e2fbd14f86298a502b8~mv2.avif" alt="Teacher Seminar" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
               <span class="text-xs text-brand-red font-bold uppercase">Professional Dev</span>
               <span class="font-bold text-sm">Teacher Training &amp; Curriculum Workshop</span>
@@ -715,7 +731,7 @@
 
           <!-- 24: Graduation - Grade 8 Convocation -->
           <div data-category="graduation" onclick="openLightbox(24)" class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer border border-gray-200 bg-gray-100 hover:shadow-xl transition-all duration-300">
-            <img src="./img/13c47c_f616555a01e0445dbd98edc64dfe0600~mv2.avif" alt="Grade 8 Convocation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <img src="./img/13c47c_f616555a01e0445dbd98edc64dfe0600~mv2.avif" alt="Grade 8 Convocation" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
               <span class="text-xs text-brand-red font-bold uppercase">Graduation</span>
               <span class="font-bold text-sm">Grade 8 Cap &amp; Gown Convocation</span>
@@ -724,7 +740,7 @@
 
           <!-- 25: Graduation - Graduating Class -->
           <div data-category="graduation" onclick="openLightbox(25)" class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer border border-gray-200 bg-gray-100 hover:shadow-xl transition-all duration-300">
-            <img src="./img/13c47c_54660ee7f040483998c90fbc855a3bcb~mv2.avif" alt="Graduating Class" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <img src="./img/13c47c_54660ee7f040483998c90fbc855a3bcb~mv2.avif" alt="Graduating Class" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
               <span class="text-xs text-brand-red font-bold uppercase">Diploma Holders</span>
               <span class="font-bold text-sm">Arivakam Graduating Class of Excellence</span>
@@ -733,7 +749,7 @@
 
           <!-- 26: Graduation - Stage Conferral -->
           <div data-category="graduation" onclick="openLightbox(26)" class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer border border-gray-200 bg-gray-100 hover:shadow-xl transition-all duration-300">
-            <img src="./img/13c47c_1ddc13f5d7814a28b892320d2aef9244~mv2.avif" alt="Stage Conferral" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <img src="./img/13c47c_1ddc13f5d7814a28b892320d2aef9244~mv2.avif" alt="Stage Conferral" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
               <span class="text-xs text-brand-red font-bold uppercase">Commencement</span>
               <span class="font-bold text-sm">Official Diploma Conferral on Stage</span>
@@ -742,7 +758,7 @@
 
           <!-- 27: Graduation - Processional Dignitaries -->
           <div data-category="graduation" onclick="openLightbox(27)" class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer border border-gray-200 bg-gray-100 hover:shadow-xl transition-all duration-300">
-            <img src="./img/13c47c_a854d8db3170453cb6026b22c57f9cc9~mv2.avif" alt="Graduation Processional" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <img src="./img/13c47c_a854d8db3170453cb6026b22c57f9cc9~mv2.avif" alt="Graduation Processional" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
               <span class="text-xs text-brand-red font-bold uppercase">Academic Ceremony</span>
               <span class="font-bold text-sm">Graduation Formal Procession</span>
@@ -751,7 +767,7 @@
 
           <!-- 28: Graduation - Valedictorian Address -->
           <div data-category="graduation" onclick="openLightbox(28)" class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer border border-gray-200 bg-gray-100 hover:shadow-xl transition-all duration-300">
-            <img src="./img/13c47c_82b72326d07d4920b9912c90e428ea87~mv2.avif" alt="Valedictorian Address" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <img src="./img/13c47c_82b72326d07d4920b9912c90e428ea87~mv2.avif" alt="Valedictorian Address" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
               <span class="text-xs text-brand-red font-bold uppercase">Valedictorian</span>
               <span class="font-bold text-sm">Valedictory Keynote Address</span>
@@ -760,7 +776,7 @@
 
           <!-- 29: Graduation - Merit Gold Medals -->
           <div data-category="graduation" onclick="openLightbox(29)" class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer border border-gray-200 bg-gray-100 hover:shadow-xl transition-all duration-300">
-            <img src="./img/13c47c_ecee5f4364374d0689ebf309891bad5c~mv2.avif" alt="Merit Gold Medals" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <img src="./img/13c47c_ecee5f4364374d0689ebf309891bad5c~mv2.avif" alt="Merit Gold Medals" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
               <span class="text-xs text-brand-red font-bold uppercase">Academic Honors</span>
               <span class="font-bold text-sm">Gold Medals &amp; Merit Awards</span>
@@ -769,7 +785,7 @@
 
           <!-- 30: Graduation - Commencement Families -->
           <div data-category="graduation" onclick="openLightbox(30)" class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer border border-gray-200 bg-gray-100 hover:shadow-xl transition-all duration-300">
-            <img src="./img/13c47c_d192989e7ffc4950925d567a15131241~mv2.avif" alt="Commencement Families" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <img src="./img/13c47c_d192989e7ffc4950925d567a15131241~mv2.avif" alt="Commencement Families" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
               <span class="text-xs text-brand-red font-bold uppercase">Family Celebration</span>
               <span class="font-bold text-sm">Commencement Graduates &amp; Families</span>
@@ -778,7 +794,7 @@
 
           <!-- 31: Graduation - High School Credit Recognition -->
           <div data-category="graduation" onclick="openLightbox(31)" class="gallery-item group relative aspect-[4/3] rounded-2xl overflow-hidden shadow-md cursor-pointer border border-gray-200 bg-gray-100 hover:shadow-xl transition-all duration-300">
-            <img src="./img/13c47c_953b0a54eec74c18a58f505c1b8d4c0e~mv2.avif" alt="High School Credit Recognition" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" decoding="async">
+            <img src="./img/13c47c_953b0a54eec74c18a58f505c1b8d4c0e~mv2.avif" alt="High School Credit Recognition" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" width="400" height="300" loading="lazy" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity p-4 flex flex-col justify-end text-white">
               <span class="text-xs text-brand-red font-bold uppercase">Tamil Accreditation</span>
               <span class="font-bold text-sm">High School Credit &amp; Diplomas</span>
@@ -819,7 +835,7 @@
       </button>
 
       <!-- Main Image -->
-      <img id="lightbox-img" class="max-w-full max-h-[75vh] object-contain rounded-2xl shadow-2xl border border-white/10 transition-transform duration-300" src="" alt="Enlarged View">
+      <img id="lightbox-img" class="max-w-full max-h-[75vh] object-contain rounded-2xl shadow-2xl border border-white/10 transition-transform duration-300" src="" alt="Enlarged View" decoding="async">
 
       <!-- Next Button -->
       <button onclick="nextLightbox()" aria-label="Next Photo" class="absolute right-2 md:right-4 z-20 w-12 h-12 rounded-full bg-white/15 text-white flex items-center justify-center hover:bg-brand-red hover:scale-110 active:scale-95 transition-all backdrop-blur-md shadow-lg">
@@ -840,7 +856,7 @@
     <div class="max-w-screen-2xl mx-auto px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-gray-800">
         <div>
-          <img src="./Arivakam Logo.avif" alt="Arivakam Logo" class="h-12 w-auto mb-4 object-contain">
+          <img src="./Arivakam Logo.avif" alt="Arivakam Logo" class="h-12 w-auto mb-4 object-contain" decoding="async">
           <p class="text-xs text-gray-400 leading-relaxed mb-4">
             Arivakam Tamil Cultural Academy is a registered non-profit educational institution dedicated to Tamil language, literature, arts, and cultural heritage across North America since 2008.
           </p>
@@ -915,13 +931,14 @@
       let lenis = null;
       if (typeof Lenis !== "undefined") {
         lenis = new Lenis({
-          duration: 0.85,
+          duration: 0.5,
           easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
           orientation: 'vertical',
           gestureOrientation: 'vertical',
           smoothWheel: true,
-          wheelMultiplier: 1.05,
-          touchMultiplier: 1.5,
+          wheelMultiplier: 1.0,
+          touchMultiplier: 0,
+          syncTouch: true,
           infinite: false
         });
 
@@ -941,7 +958,7 @@
               const targetEl = document.querySelector(targetId);
               if (targetEl) {
                 e.preventDefault();
-                lenis.scrollTo(targetEl, { offset: -70, duration: 1.1 });
+                lenis.scrollTo(targetEl, { offset: -70, duration: 0.7 });
                 const drawerEl = document.getElementById("mobile-drawer");
                 if (drawerEl && !drawerEl.classList.contains("hidden")) {
                   drawerEl.classList.add("hidden");
@@ -961,8 +978,9 @@
         });
       }
 
-      // 2. High-Performance Header & Progress Bar (Zero Forced Layout Reflow)
+      // 2. High-Performance Header & GPU-Composited Progress Bar
       let lastScrollY = window.scrollY;
+      let lastNavScrollY = 0;
       const navbar = document.querySelector("nav");
       const progressBar = document.getElementById("scroll-progress-bar");
       const backToTopBtn = document.getElementById("back-to-top");
@@ -971,7 +989,7 @@
         backToTopBtn.addEventListener("click", (e) => {
           e.preventDefault();
           if (lenis) {
-            lenis.scrollTo(0, { duration: 1.2 });
+            lenis.scrollTo(0, { duration: 0.8 });
           } else {
             window.scrollTo({ top: 0, behavior: "smooth" });
           }
@@ -981,17 +999,19 @@
       function updateScrollUI(scrollY, scrollProgress, scrollDirection) {
         const isDrawerOpen = drawer && !drawer.classList.contains("hidden");
 
-        if (navbar) {
+        // Smart Header Hide with threshold to prevent micro-stutter
+        if (navbar && Math.abs(scrollY - lastNavScrollY) > 10) {
           if (scrollY > 120 && scrollDirection > 0 && !isDrawerOpen) {
             navbar.classList.add("-translate-y-full");
           } else if (scrollDirection < 0 || scrollY <= 120) {
             navbar.classList.remove("-translate-y-full");
           }
+          lastNavScrollY = scrollY;
         }
 
-        // Reading Progress Bar
+        // Reading Progress Bar: Pure GPU scaleX transform, 0ms layout cost
         if (progressBar) {
-          progressBar.style.width = Math.min(100, Math.max(0, scrollProgress * 100)) + "%";
+          progressBar.style.transform = `scaleX(${Math.min(1, Math.max(0, scrollProgress))})`;
         }
 
         // Back to top visibility

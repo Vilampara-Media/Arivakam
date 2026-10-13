@@ -169,6 +169,23 @@
     }
   </script>
   <style>
+    /* Ultra-Smooth 120fps GPU Hardware Acceleration */
+    html {
+      scroll-behavior: smooth;
+    }
+    #scroll-progress-bar {
+      transform-origin: left;
+      will-change: transform;
+    }
+    .gallery-item, .album-card, .sponsor-card, .premium-card-hover {
+      transform: translateZ(0);
+      backface-visibility: hidden;
+    }
+    .gallery-item img, .album-card img, .sponsor-card img {
+      transform: translateZ(0);
+      backface-visibility: hidden;
+    }
+
     /* Ultra-Smooth Inertial Scrolling (Lenis) */
     html, body {
       scroll-behavior: auto !important;
@@ -372,7 +389,7 @@
 <body class="bg-white text-dark-heading font-body-md antialiased pt-20 relative">
 
   <!-- Top Reading Scroll Progress Bar -->
-  <div id="scroll-progress-bar" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-brand-red via-rose-500 to-amber-400 z-[60] transition-all duration-150 ease-out" style="width: 0%;"></div>
+  <div id="scroll-progress-bar" class="fixed top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-red via-rose-500 to-amber-400 z-[60] origin-left pointer-events-none transform-gpu" style="transform: scaleX(0);"></div>
 
   <!-- Floating Back-to-Top Button -->
   <button id="back-to-top" aria-label="Back to Top" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-brand-red text-white flex items-center justify-center shadow-xl hover:bg-brand-red-dark hover:scale-110 active:scale-95 transition-all duration-300 opacity-0 pointer-events-none translate-y-4">
@@ -380,11 +397,11 @@
   </button>
 
   <!-- TopNavBar Component -->
-  <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300 ease-in-out border-b border-gray-200">
+  <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm transition-transform duration-300 ease-out border-b border-gray-200 will-change-transform">
     <div class="flex justify-between items-center px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24 py-4 max-w-screen-2xl mx-auto">
       <div class="flex items-center">
         <a href="index.html" class="transition-transform hover:scale-105 duration-300">
-          <img alt="Arivakam Logo" class="h-14 w-auto object-contain" src="./Arivakam Logo.avif">
+          <img alt="Arivakam Logo" class="h-14 w-auto object-contain" src="./Arivakam Logo.avif" decoding="async">
         </a>
       </div>
 
@@ -531,19 +548,19 @@
             <div class="relative aspect-[16/10] rounded-2xl overflow-hidden bg-gray-100 shadow-inner">
               <!-- Slide 1 -->
               <div class="hero-slide absolute inset-0 opacity-100 transition-opacity duration-700 ease-in-out">
-                <img alt="Arivakam Cultural Assembly" class="w-full h-full object-cover" src="https://static.wixstatic.com/media/13c47c_aaa4324e97b242388ac66a8f19111f0d~mv2.jpg/v1/fit/w_9395,h_515,q_90,enc_avif,quality_auto/13c47c_aaa4324e97b242388ac66a8f19111f0d~mv2.jpg">
+                <img alt="Arivakam Cultural Assembly" class="w-full h-full object-cover" src="https://static.wixstatic.com/media/13c47c_aaa4324e97b242388ac66a8f19111f0d~mv2.jpg/v1/fit/w_9395,h_515,q_90,enc_avif,quality_auto/13c47c_aaa4324e97b242388ac66a8f19111f0d~mv2.jpg" decoding="async">
               </div>
               <!-- Slide 2 -->
               <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out">
-                <img alt="Arivakam Tamil Academy Classroom" class="w-full h-full object-cover" src="https://static.wixstatic.com/media/13c47c_a097d89304524e289a7d65cdb54df5b1~mv2.jpg/v1/fill/w_3429,h_1269,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/13c47c_a097d89304524e289a7d65cdb54df5b1~mv2.jpg">
+                <img alt="Arivakam Tamil Academy Classroom" class="w-full h-full object-cover" src="https://static.wixstatic.com/media/13c47c_a097d89304524e289a7d65cdb54df5b1~mv2.jpg/v1/fill/w_3429,h_1269,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/13c47c_a097d89304524e289a7d65cdb54df5b1~mv2.jpg" decoding="async">
               </div>
               <!-- Slide 3 -->
               <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out">
-                <img alt="Student Artwork & Learning" class="w-full h-full object-cover" src="https://static.wixstatic.com/media/13c47c_d0e649703d8c4b179ee763e420b4fc90~mv2.png/v1/fill/w_1180,h_683,al_c,q_90,enc_avif,quality_auto/13c47c_d0e649703d8c4b179ee763e420b4fc90~mv2.png">
+                <img alt="Student Artwork & Learning" class="w-full h-full object-cover" src="https://static.wixstatic.com/media/13c47c_d0e649703d8c4b179ee763e420b4fc90~mv2.png/v1/fill/w_1180,h_683,al_c,q_90,enc_avif,quality_auto/13c47c_d0e649703d8c4b179ee763e420b4fc90~mv2.png" decoding="async">
               </div>
               <!-- Slide 4 -->
               <div class="hero-slide absolute inset-0 opacity-0 transition-opacity duration-700 ease-in-out">
-                <img alt="Arivakam Graduation & Award Ceremony" class="w-full h-full object-cover" src="https://static.wixstatic.com/media/13c47c_d69577ae220d4b1da684a8ea63cb1ba0~mv2.png/v1/fit/w_1790,h_1164,q_90,enc_avif,quality_auto/13c47c_d69577ae220d4b1da684a8ea63cb1ba0~mv2.png">
+                <img alt="Arivakam Graduation & Award Ceremony" class="w-full h-full object-cover" src="https://static.wixstatic.com/media/13c47c_d69577ae220d4b1da684a8ea63cb1ba0~mv2.png/v1/fit/w_1790,h_1164,q_90,enc_avif,quality_auto/13c47c_d69577ae220d4b1da684a8ea63cb1ba0~mv2.png" decoding="async">
               </div>
 
               <!-- Dynamic Glass Caption Overlay at Bottom of Card -->
@@ -637,12 +654,12 @@
         <!-- Polaroid Style Interactive Photo Cards Stack -->
         <div class="relative flex items-center justify-center gap-4 shrink-0 pt-4 lg:pt-0 z-10">
           <div class="relative group/card1">
-            <img class="w-36 h-48 md:w-44 md:h-56 object-cover rounded-2xl border-4 border-white shadow-xl rotate-[-4deg] group-hover/card1:rotate-0 transition-transform duration-300" src="https://static.wixstatic.com/media/13c47c_7700a62d3ed34d979eb1b4499ac9640c~mv2.png/v1/fill/w_240,h_240,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fb%20ad%20posts.png" alt="Arivakam Tamil Class Registration Ad">
+            <img class="w-36 h-48 md:w-44 md:h-56 object-cover rounded-2xl border-4 border-white shadow-xl rotate-[-4deg] group-hover/card1:rotate-0 transition-transform duration-300" src="https://static.wixstatic.com/media/13c47c_7700a62d3ed34d979eb1b4499ac9640c~mv2.png/v1/fill/w_240,h_240,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/fb%20ad%20posts.png" alt="Arivakam Tamil Class Registration Ad" decoding="async">
             <span class="absolute bottom-2 left-2 bg-brand-navy/90 backdrop-blur-md text-white text-[10px] font-bold px-2 py-1 rounded-md shadow">Preschool</span>
           </div>
 
           <div class="relative group/card2 translate-y-4">
-            <img class="w-36 h-48 md:w-44 md:h-56 object-cover rounded-2xl border-4 border-white shadow-xl rotate-[4deg] group-hover/card2:rotate-0 transition-transform duration-300" src="https://static.wixstatic.com/media/13c47c_4fcc2896d1784fc5b3cdd36deb65836f~mv2.png/v1/crop/x_364,y_0,w_1166,h_1166/fill/w_240,h_240,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screen%20Shot%202023-03-06%20at%201_56_35%20PM.png" alt="Arivakam Student Learning Activity">
+            <img class="w-36 h-48 md:w-44 md:h-56 object-cover rounded-2xl border-4 border-white shadow-xl rotate-[4deg] group-hover/card2:rotate-0 transition-transform duration-300" src="https://static.wixstatic.com/media/13c47c_4fcc2896d1784fc5b3cdd36deb65836f~mv2.png/v1/crop/x_364,y_0,w_1166,h_1166/fill/w_240,h_240,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/Screen%20Shot%202023-03-06%20at%201_56_35%20PM.png" alt="Arivakam Student Learning Activity" decoding="async">
             <span class="absolute bottom-2 left-2 bg-brand-red text-white text-[10px] font-bold px-2 py-1 rounded-md shadow">Grade 1-8</span>
           </div>
         </div>
@@ -715,7 +732,7 @@
             </div>
             <!-- Image Fills 100% Remaining Vertical Height of Frame -->
             <div class="flex-1 w-full min-h-[220px] md:min-h-[260px] relative overflow-hidden rounded-2xl border border-black/5 shadow-inner group-hover:shadow-md transition-shadow">
-              <img alt="Structured Tamil Curriculum" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://static.wixstatic.com/media/13c47c_a097d89304524e289a7d65cdb54df5b1~mv2.jpg/v1/fill/w_3429,h_1269,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/13c47c_a097d89304524e289a7d65cdb54df5b1~mv2.jpg">
+              <img alt="Structured Tamil Curriculum" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://static.wixstatic.com/media/13c47c_a097d89304524e289a7d65cdb54df5b1~mv2.jpg/v1/fill/w_3429,h_1269,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/13c47c_a097d89304524e289a7d65cdb54df5b1~mv2.jpg" decoding="async">
             </div>
           </div>
 
@@ -735,7 +752,7 @@
                 </p>
               </div>
               <div class="relative overflow-hidden rounded-xl border border-black/5 shadow-inner">
-                <img alt="Student Artwork & Literature Projects" class="w-full h-32 md:h-36 object-cover group-hover:scale-105 transition-transform duration-700" src="https://static.wixstatic.com/media/13c47c_d0e649703d8c4b179ee763e420b4fc90~mv2.png/v1/fill/w_1180,h_683,al_c,q_90,enc_avif,quality_auto/13c47c_d0e649703d8c4b179ee763e420b4fc90~mv2.png">
+                <img alt="Student Artwork & Literature Projects" class="w-full h-32 md:h-36 object-cover group-hover:scale-105 transition-transform duration-700" src="https://static.wixstatic.com/media/13c47c_d0e649703d8c4b179ee763e420b4fc90~mv2.png/v1/fill/w_1180,h_683,al_c,q_90,enc_avif,quality_auto/13c47c_d0e649703d8c4b179ee763e420b4fc90~mv2.png" decoding="async">
               </div>
             </div>
 
@@ -753,7 +770,7 @@
                 </p>
               </div>
               <div class="relative z-10 overflow-hidden rounded-xl border border-white/15 shadow-inner">
-                <img alt="Tamil Heritage & Cultural Stage Performance" class="w-full h-32 md:h-36 object-cover group-hover:scale-105 transition-transform duration-700" src="https://static.wixstatic.com/media/13c47c_cd8ff4bcb0924b80b3bf16843b407dda~mv2.jpg/v1/fill/w_3395,h_2263,q_90,enc_avif,quality_auto/13c47c_cd8ff4bcb0924b80b3bf16843b407dda~mv2.jpg">
+                <img alt="Tamil Heritage & Cultural Stage Performance" class="w-full h-32 md:h-36 object-cover group-hover:scale-105 transition-transform duration-700" src="https://static.wixstatic.com/media/13c47c_cd8ff4bcb0924b80b3bf16843b407dda~mv2.jpg/v1/fill/w_3395,h_2263,q_90,enc_avif,quality_auto/13c47c_cd8ff4bcb0924b80b3bf16843b407dda~mv2.jpg" decoding="async">
               </div>
             </div>
           </div>
@@ -1074,7 +1091,7 @@
           <!-- LEFT FEATURED BIG VIDEO PLAYER (Col-Span 7) -->
           <div class="reveal-left delay-75 lg:col-span-7 bg-white rounded-3xl overflow-hidden shadow-xl border border-black/10 flex flex-col group spotlight-card">
             <div id="featured-video-player-container" class="w-full aspect-video min-h-[260px] md:min-h-[340px] bg-black relative overflow-hidden shadow-inner group/player cursor-pointer" onclick="loadMainFeaturedVideo('jH3mIstPkI0')">
-              <img id="featured-video-poster" class="w-full h-full object-cover group-hover/player:scale-105 transition-transform duration-500" src="https://img.youtube.com/vi/jH3mIstPkI0/hqdefault.jpg" alt="Arivakam Student Showcase Poster">
+              <img id="featured-video-poster" class="w-full h-full object-cover group-hover/player:scale-105 transition-transform duration-500" src="https://img.youtube.com/vi/jH3mIstPkI0/hqdefault.jpg" alt="Arivakam Student Showcase Poster" decoding="async">
               <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-between p-6">
                 <div class="flex justify-end">
                   <span class="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-white text-xs font-semibold border border-white/20">Click to Play 🎬</span>
@@ -1119,7 +1136,7 @@
             <!-- Secondary Video 1: A8aG3T3KDaU -->
             <div class="video-card-select bg-white rounded-2xl p-3.5 overflow-hidden shadow-sm hover:shadow-md transition-all border border-black/5 flex flex-col sm:flex-row gap-3.5 items-center cursor-pointer group hover:border-brand-red/40 spotlight-card" onclick="swapFeaturedVideo('A8aG3T3KDaU', 'Annual Stage', 'Toronto Center', 'Cultural Events &amp; Annual Stage Presentation', '&quot;Seeing our children perform on stage fills our hearts with immense pride in our heritage.&quot;', 'https://youtu.be/A8aG3T3KDaU')">
               <div class="aspect-video w-full sm:w-40 shrink-0 rounded-xl overflow-hidden bg-black relative group/thumb">
-                <img class="w-full h-full object-cover group-hover/thumb:scale-105 transition-transform" src="https://img.youtube.com/vi/A8aG3T3KDaU/hqdefault.jpg" alt="Cultural Events Poster">
+                <img class="w-full h-full object-cover group-hover/thumb:scale-105 transition-transform" src="https://img.youtube.com/vi/A8aG3T3KDaU/hqdefault.jpg" alt="Cultural Events Poster" decoding="async">
                 <div class="absolute inset-0 bg-black/30 group-hover/thumb:bg-black/10 flex items-center justify-center transition-colors">
                   <div class="w-9 h-9 rounded-full bg-brand-red text-white flex items-center justify-center shadow-lg">
                     <span class="material-symbols-outlined text-lg ml-0.5">play_arrow</span>
@@ -1144,7 +1161,7 @@
             <!-- Secondary Video 2: QhLEow7O4io -->
             <div class="video-card-select bg-white rounded-2xl p-3.5 overflow-hidden shadow-sm hover:shadow-md transition-all border border-black/5 flex flex-col sm:flex-row gap-3.5 items-center cursor-pointer group hover:border-brand-red/40 spotlight-card" onclick="swapFeaturedVideo('QhLEow7O4io', 'Thirukkural', 'Markham Hub', 'Thirukkural Recitation &amp; Drama Showcase', '&quot;Structured lessons make Thirukkural and ancient ethics engaging and easy for kids.&quot;', 'https://youtu.be/QhLEow7O4io')">
               <div class="aspect-video w-full sm:w-40 shrink-0 rounded-xl overflow-hidden bg-black relative group/thumb">
-                <img class="w-full h-full object-cover group-hover/thumb:scale-105 transition-transform" src="https://img.youtube.com/vi/QhLEow7O4io/hqdefault.jpg" alt="Thirukkural Drama Poster">
+                <img class="w-full h-full object-cover group-hover/thumb:scale-105 transition-transform" src="https://img.youtube.com/vi/QhLEow7O4io/hqdefault.jpg" alt="Thirukkural Drama Poster" decoding="async">
                 <div class="absolute inset-0 bg-black/30 group-hover/thumb:bg-black/10 flex items-center justify-center transition-colors">
                   <div class="w-9 h-9 rounded-full bg-brand-red text-white flex items-center justify-center shadow-lg">
                     <span class="material-symbols-outlined text-lg ml-0.5">play_arrow</span>
@@ -1169,7 +1186,7 @@
             <!-- Secondary Video 3: 6qNizX1brtE -->
             <div class="video-card-select bg-white rounded-2xl p-3.5 overflow-hidden shadow-sm hover:shadow-md transition-all border border-black/5 flex flex-col sm:flex-row gap-3.5 items-center cursor-pointer group hover:border-brand-red/40 spotlight-card" onclick="swapFeaturedVideo('6qNizX1brtE', 'Parent Voice', 'New Jersey Hub', 'Parent Experiences &amp; Community Impact', '&quot;The best decision for our family\'s cultural connection in North America.&quot;', 'https://youtu.be/6qNizX1brtE')">
               <div class="aspect-video w-full sm:w-40 shrink-0 rounded-xl overflow-hidden bg-black relative group/thumb">
-                <img class="w-full h-full object-cover group-hover/thumb:scale-105 transition-transform" src="https://img.youtube.com/vi/6qNizX1brtE/hqdefault.jpg" alt="Parent Testimonials Poster">
+                <img class="w-full h-full object-cover group-hover/thumb:scale-105 transition-transform" src="https://img.youtube.com/vi/6qNizX1brtE/hqdefault.jpg" alt="Parent Testimonials Poster" decoding="async">
                 <div class="absolute inset-0 bg-black/30 group-hover/thumb:bg-black/10 flex items-center justify-center transition-colors">
                   <div class="w-9 h-9 rounded-full bg-brand-red text-white flex items-center justify-center shadow-lg">
                     <span class="material-symbols-outlined text-lg ml-0.5">play_arrow</span>
@@ -1194,7 +1211,7 @@
             <!-- Secondary Video 4: ZjSrbgHCqCk -->
             <div class="video-card-select bg-white rounded-2xl p-3.5 overflow-hidden shadow-sm hover:shadow-md transition-all border border-black/5 flex flex-col sm:flex-row gap-3.5 items-center cursor-pointer group hover:border-brand-red/40 spotlight-card" onclick="swapFeaturedVideo('ZjSrbgHCqCk', 'Classroom Activity', 'Brampton &amp; Peel Hub', 'Classroom Activities &amp; Interactive Learning', '&quot;Interactive teaching methods keep young children excited about attending Tamil school every weekend.&quot;', 'https://youtu.be/ZjSrbgHCqCk')">
               <div class="aspect-video w-full sm:w-40 shrink-0 rounded-xl overflow-hidden bg-black relative group/thumb">
-                <img class="w-full h-full object-cover group-hover/thumb:scale-105 transition-transform" src="https://img.youtube.com/vi/ZjSrbgHCqCk/hqdefault.jpg" alt="Classroom Activity Poster">
+                <img class="w-full h-full object-cover group-hover/thumb:scale-105 transition-transform" src="https://img.youtube.com/vi/ZjSrbgHCqCk/hqdefault.jpg" alt="Classroom Activity Poster" decoding="async">
                 <div class="absolute inset-0 bg-black/30 group-hover/thumb:bg-black/10 flex items-center justify-center transition-colors">
                   <div class="w-9 h-9 rounded-full bg-brand-red text-white flex items-center justify-center shadow-lg">
                     <span class="material-symbols-outlined text-lg ml-0.5">play_arrow</span>
@@ -1239,7 +1256,7 @@
           
           <!-- Image 1: Cultural Assemblies -->
           <div class="reveal-on-scroll delay-75 relative group rounded-2xl overflow-hidden aspect-[4/3] shadow-md border border-white/10 cursor-pointer" onclick="openImageLightbox(0)">
-            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://static.wixstatic.com/media/13c47c_aaa4324e97b242388ac66a8f19111f0d~mv2.jpg/v1/fit/w_9395,h_515,q_90,enc_avif,quality_auto/13c47c_aaa4324e97b242388ac66a8f19111f0d~mv2.jpg" alt="Arivakam Cultural Assembly">
+            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://static.wixstatic.com/media/13c47c_aaa4324e97b242388ac66a8f19111f0d~mv2.jpg/v1/fit/w_9395,h_515,q_90,enc_avif,quality_auto/13c47c_aaa4324e97b242388ac66a8f19111f0d~mv2.jpg" alt="Arivakam Cultural Assembly" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-5 opacity-90 group-hover:opacity-100 transition-opacity">
               <span class="text-[10px] uppercase font-bold text-brand-red tracking-wider mb-0.5">Annual Summit</span>
               <h4 class="font-serif font-bold text-base text-white">Cultural Assemblies</h4>
@@ -1251,7 +1268,7 @@
 
           <!-- Image 2: Student Projects -->
           <div class="reveal-on-scroll delay-150 relative group rounded-2xl overflow-hidden aspect-[4/3] shadow-md border border-white/10 cursor-pointer" onclick="openImageLightbox(1)">
-            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://static.wixstatic.com/media/13c47c_d0e649703d8c4b179ee763e420b4fc90~mv2.png/v1/fill/w_1180,h_683,al_c,q_90,enc_avif,quality_auto/13c47c_d0e649703d8c4b179ee763e420b4fc90~mv2.png" alt="Student Literature Projects">
+            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://static.wixstatic.com/media/13c47c_d0e649703d8c4b179ee763e420b4fc90~mv2.png/v1/fill/w_1180,h_683,al_c,q_90,enc_avif,quality_auto/13c47c_d0e649703d8c4b179ee763e420b4fc90~mv2.png" alt="Student Literature Projects" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-5 opacity-90 group-hover:opacity-100 transition-opacity">
               <span class="text-[10px] uppercase font-bold text-brand-red tracking-wider mb-0.5">Literature &amp; Art</span>
               <h4 class="font-serif font-bold text-base text-white">Student Art &amp; Projects</h4>
@@ -1263,7 +1280,7 @@
 
           <!-- Image 3: Award Honors -->
           <div class="reveal-on-scroll delay-225 relative group rounded-2xl overflow-hidden aspect-[4/3] shadow-md border border-white/10 cursor-pointer" onclick="openImageLightbox(2)">
-            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://static.wixstatic.com/media/13c47c_d69577ae220d4b1da684a8ea63cb1ba0~mv2.png/v1/fit/w_1790,h_1164,q_90,enc_avif,quality_auto/13c47c_d69577ae220d4b1da684a8ea63cb1ba0~mv2.png" alt="Student Award Honors">
+            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://static.wixstatic.com/media/13c47c_d69577ae220d4b1da684a8ea63cb1ba0~mv2.png/v1/fit/w_1790,h_1164,q_90,enc_avif,quality_auto/13c47c_d69577ae220d4b1da684a8ea63cb1ba0~mv2.png" alt="Student Award Honors" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-5 opacity-90 group-hover:opacity-100 transition-opacity">
               <span class="text-[10px] uppercase font-bold text-brand-red tracking-wider mb-0.5">Excellence</span>
               <h4 class="font-serif font-bold text-base text-white">Annual Honor Awards</h4>
@@ -1275,7 +1292,7 @@
 
           <!-- Image 4: Regional Hub Workshops -->
           <div class="reveal-on-scroll delay-300 relative group rounded-2xl overflow-hidden aspect-[4/3] shadow-md border border-white/10 cursor-pointer" onclick="openImageLightbox(3)">
-            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://static.wixstatic.com/media/13c47c_a097d89304524e289a7d65cdb54df5b1~mv2.jpg/v1/fill/w_3429,h_1269,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/13c47c_a097d89304524e289a7d65cdb54df5b1~mv2.jpg" alt="Regional Hub Workshop">
+            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://static.wixstatic.com/media/13c47c_a097d89304524e289a7d65cdb54df5b1~mv2.jpg/v1/fill/w_3429,h_1269,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/13c47c_a097d89304524e289a7d65cdb54df5b1~mv2.jpg" alt="Regional Hub Workshop" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-5 opacity-90 group-hover:opacity-100 transition-opacity">
               <span class="text-[10px] uppercase font-bold text-brand-red tracking-wider mb-0.5">Regional Hubs</span>
               <h4 class="font-serif font-bold text-base text-white">Hub Academic Workshops</h4>
@@ -1287,7 +1304,7 @@
 
           <!-- Image 5: Cultural Festival -->
           <div class="reveal-on-scroll delay-75 relative group rounded-2xl overflow-hidden aspect-[4/3] shadow-md border border-white/10 cursor-pointer" onclick="openImageLightbox(4)">
-            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://static.wixstatic.com/media/13c47c_cd8ff4bcb0924b80b3bf16843b407dda~mv2.jpg/v1/fill/w_3395,h_2263,q_90,enc_avif,quality_auto/13c47c_cd8ff4bcb0924b80b3bf16843b407dda~mv2.jpg" alt="Arivakam Cultural Festival Stage">
+            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://static.wixstatic.com/media/13c47c_cd8ff4bcb0924b80b3bf16843b407dda~mv2.jpg/v1/fill/w_3395,h_2263,q_90,enc_avif,quality_auto/13c47c_cd8ff4bcb0924b80b3bf16843b407dda~mv2.jpg" alt="Arivakam Cultural Festival Stage" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-5 opacity-90 group-hover:opacity-100 transition-opacity">
               <span class="text-[10px] uppercase font-bold text-brand-red tracking-wider mb-0.5">Cultural Festival</span>
               <h4 class="font-serif font-bold text-base text-white">Annual Tamil Fest &amp; Stage</h4>
@@ -1299,7 +1316,7 @@
 
           <!-- Image 6: Youth Leadership -->
           <div class="reveal-on-scroll delay-150 relative group rounded-2xl overflow-hidden aspect-[4/3] shadow-md border border-white/10 cursor-pointer" onclick="openImageLightbox(5)">
-            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://static.wixstatic.com/media/13c47c_1215248838c041409eb7d7eb0cb50d34~mv2.jpg/v1/fill/w_6601,h_4406,q_90,enc_avif,quality_auto/13c47c_1215248838c041409eb7d7eb0cb50d34~mv2.jpg" alt="Youth Leadership Presentation">
+            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://static.wixstatic.com/media/13c47c_1215248838c041409eb7d7eb0cb50d34~mv2.jpg/v1/fill/w_6601,h_4406,q_90,enc_avif,quality_auto/13c47c_1215248838c041409eb7d7eb0cb50d34~mv2.jpg" alt="Youth Leadership Presentation" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-5 opacity-90 group-hover:opacity-100 transition-opacity">
               <span class="text-[10px] uppercase font-bold text-brand-red tracking-wider mb-0.5">Youth Leadership</span>
               <h4 class="font-serif font-bold text-base text-white">Youth Speech &amp; Assemblies</h4>
@@ -1311,7 +1328,7 @@
 
           <!-- Image 7: Community Union -->
           <div class="reveal-on-scroll delay-225 relative group rounded-2xl overflow-hidden aspect-[4/3] shadow-md border border-white/10 cursor-pointer" onclick="openImageLightbox(6)">
-            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://static.wixstatic.com/media/13c47c_5ab62a35ea0b4f4eab974bd65bf754c1~mv2.jpeg/v1/fill/w_2044,h_1538,q_90,enc_avif,quality_auto/13c47c_5ab62a35ea0b4f4eab974bd65bf754c1~mv2.jpeg" alt="Student Celebration Gathering">
+            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://static.wixstatic.com/media/13c47c_5ab62a35ea0b4f4eab974bd65bf754c1~mv2.jpeg/v1/fill/w_2044,h_1538,q_90,enc_avif,quality_auto/13c47c_5ab62a35ea0b4f4eab974bd65bf754c1~mv2.jpeg" alt="Student Celebration Gathering" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-5 opacity-90 group-hover:opacity-100 transition-opacity">
               <span class="text-[10px] uppercase font-bold text-brand-red tracking-wider mb-0.5">Community Union</span>
               <h4 class="font-serif font-bold text-base text-white">Student Celebration Gathering</h4>
@@ -1323,7 +1340,7 @@
 
           <!-- Image 8: Thirukkural Honor -->
           <div class="reveal-on-scroll delay-300 relative group rounded-2xl overflow-hidden aspect-[4/3] shadow-md border border-white/10 cursor-pointer" onclick="openImageLightbox(7)">
-            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://static.wixstatic.com/media/13c47c_d8bc51de8b92423d8c8cc62a63294b91~mv2.jpg/v1/fill/w_3618,h_2418,q_90,enc_avif,quality_auto/13c47c_d8bc51de8b92423d8c8cc62a63294b91~mv2.jpg" alt="Thirukkural Stage Honors">
+            <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" src="https://static.wixstatic.com/media/13c47c_d8bc51de8b92423d8c8cc62a63294b91~mv2.jpg/v1/fill/w_3618,h_2418,q_90,enc_avif,quality_auto/13c47c_d8bc51de8b92423d8c8cc62a63294b91~mv2.jpg" alt="Thirukkural Stage Honors" decoding="async">
             <div class="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent flex flex-col justify-end p-5 opacity-90 group-hover:opacity-100 transition-opacity">
               <span class="text-[10px] uppercase font-bold text-brand-red tracking-wider mb-0.5">Thirukkural Honor</span>
               <h4 class="font-serif font-bold text-base text-white">Literature Stage Recognition</h4>
@@ -1588,7 +1605,7 @@
     <div class="max-w-screen-2xl mx-auto px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-gray-800">
         <div>
-          <img src="./Arivakam Logo.avif" alt="Arivakam Logo" class="h-12 w-auto mb-4 object-contain">
+          <img src="./Arivakam Logo.avif" alt="Arivakam Logo" class="h-12 w-auto mb-4 object-contain" decoding="async">
           <p class="text-xs text-gray-400 leading-relaxed mb-4">
             Arivakam Tamil Cultural Academy is a registered non-profit educational institution dedicated to Tamil language, literature, arts, and cultural heritage across North America since 2008.
           </p>
@@ -1664,13 +1681,14 @@
       let lenis = null;
       if (typeof Lenis !== "undefined") {
         lenis = new Lenis({
-          duration: 0.85,
+          duration: 0.5,
           easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
           orientation: 'vertical',
           gestureOrientation: 'vertical',
           smoothWheel: true,
-          wheelMultiplier: 1.05,
-          touchMultiplier: 1.5,
+          wheelMultiplier: 1.0,
+          touchMultiplier: 0,
+          syncTouch: true,
           infinite: false
         });
 
@@ -1740,7 +1758,7 @@
 
         // Reading Progress Bar - pure RAF calculation, zero layout thrashing
         if (progressBar) {
-          progressBar.style.width = Math.min(100, Math.max(0, scrollProgress * 100)) + "%";
+          progressBar.style.transform = `scaleX(${Math.min(1, Math.max(0, scrollProgress))})`;
         }
 
         // Back to top visibility
@@ -2136,7 +2154,7 @@
         <span class="material-symbols-outlined text-2xl">chevron_left</span>
       </button>
 
-      <img id="gallery-lightbox-img" class="max-w-full max-h-[78vh] object-contain rounded-2xl shadow-2xl border border-white/15 transition-all duration-300" src="" alt="Expanded View">
+      <img id="gallery-lightbox-img" class="max-w-full max-h-[78vh] object-contain rounded-2xl shadow-2xl border border-white/15 transition-all duration-300" src="" alt="Expanded View" decoding="async">
 
       <button onclick="navigateGalleryLightbox(1)" class="absolute right-2 md:right-6 z-20 w-12 h-12 rounded-full bg-black/60 hover:bg-brand-red text-white flex items-center justify-center backdrop-blur-md border border-white/20 transition-all shadow-xl cursor-pointer" aria-label="Next image">
         <span class="material-symbols-outlined text-2xl">chevron_right</span>

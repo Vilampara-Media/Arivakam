@@ -121,6 +121,23 @@
     }
   </script>
   <style>
+    /* Ultra-Smooth 120fps GPU Hardware Acceleration */
+    html {
+      scroll-behavior: smooth;
+    }
+    #scroll-progress-bar {
+      transform-origin: left;
+      will-change: transform;
+    }
+    .gallery-item, .album-card, .sponsor-card, .premium-card-hover {
+      transform: translateZ(0);
+      backface-visibility: hidden;
+    }
+    .gallery-item img, .album-card img, .sponsor-card img {
+      transform: translateZ(0);
+      backface-visibility: hidden;
+    }
+
     /* ── Lenis Smooth Scroll ── */
     html, body {
       scroll-behavior: auto !important;
@@ -355,7 +372,7 @@
 <body class="bg-white text-dark-heading font-body-md antialiased pt-20 relative">
 
   <!-- ── Top Reading Scroll Progress Bar ── -->
-  <div id="scroll-progress-bar" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-brand-red via-rose-500 to-amber-400 z-[60] transition-all duration-150 ease-out" style="width: 0%;"></div>
+  <div id="scroll-progress-bar" class="fixed top-0 left-0 w-full h-1 bg-gradient-to-r from-brand-red via-rose-500 to-amber-400 z-[60] origin-left pointer-events-none transform-gpu" style="transform: scaleX(0);"></div>
 
   <!-- ── Floating Back-to-Top Button ── -->
   <button id="back-to-top" aria-label="Back to Top" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-brand-red text-white flex items-center justify-center shadow-xl hover:bg-brand-red-dark hover:scale-110 active:scale-95 transition-all duration-300 opacity-0 pointer-events-none translate-y-4">
@@ -363,11 +380,11 @@
   </button>
 
   <!-- ── TopNavBar ── -->
-  <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300 ease-in-out border-b border-gray-200">
+  <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm transition-transform duration-300 ease-out border-b border-gray-200 will-change-transform">
     <div class="flex justify-between items-center px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24 py-4 max-w-screen-2xl mx-auto">
       <div class="flex items-center">
         <a href="index.html" class="transition-transform hover:scale-105 duration-300">
-          <img alt="Arivakam Logo" class="h-14 w-auto object-contain" src="./Arivakam Logo.avif">
+          <img alt="Arivakam Logo" class="h-14 w-auto object-contain" src="./Arivakam Logo.avif" decoding="async">
         </a>
       </div>
 
@@ -1056,7 +1073,7 @@
     <div class="max-w-screen-2xl mx-auto px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-gray-800">
         <div>
-          <img src="./Arivakam Logo.avif" alt="Arivakam Logo" class="h-12 w-auto mb-4 object-contain">
+          <img src="./Arivakam Logo.avif" alt="Arivakam Logo" class="h-12 w-auto mb-4 object-contain" decoding="async">
           <p class="text-xs text-gray-400 leading-relaxed mb-4">
             Arivakam Tamil Cultural Academy is a registered non-profit educational institution dedicated to Tamil language, literature, arts, and cultural heritage across North America since 2008.
           </p>
@@ -1131,13 +1148,14 @@
       let lenis = null;
       if (typeof Lenis !== "undefined") {
         lenis = new Lenis({
-          duration: 0.85,
+          duration: 0.5,
           easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
           orientation: 'vertical',
           gestureOrientation: 'vertical',
           smoothWheel: true,
-          wheelMultiplier: 1.05,
-          touchMultiplier: 1.5,
+          wheelMultiplier: 1.0,
+          touchMultiplier: 0,
+          syncTouch: true,
           infinite: false
         });
 
@@ -1207,7 +1225,7 @@
 
         // Reading Progress Bar
         if (progressBar) {
-          progressBar.style.width = Math.min(100, Math.max(0, scrollProgress * 100)) + "%";
+          progressBar.style.transform = `scaleX(${Math.min(1, Math.max(0, scrollProgress))})`;
         }
 
         // Back to top visibility
