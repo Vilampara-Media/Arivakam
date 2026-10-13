@@ -1,0 +1,952 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Contact Us &amp; Campus Locations | Arivakam Tamil Cultural Academy</title>
+  <meta name="description" content="Get in touch with Arivakam Tamil Cultural Academy. Contact our head office in Scarborough, explore campus locations across Greater Toronto Area, or send an inquiry for student admissions, teaching, or volunteering.">
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.cdnfonts.com/css/myriad-pro" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+  <!-- Lenis Premium Smooth Inertial Scroll Library -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.20/dist/lenis.min.js"></script>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "brand-red": "#ed1c29",
+            "brand-red-dark": "#b1101a",
+            "btn-red": "#BF0000",
+            "btn-red-dark": "#990000",
+            "brand-navy": "#070e1b",
+            "top-dark": "#0d1b2a",
+            "dark-heading": "#2d2d2d",
+            "body-gray": "#5c5c5c",
+            "sub-gray": "#a1a2a4",
+            "bg-light": "#f8f9fa",
+            "paper-white": "#ffffff",
+            "heritage-red": "#ed1c29",
+            "primary": "#2d2d2d",
+            "ink-dark": "#070e1b"
+          },
+          fontFamily: {
+            "sans": ["Inter", "sans-serif"],
+            "serif": ["'Myriad Pro Bold'", "'MyriadPro-Bold'", "'Myriad Pro'", "'MyriadPro'", "'Myriad'", "-apple-system", "BlinkMacSystemFont", "'Segoe UI'", "Roboto", "Helvetica", "Arial", "sans-serif"],
+            "myriad": ["'Myriad Pro Bold'", "'MyriadPro-Bold'", "'Myriad Pro'", "'MyriadPro'", "'Myriad'", "-apple-system", "BlinkMacSystemFont", "'Segoe UI'", "Roboto", "Helvetica", "Arial", "sans-serif"],
+            "title": ["'Myriad Pro Bold'", "'MyriadPro-Bold'", "'Myriad Pro'", "'MyriadPro'", "'Myriad'", "-apple-system", "BlinkMacSystemFont", "'Segoe UI'", "Roboto", "Helvetica", "Arial", "sans-serif"]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    /* ── Lenis Smooth Scroll Optimization ── */
+    html, body {
+      scroll-behavior: auto !important;
+    }
+    html.lenis, html.lenis body { height: auto; }
+    .lenis.lenis-smooth { scroll-behavior: auto !important; }
+    .lenis.lenis-smooth [data-lenis-prevent] { overscroll-behavior: contain; }
+    .lenis.lenis-stopped { overflow: hidden; }
+    .lenis.lenis-scrolling iframe { pointer-events: none; }
+
+    /* Title Fonts: Myriad Pro Bold Family & Weights (Bold 700) */
+    h1, h2, h3, h4, h5, h6,
+    .font-title, .font-serif, .font-myriad {
+        font-family: 'Myriad Pro Bold', 'MyriadPro-Bold', 'Myriad Pro', 'MyriadPro', 'Myriad', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif !important;
+        font-weight: 700 !important;
+    }
+
+    .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .material-symbols-outlined[data-weight="fill"] {
+        font-variation-settings: 'FILL' 1;
+    }
+
+    /* ── Scroll Reveal Animations ── */
+    .reveal-on-scroll {
+        opacity: 0;
+        transform: translateY(28px);
+        transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+        will-change: opacity, transform;
+    }
+    .reveal-on-scroll.is-visible {
+        opacity: 1;
+        transform: translateY(0);
+        will-change: auto;
+    }
+    .reveal-left {
+        opacity: 0;
+        transform: translateX(-28px);
+        transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-left.is-visible {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    .reveal-right {
+        opacity: 0;
+        transform: translateX(28px);
+        transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .reveal-right.is-visible {
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+    /* ── Stagger Delays ── */
+    .delay-75  { transition-delay: 75ms; }
+    .delay-150 { transition-delay: 150ms; }
+    .delay-225 { transition-delay: 225ms; }
+    .delay-300 { transition-delay: 300ms; }
+
+    /* ── Button Shimmer Sweep ── */
+    @keyframes shimmer-sweep {
+      0% { transform: translateX(-100%); }
+      100% { transform: translateX(200%); }
+    }
+    .btn-shimmer-sweep {
+      position: relative;
+      overflow: hidden;
+    }
+    .btn-shimmer-sweep::after {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.28), transparent);
+      transform: translateX(-100%);
+    }
+    .btn-shimmer-sweep:hover::after {
+      animation: shimmer-sweep 1.2s ease-in-out infinite;
+    }
+
+    /* ── Running Border on Card Hover ── */
+    @property --border-angle {
+      syntax: '<angle>';
+      inherits: false;
+      initial-value: 0deg;
+    }
+    @keyframes run-border {
+      0%   { --border-angle: 0deg; }
+      100% { --border-angle: 360deg; }
+    }
+    .running-border-card {
+      position: relative;
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .running-border-card::before {
+      content: '';
+      position: absolute;
+      inset: -2px;
+      border-radius: inherit;
+      padding: 2px;
+      background: conic-gradient(from var(--border-angle, 0deg), transparent 25%, #ed1c29 50%, #ff8088 65%, #ed1c29 80%, transparent 95%);
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask-composite: exclude;
+      opacity: 0;
+      transition: opacity 0.35s ease;
+      pointer-events: none;
+      z-index: 10;
+      animation: run-border 3.5s linear infinite;
+    }
+    .running-border-card:hover::before {
+      opacity: 1;
+    }
+    .running-border-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 20px 40px -15px rgba(0,0,0,0.08);
+      border-color: rgba(237, 28, 41, 0.3) !important;
+    }
+
+    /* ── Hero Drift Particles ── */
+    @keyframes drift {
+      0%   { transform: translateY(0px) rotate(0deg); opacity: 0.6; }
+      50%  { transform: translateY(-16px) rotate(180deg); opacity: 0.3; }
+      100% { transform: translateY(0px) rotate(360deg); opacity: 0.6; }
+    }
+    .particle {
+      position: absolute;
+      border-radius: 50%;
+      animation: drift linear infinite;
+      pointer-events: none;
+    }
+  </style>
+</head>
+<body class="bg-[#fbfcff] text-dark-heading font-sans antialiased pt-20 relative selection:bg-brand-red selection:text-white">
+
+  <!-- ── Top Reading Scroll Progress Bar ── -->
+  <div id="scroll-progress-bar" class="fixed top-0 left-0 h-1 bg-gradient-to-r from-brand-red via-rose-500 to-amber-400 z-[60] transition-all duration-150 ease-out" style="width: 0%;"></div>
+
+  <!-- ── Floating Back-to-Top Button ── -->
+  <button id="back-to-top" aria-label="Back to Top" class="fixed bottom-6 right-6 z-40 w-12 h-12 rounded-full bg-brand-red text-white flex items-center justify-center shadow-xl hover:bg-brand-red-dark hover:scale-110 active:scale-95 transition-all duration-300 opacity-0 pointer-events-none translate-y-4">
+    <span class="material-symbols-outlined text-2xl">arrow_upward</span>
+  </button>
+
+  <!-- ══════════════════════════════════════════════════
+       TopNavBar Component
+  ══════════════════════════════════════════════════ -->
+  <nav class="fixed top-0 w-full z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300 ease-in-out border-b border-gray-200">
+    <div class="flex justify-between items-center px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24 py-4 max-w-screen-2xl mx-auto">
+      <div class="flex items-center">
+        <a href="index.html" class="transition-transform hover:scale-105 duration-300">
+          <img alt="Arivakam Logo" class="h-14 w-auto object-contain" src="./Arivakam Logo.avif">
+        </a>
+      </div>
+
+      <!-- Desktop Navigation links -->
+      <div class="hidden lg:flex gap-6 items-center">
+        <a class="text-dark-heading font-medium text-sm hover:text-brand-red transition-colors pb-1" href="index.html">Home</a>
+        
+        <!-- Registration Dropdown -->
+        <div class="relative group py-2">
+          <button class="flex items-center gap-1 text-dark-heading font-medium text-sm hover:text-brand-red transition-colors pb-1">
+            <span>Registration</span>
+            <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+          </button>
+          <div class="absolute top-full left-0 hidden group-hover:block bg-white shadow-xl rounded-2xl border border-gray-200 py-2 w-56 z-50">
+            <a class="block px-4 py-2.5 text-sm text-dark-heading hover:bg-bg-light hover:text-brand-red transition-colors" href="student-registration.html">Student Registration</a>
+            <a class="block px-4 py-2.5 text-sm text-dark-heading hover:bg-bg-light hover:text-brand-red transition-colors" href="teach-with-arivakam.html">Teacher Registration</a>
+          </div>
+        </div>
+
+        <!-- Community Dropdown -->
+        <div class="relative group py-2">
+          <button class="flex items-center gap-1 text-dark-heading font-medium text-sm hover:text-brand-red transition-colors pb-1">
+            <span>Community</span>
+            <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+          </button>
+          <div class="absolute top-full left-0 hidden group-hover:block bg-white shadow-xl rounded-2xl border border-gray-200 py-2 w-56 z-50">
+            <a class="block px-4 py-2.5 text-sm text-dark-heading hover:bg-bg-light hover:text-brand-red transition-colors" href="upcoming-events.html">Upcoming Events</a>
+            <a class="block px-4 py-2.5 text-sm text-dark-heading hover:bg-bg-light hover:text-brand-red transition-colors" href="arivakam-community.html">Our Pictures</a>
+            <a class="block px-4 py-2.5 text-sm text-dark-heading hover:bg-bg-light hover:text-brand-red transition-colors" href="photo-albums.html">Photo Albums</a>
+          </div>
+        </div>
+
+        <!-- Get Involved Dropdown -->
+        <div class="relative group py-2">
+          <button class="flex items-center gap-1 text-dark-heading font-medium text-sm hover:text-brand-red transition-colors pb-1">
+            <span>Get Involved</span>
+            <span class="material-symbols-outlined text-sm transition-transform group-hover:rotate-180">expand_more</span>
+          </button>
+          <div class="absolute top-full left-0 hidden group-hover:block bg-white shadow-xl rounded-2xl border border-gray-200 py-2 w-56 z-50">
+            <a class="block px-4 py-2.5 text-sm text-dark-heading hover:bg-bg-light hover:text-brand-red transition-colors" href="volunteer-with-us.html">Volunteer With Us</a>
+            <a class="block px-4 py-2.5 text-sm text-dark-heading hover:bg-bg-light hover:text-brand-red transition-colors" href="advertise-your-business.html">Advertise Business</a>
+            <a class="block px-4 py-2.5 text-sm text-dark-heading hover:bg-bg-light hover:text-brand-red transition-colors" href="tamil-school-sponsors.html">Our Sponsors</a>
+          </div>
+        </div>
+
+        <a class="text-dark-heading font-medium text-sm hover:text-brand-red transition-colors pb-1" href="free-learning-materials.html">FREE Materials</a>
+      </div>
+
+      <!-- Action Buttons & Hamburger Menu -->
+      <div class="flex items-center gap-4">
+        <a href="teach-with-arivakam.html" class="hidden sm:block border border-dark-heading text-dark-heading px-5 py-2 rounded-full font-semibold text-xs hover:bg-bg-light hover:border-brand-red hover:text-brand-red transition-all duration-300 whitespace-nowrap shadow-sm hover:shadow-md">
+          Become a Teacher
+        </a>
+        <a href="student-registration.html" class="bg-btn-red hover:bg-btn-red-dark text-white px-5 py-2 rounded-full font-bold text-xs transition-all shadow-md hover:shadow-lg whitespace-nowrap hover:scale-105 active:scale-95 duration-200 btn-shimmer-sweep">
+          Register Now
+        </a>
+        <button id="hamburger-btn" class="lg:hidden flex items-center text-dark-heading hover:text-brand-red focus:outline-none" aria-label="Toggle Navigation">
+          <span class="material-symbols-outlined text-3xl">menu</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile Drawer Navigation -->
+    <div id="mobile-drawer" class="hidden lg:hidden w-full bg-white border-t border-gray-200 py-4 px-6 sm:px-10 shadow-xl max-h-[80vh] overflow-y-auto">
+      <div class="flex flex-col gap-2">
+        <a class="text-dark-heading font-semibold text-sm hover:text-brand-red py-2.5 border-b border-gray-100" href="index.html">Home</a>
+        <a class="text-dark-heading font-semibold text-sm hover:text-brand-red py-2.5 border-b border-gray-100" href="student-registration.html">Student Registration</a>
+        <a class="text-dark-heading font-semibold text-sm hover:text-brand-red py-2.5 border-b border-gray-100" href="teach-with-arivakam.html">Teacher Registration</a>
+        <a class="text-dark-heading font-semibold text-sm hover:text-brand-red py-2.5 border-b border-gray-100" href="upcoming-events.html">Upcoming Events</a>
+        <a class="text-dark-heading font-semibold text-sm hover:text-brand-red py-2.5 border-b border-gray-100" href="arivakam-community.html">Our Pictures</a>
+        <a class="text-dark-heading font-semibold text-sm hover:text-brand-red py-2.5 border-b border-gray-100" href="photo-albums.html">Photo Albums</a>
+        <a class="text-dark-heading font-semibold text-sm hover:text-brand-red py-2.5 border-b border-gray-100" href="volunteer-with-us.html">Volunteer With Us</a>
+        <a class="text-dark-heading font-semibold text-sm hover:text-brand-red py-2.5 border-b border-gray-100" href="advertise-your-business.html">Advertise Business</a>
+        <a class="text-dark-heading font-semibold text-sm hover:text-brand-red py-2.5 border-b border-gray-100" href="tamil-school-sponsors.html">Our Sponsors</a>
+        <a class="text-dark-heading font-semibold text-sm hover:text-brand-red py-2.5 border-b border-gray-100" href="free-learning-materials.html">FREE Learning Materials</a>
+        <a class="sm:hidden text-center border border-dark-heading text-dark-heading py-2.5 rounded-full font-bold text-xs hover:bg-bg-light transition-colors mt-2" href="teach-with-arivakam.html">
+          Become a Teacher
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════════════════
+       Hero Banner
+  ══════════════════════════════════════════════════ -->
+  <section class="bg-gradient-to-br from-[#060c18] via-brand-navy to-[#0c172e] text-white py-16 md:py-24 px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24 relative overflow-hidden">
+    <!-- Ambient Glow Effects -->
+    <div class="absolute -top-32 -left-32 w-96 h-96 bg-brand-red/15 rounded-full blur-3xl pointer-events-none"></div>
+    <div class="absolute -bottom-32 -right-32 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none"></div>
+
+    <!-- Animated Particles -->
+    <div class="particle bg-brand-red/20 w-3 h-3 left-[12%] top-[30%]" style="animation-duration: 7s;"></div>
+    <div class="particle bg-white/20 w-2 h-2 left-[48%] top-[60%]" style="animation-duration: 9s;"></div>
+    <div class="particle bg-amber-400/20 w-2.5 h-2.5 left-[82%] top-[25%]" style="animation-duration: 6s;"></div>
+
+    <div class="max-w-screen-2xl mx-auto relative z-10 space-y-5">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-red/15 text-brand-red text-xs font-bold border border-brand-red/30 backdrop-blur-md shadow-sm">
+          <span class="w-2 h-2 rounded-full bg-brand-red animate-ping"></span>
+          We Welcome Your Inquiries
+        </span>
+        <span class="px-3.5 py-1 rounded-full bg-white/10 text-gray-300 text-xs font-medium border border-white/15">
+          18+ Years Serving Diaspora Families Since 2008
+        </span>
+      </div>
+
+      <h1 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-title leading-tight tracking-tight">
+        Connect With <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-red via-rose-400 to-amber-300">Arivakam Academy</span>
+      </h1>
+      
+      <p class="text-gray-300 text-base md:text-lg max-w-3xl leading-relaxed">
+        Whether you have questions about student enrollment, curriculum standards, teacher career opportunities, campus locations, or sponsoring community cultural events, our dedicated administration team is here for you.
+      </p>
+
+      <!-- Key Contact Stats -->
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-4 max-w-4xl">
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-3.5 backdrop-blur-sm">
+          <div class="text-brand-red font-bold text-xs uppercase tracking-wider">Fast Response</div>
+          <div class="text-white text-xs font-medium mt-0.5">Within 24 Hours</div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-3.5 backdrop-blur-sm">
+          <div class="text-brand-red font-bold text-xs uppercase tracking-wider">Central Phone</div>
+          <div class="text-white text-xs font-medium mt-0.5">416-849-9890</div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-3.5 backdrop-blur-sm">
+          <div class="text-brand-red font-bold text-xs uppercase tracking-wider">Active Campus Hubs</div>
+          <div class="text-white text-xs font-medium mt-0.5">30+ Across GTA &amp; Virtual</div>
+        </div>
+        <div class="bg-white/5 border border-white/10 rounded-2xl p-3.5 backdrop-blur-sm">
+          <div class="text-brand-red font-bold text-xs uppercase tracking-wider">Office Hours</div>
+          <div class="text-white text-xs font-medium mt-0.5">Mon–Fri 9am–5pm EST</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       4 Contact Channels Strip
+  ══════════════════════════════════════════════════ -->
+  <section class="py-12 md:py-16 px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24 -mt-10 relative z-20">
+    <div class="max-w-screen-2xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      
+      <!-- Card 1: Phone -->
+      <div class="bg-white rounded-3xl p-6 border border-gray-200/80 shadow-lg running-border-card reveal-on-scroll">
+        <div class="w-12 h-12 rounded-2xl bg-brand-red/10 text-brand-red flex items-center justify-center mb-4">
+          <span class="material-symbols-outlined text-2xl">call</span>
+        </div>
+        <span class="text-[11px] font-bold uppercase tracking-wider text-brand-red">Telephone Support</span>
+        <h3 class="text-lg font-bold font-title text-dark-heading mt-1">416-849-9890</h3>
+        <p class="text-xs text-body-gray mt-2 leading-relaxed">
+          Direct telephone helpline for admissions, class questions, and teacher coordination.
+        </p>
+        <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs">
+          <span class="text-sub-gray font-medium">Fax: 416-613-1890</span>
+          <a href="tel:4168499890" class="text-brand-red font-bold hover:underline flex items-center gap-1">
+            <span>Call Now</span>
+            <span class="material-symbols-outlined text-xs">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 2: Email -->
+      <div class="bg-white rounded-3xl p-6 border border-gray-200/80 shadow-lg running-border-card reveal-on-scroll delay-75">
+        <div class="w-12 h-12 rounded-2xl bg-blue-500/10 text-blue-600 flex items-center justify-center mb-4">
+          <span class="material-symbols-outlined text-2xl">mail</span>
+        </div>
+        <span class="text-[11px] font-bold uppercase tracking-wider text-blue-600">Email Inquiries</span>
+        <h3 class="text-lg font-bold font-title text-dark-heading mt-1">info@arivakam.org</h3>
+        <p class="text-xs text-body-gray mt-2 leading-relaxed">
+          Submit curriculum inquiries, registration requests, or event collaboration proposals.
+        </p>
+        <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs">
+          <span class="text-sub-gray font-medium">Response within 24h</span>
+          <a href="mailto:info@arivakam.org" class="text-brand-red font-bold hover:underline flex items-center gap-1">
+            <span>Send Email</span>
+            <span class="material-symbols-outlined text-xs">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 3: Head Office -->
+      <div class="bg-white rounded-3xl p-6 border border-gray-200/80 shadow-lg running-border-card reveal-on-scroll delay-150">
+        <div class="w-12 h-12 rounded-2xl bg-emerald-500/10 text-emerald-600 flex items-center justify-center mb-4">
+          <span class="material-symbols-outlined text-2xl">location_on</span>
+        </div>
+        <span class="text-[11px] font-bold uppercase tracking-wider text-emerald-600">Head Office Campus</span>
+        <h3 class="text-lg font-bold font-title text-dark-heading mt-1">Scarborough, ON</h3>
+        <p class="text-xs text-body-gray mt-2 leading-relaxed">
+          Scarborough, ON M1H 2X1, Greater Toronto Area, Ontario, Canada.
+        </p>
+        <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs">
+          <span class="text-sub-gray font-medium">Non-Profit Reg. 13C47C</span>
+          <a href="#campus-directory" class="text-brand-red font-bold hover:underline flex items-center gap-1">
+            <span>View Hubs</span>
+            <span class="material-symbols-outlined text-xs">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Card 4: Global Online Academy -->
+      <div class="bg-white rounded-3xl p-6 border border-gray-200/80 shadow-lg running-border-card reveal-on-scroll delay-225">
+        <div class="w-12 h-12 rounded-2xl bg-purple-500/10 text-purple-600 flex items-center justify-center mb-4">
+          <span class="material-symbols-outlined text-2xl">language</span>
+        </div>
+        <span class="text-[11px] font-bold uppercase tracking-wider text-purple-600">Global Virtual Classes</span>
+        <h3 class="text-lg font-bold font-title text-dark-heading mt-1">Worldwide Virtual</h3>
+        <p class="text-xs text-body-gray mt-2 leading-relaxed">
+          Interactive digital classrooms for students across Canada, USA, UK, Europe, &amp; Australia.
+        </p>
+        <div class="mt-4 pt-3 border-t border-gray-100 flex items-center justify-between text-xs">
+          <span class="text-sub-gray font-medium">Flexible Weekend Times</span>
+          <a href="student-registration.html" class="text-brand-red font-bold hover:underline flex items-center gap-1">
+            <span>Register</span>
+            <span class="material-symbols-outlined text-xs">arrow_forward</span>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       Main Inquiries Form & Campus Schedule
+  ══════════════════════════════════════════════════ -->
+  <section class="py-12 md:py-20 px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24 bg-white">
+    <div class="max-w-screen-2xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+      
+      <!-- Left Column: Form -->
+      <div class="lg:col-span-7 bg-[#fbfbfe] rounded-3xl p-8 md:p-10 border border-gray-200/80 shadow-lg reveal-left">
+        <div class="space-y-3 mb-8">
+          <span class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-brand-red/10 text-brand-red text-xs font-bold">
+            <span class="material-symbols-outlined text-sm">send</span>
+            Direct Admissions &amp; Support Form
+          </span>
+          <h2 class="text-2xl sm:text-3xl font-bold font-title text-dark-heading">
+            Send Us an Instant Message
+          </h2>
+          <p class="text-body-gray text-xs sm:text-sm leading-relaxed">
+            Fill out the details below and an academy coordinator will follow up with you by phone or email within one business day.
+          </p>
+        </div>
+
+        <form id="contact-form" onsubmit="handleContactSubmission(event)" class="space-y-5">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-dark-heading uppercase tracking-wider mb-1.5" for="contact-name">
+                Your Full Name <span class="text-brand-red">*</span>
+              </label>
+              <input type="text" id="contact-name" required placeholder="e.g. Priyanthi Selvakumar" class="w-full px-4 py-3 rounded-2xl border border-gray-300 focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 outline-none text-xs transition-all bg-white">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-dark-heading uppercase tracking-wider mb-1.5" for="contact-phone">
+                Phone Number <span class="text-brand-red">*</span>
+              </label>
+              <input type="tel" id="contact-phone" required placeholder="e.g. 416-555-0192" class="w-full px-4 py-3 rounded-2xl border border-gray-300 focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 outline-none text-xs transition-all bg-white">
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <div>
+              <label class="block text-xs font-bold text-dark-heading uppercase tracking-wider mb-1.5" for="contact-email">
+                Email Address <span class="text-brand-red">*</span>
+              </label>
+              <input type="email" id="contact-email" required placeholder="name@example.com" class="w-full px-4 py-3 rounded-2xl border border-gray-300 focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 outline-none text-xs transition-all bg-white">
+            </div>
+            <div>
+              <label class="block text-xs font-bold text-dark-heading uppercase tracking-wider mb-1.5" for="contact-topic">
+                Inquiry Topic <span class="text-brand-red">*</span>
+              </label>
+              <select id="contact-topic" required class="w-full px-4 py-3 rounded-2xl border border-gray-300 focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 outline-none text-xs transition-all bg-white">
+                <option value="student-admission">Student Admission &amp; Grade Placement</option>
+                <option value="teach-registration">Teacher Career Application</option>
+                <option value="volunteer-hours">High School Volunteer Hours</option>
+                <option value="sponsorship">Event Sponsorship &amp; Advertising</option>
+                <option value="speech-competition">Speech &amp; Art Competitions</option>
+                <option value="other-general">General Academy Inquiry</option>
+              </select>
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-dark-heading uppercase tracking-wider mb-1.5" for="contact-location">
+              Preferred Campus Hub
+            </label>
+            <select id="contact-location" class="w-full px-4 py-3 rounded-2xl border border-gray-300 focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 outline-none text-xs transition-all bg-white">
+              <option value="scarborough">Scarborough Central Campus</option>
+              <option value="markham">Markham &amp; Unionville Hub</option>
+              <option value="brampton">Brampton &amp; Peel Hub</option>
+              <option value="mississauga">Mississauga Campus</option>
+              <option value="virtual-canada">Global Virtual Academy (Canada / USA / Worldwide)</option>
+              <option value="not-sure">I'm Not Sure Yet / Need Advice</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold text-dark-heading uppercase tracking-wider mb-1.5" for="contact-message">
+              How Can We Help You? <span class="text-brand-red">*</span>
+            </label>
+            <textarea id="contact-message" rows="4" required placeholder="Please let us know your child's age, prior Tamil background, or any specific questions about our classes or events..." class="w-full px-4 py-3 rounded-2xl border border-gray-300 focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 outline-none text-xs transition-all bg-white"></textarea>
+          </div>
+
+          <div class="flex items-center gap-3">
+            <input type="checkbox" id="contact-consent" required class="rounded border-gray-300 text-brand-red focus:ring-brand-red">
+            <label for="contact-consent" class="text-[11px] text-body-gray">
+              I consent to Arivakam contacting me regarding my inquiry pursuant to the <a href="privacy-policy.html" class="text-brand-red underline">Privacy Policy</a>.
+            </label>
+          </div>
+
+          <button type="submit" id="submit-btn" class="w-full py-3.5 px-6 rounded-2xl bg-btn-red hover:bg-btn-red-dark text-white font-bold text-xs uppercase tracking-wider shadow-lg hover:shadow-xl transition-all flex items-center justify-center gap-2 btn-shimmer-sweep active:scale-98">
+            <span class="material-symbols-outlined text-base">send</span>
+            <span>Submit Message to Admissions Desk</span>
+          </button>
+        </form>
+
+        <!-- Success Feedback Banner (hidden by default) -->
+        <div id="contact-success" class="hidden mt-6 p-6 rounded-2xl bg-emerald-50 border border-emerald-200 text-emerald-900 space-y-2">
+          <div class="flex items-center gap-2 font-bold text-sm">
+            <span class="material-symbols-outlined text-emerald-600 text-xl">check_circle</span>
+            Thank you! Your message has been received.
+          </div>
+          <p class="text-xs text-emerald-800 leading-relaxed">
+            Our admissions registrar will review your inquiry and follow up within 24 hours. A copy of this confirmation has been prepared for our team.
+          </p>
+        </div>
+      </div>
+
+      <!-- Right Column: Campus Details & Office Hours -->
+      <div class="lg:col-span-5 space-y-6 reveal-right">
+        
+        <!-- Central Office Card -->
+        <div class="bg-gradient-to-br from-brand-navy to-[#111f38] text-white rounded-3xl p-7 md:p-8 shadow-xl border border-gray-800">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-xl bg-brand-red/20 text-brand-red flex items-center justify-center">
+              <span class="material-symbols-outlined text-xl">home_work</span>
+            </div>
+            <div>
+              <h3 class="font-title text-lg font-bold text-white">Central Head Office</h3>
+              <p class="text-xs text-gray-400">Non-Profit Reg. No. 13C47C</p>
+            </div>
+          </div>
+
+          <div class="space-y-3 text-xs text-gray-200 border-t border-white/10 pt-4 leading-relaxed">
+            <div class="flex items-start gap-3">
+              <span class="material-symbols-outlined text-brand-red text-base shrink-0 mt-0.5">pin_drop</span>
+              <span>Scarborough, ON M1H 2X1, Greater Toronto Area, Ontario, Canada</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-brand-red text-base shrink-0">phone</span>
+              <span>Tel: 416-849-9890</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-brand-red text-base shrink-0">fax</span>
+              <span>Fax: 416-613-1890</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-brand-red text-base shrink-0">mail</span>
+              <span>Email: <a href="mailto:info@arivakam.org" class="text-brand-red hover:underline">info@arivakam.org</a></span>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-white/10">
+            <h4 class="font-bold text-xs uppercase tracking-wider text-amber-300 mb-2">Weekly Office Hours</h4>
+            <div class="space-y-1.5 text-xs text-gray-300">
+              <div class="flex justify-between">
+                <span>Monday – Friday:</span>
+                <span class="font-semibold text-white">9:00 AM – 5:00 PM EST</span>
+              </div>
+              <div class="flex justify-between">
+                <span>Saturday – Sunday:</span>
+                <span class="font-semibold text-white">8:30 AM – 4:00 PM (Class Hours)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Quick Registration Prompts -->
+        <div class="bg-[#f8f9fa] rounded-3xl p-7 border border-gray-200/80 shadow-md space-y-4">
+          <h4 class="font-title text-base font-bold text-dark-heading flex items-center gap-2">
+            <span class="material-symbols-outlined text-brand-red">school</span>
+            Looking to Enroll Right Away?
+          </h4>
+          <p class="text-xs text-body-gray leading-relaxed">
+            Our admissions portals are open for new students and educators throughout the academic semester.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-3 pt-1">
+            <a href="student-registration.html" class="flex-1 text-center py-2.5 px-4 rounded-xl bg-btn-red text-white text-xs font-bold shadow hover:bg-btn-red-dark transition-all">
+              Student Registration
+            </a>
+            <a href="teach-with-arivakam.html" class="flex-1 text-center py-2.5 px-4 rounded-xl border border-dark-heading text-dark-heading text-xs font-bold hover:bg-white transition-all">
+              Become a Teacher
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       Campus Locations Directory
+  ══════════════════════════════════════════════════ -->
+  <section id="campus-directory" class="py-16 md:py-24 px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24 bg-[#f8f9fc]">
+    <div class="max-w-screen-2xl mx-auto space-y-10">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-3">
+        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-red/10 text-brand-red text-xs font-bold">
+          <span class="material-symbols-outlined text-sm">hub</span>
+          Regional Presence
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-bold font-title text-dark-heading">
+          Our Greater Toronto Campus Hubs
+        </h2>
+        <p class="text-body-gray text-xs sm:text-sm leading-relaxed">
+          Over 30 class centers and digital pods serving community families across Ontario and international students online.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Scarborough Hub -->
+        <div class="bg-white rounded-3xl p-6 border border-gray-200/80 shadow-md running-border-card reveal-on-scroll">
+          <div class="flex items-center justify-between mb-3">
+            <span class="px-3 py-1 rounded-full bg-brand-red/10 text-brand-red text-[11px] font-bold">East GTA</span>
+            <span class="material-symbols-outlined text-brand-red">school</span>
+          </div>
+          <h3 class="font-title text-lg font-bold text-dark-heading">Scarborough Hub</h3>
+          <p class="text-xs text-body-gray mt-1 leading-relaxed">
+            Central administrative academy with beginner, intermediate, and Grade 8 graduation divisions.
+          </p>
+          <div class="mt-4 pt-3 border-t border-gray-100 text-xs text-dark-heading space-y-1">
+            <div class="font-semibold">Schedule: Saturday &amp; Sunday</div>
+            <div class="text-sub-gray">Morning: 9:00 AM – 12:00 PM</div>
+            <div class="text-sub-gray">Afternoon: 1:00 PM – 4:00 PM</div>
+          </div>
+        </div>
+
+        <!-- Markham Hub -->
+        <div class="bg-white rounded-3xl p-6 border border-gray-200/80 shadow-md running-border-card reveal-on-scroll delay-75">
+          <div class="flex items-center justify-between mb-3">
+            <span class="px-3 py-1 rounded-full bg-blue-500/10 text-blue-600 text-[11px] font-bold">York Region</span>
+            <span class="material-symbols-outlined text-blue-600">school</span>
+          </div>
+          <h3 class="font-title text-lg font-bold text-dark-heading">Markham &amp; Unionville</h3>
+          <p class="text-xs text-body-gray mt-1 leading-relaxed">
+            Serving families in Markham, Stouffville, and Richmond Hill with intensive grammar and speaking modules.
+          </p>
+          <div class="mt-4 pt-3 border-t border-gray-100 text-xs text-dark-heading space-y-1">
+            <div class="font-semibold">Schedule: Saturday Mornings</div>
+            <div class="text-sub-gray">Class Pods: Grades 1 through 8</div>
+            <div class="text-sub-gray">Speech &amp; Oratory Coaching</div>
+          </div>
+        </div>
+
+        <!-- Peel Hub -->
+        <div class="bg-white rounded-3xl p-6 border border-gray-200/80 shadow-md running-border-card reveal-on-scroll delay-150">
+          <div class="flex items-center justify-between mb-3">
+            <span class="px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-600 text-[11px] font-bold">West GTA</span>
+            <span class="material-symbols-outlined text-emerald-600">school</span>
+          </div>
+          <h3 class="font-title text-lg font-bold text-dark-heading">Brampton &amp; Mississauga</h3>
+          <p class="text-xs text-body-gray mt-1 leading-relaxed">
+            Accessible facilities for Peel Region students with active cultural performance and arts components.
+          </p>
+          <div class="mt-4 pt-3 border-t border-gray-100 text-xs text-dark-heading space-y-1">
+            <div class="font-semibold">Schedule: Sunday Mornings</div>
+            <div class="text-sub-gray">Morning: 9:30 AM – 12:30 PM</div>
+            <div class="text-sub-gray">Cultural Dance &amp; Choir Labs</div>
+          </div>
+        </div>
+
+        <!-- Global Virtual Hub -->
+        <div class="bg-white rounded-3xl p-6 border border-gray-200/80 shadow-md running-border-card reveal-on-scroll delay-225">
+          <div class="flex items-center justify-between mb-3">
+            <span class="px-3 py-1 rounded-full bg-purple-500/10 text-purple-600 text-[11px] font-bold">International</span>
+            <span class="material-symbols-outlined text-purple-600">devices</span>
+          </div>
+          <h3 class="font-title text-lg font-bold text-dark-heading">Global Virtual Campus</h3>
+          <p class="text-xs text-body-gray mt-1 leading-relaxed">
+            Live interactive digital learning with certified Tamil teachers for international &amp; remote students.
+          </p>
+          <div class="mt-4 pt-3 border-t border-gray-100 text-xs text-dark-heading space-y-1">
+            <div class="font-semibold">Schedule: Flexible Timezones</div>
+            <div class="text-sub-gray">EST, CST, PST, &amp; GMT Batches</div>
+            <div class="text-sub-gray">Small group 6:1 student ratio</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       Frequently Asked Questions Accordion
+  ══════════════════════════════════════════════════ -->
+  <section class="py-16 md:py-24 px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24 bg-white">
+    <div class="max-w-screen-xl mx-auto space-y-10">
+      
+      <div class="text-center max-w-2xl mx-auto space-y-3">
+        <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-brand-red/10 text-brand-red text-xs font-bold">
+          <span class="material-symbols-outlined text-sm">help</span>
+          Common Questions
+        </span>
+        <h2 class="text-3xl sm:text-4xl font-bold font-title text-dark-heading">
+          Frequently Asked Questions
+        </h2>
+        <p class="text-body-gray text-xs sm:text-sm leading-relaxed">
+          Quick answers to help you get started with enrollment, teaching, or academy programs.
+        </p>
+      </div>
+
+      <div class="space-y-4 max-w-3xl mx-auto">
+        
+        <!-- FAQ 1 -->
+        <div class="border border-gray-200 rounded-2xl p-5 hover:border-brand-red/30 transition-all bg-white shadow-sm">
+          <button class="w-full text-left font-bold text-sm text-dark-heading flex justify-between items-center" onclick="toggleFaq(this)">
+            <span>What age can children begin learning Tamil at Arivakam?</span>
+            <span class="material-symbols-outlined text-brand-red text-xl transition-transform">expand_more</span>
+          </button>
+          <div class="mt-3 text-xs text-body-gray leading-relaxed hidden">
+            Children can enroll starting from age 3 in our Mazhalai (Preschool/Junior Kindergarten) introductory pods. We utilize song, phonics, and play-based pedagogy before progressing into structured writing.
+          </div>
+        </div>
+
+        <!-- FAQ 2 -->
+        <div class="border border-gray-200 rounded-2xl p-5 hover:border-brand-red/30 transition-all bg-white shadow-sm">
+          <button class="w-full text-left font-bold text-sm text-dark-heading flex justify-between items-center" onclick="toggleFaq(this)">
+            <span>Are lessons conducted in-person, online, or both?</span>
+            <span class="material-symbols-outlined text-brand-red text-xl transition-transform">expand_more</span>
+          </button>
+          <div class="mt-3 text-xs text-body-gray leading-relaxed hidden">
+            We provide both in-person weekend classes across our Greater Toronto Area locations (Scarborough, Markham, Brampton, Mississauga) and fully interactive online virtual classes for students located elsewhere across North America.
+          </div>
+        </div>
+
+        <!-- FAQ 3 -->
+        <div class="border border-gray-200 rounded-2xl p-5 hover:border-brand-red/30 transition-all bg-white shadow-sm">
+          <button class="w-full text-left font-bold text-sm text-dark-heading flex justify-between items-center" onclick="toggleFaq(this)">
+            <span>Can high school volunteers earn authenticated community hours?</span>
+            <span class="material-symbols-outlined text-brand-red text-xl transition-transform">expand_more</span>
+          </button>
+          <div class="mt-3 text-xs text-body-gray leading-relaxed hidden">
+            Yes! High school students can volunteer as teacher aides, classroom coordinators, or event hosts and receive official signed verification letters fulfilling the 40-hour Ontario High School graduation requirement.
+          </div>
+        </div>
+
+        <!-- FAQ 4 -->
+        <div class="border border-gray-200 rounded-2xl p-5 hover:border-brand-red/30 transition-all bg-white shadow-sm">
+          <button class="w-full text-left font-bold text-sm text-dark-heading flex justify-between items-center" onclick="toggleFaq(this)">
+            <span>How are tuition fees handled and are tax receipts provided?</span>
+            <span class="material-symbols-outlined text-brand-red text-xl transition-transform">expand_more</span>
+          </button>
+          <div class="mt-3 text-xs text-body-gray leading-relaxed hidden">
+            Arivakam Tamil Cultural Academy is a registered non-profit educational institution (Reg. No. 13C47C). Official receipts are provided for all registrations and tuition payments.
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════════════
+       Footer
+  ══════════════════════════════════════════════════ -->
+  <footer class="bg-brand-navy text-white pt-16 pb-8 border-t border-gray-800">
+    <div class="max-w-screen-2xl mx-auto px-6 sm:px-10 md:px-16 lg:px-20 xl:px-24">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b border-gray-800">
+        <div>
+          <a href="index.html">
+            <img src="./Arivakam Logo.avif" alt="Arivakam Logo" class="h-12 w-auto mb-4 object-contain">
+          </a>
+          <p class="text-xs text-gray-400 leading-relaxed mb-4">
+            Arivakam Tamil Cultural Academy is a registered non-profit educational institution dedicated to Tamil language, literature, arts, and cultural heritage across North America since 2008.
+          </p>
+          <div class="flex items-center gap-2 text-xs text-brand-red font-semibold mb-3">
+            <span class="material-symbols-outlined text-sm">verified_user</span>
+            <span>Non-Profit Cultural Academy Reg. No. 13C47C</span>
+          </div>
+          <div class="flex items-center gap-2.5">
+            <a href="https://facebook.com" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-gray-300 hover:bg-brand-red hover:text-white transition-all border border-white/15" aria-label="Facebook">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-gray-300 hover:bg-brand-red hover:text-white transition-all border border-white/15" aria-label="Instagram">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+            </a>
+            <a href="https://youtube.com" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-gray-300 hover:bg-brand-red hover:text-white transition-all border border-white/15" aria-label="YouTube">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" rel="noopener" class="w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-gray-300 hover:bg-brand-red hover:text-white transition-all border border-white/15" aria-label="LinkedIn">
+              <svg class="w-4 h-4 fill-current" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-l-2 border-brand-red pl-2">Quick Links</h4>
+          <ul class="space-y-2 text-xs text-gray-300">
+            <li><a href="index.html" class="hover:text-brand-red transition-colors">Home</a></li>
+            <li><a href="student-registration.html" class="hover:text-brand-red transition-colors">Student Registration</a></li>
+            <li><a href="teach-with-arivakam.html" class="hover:text-brand-red transition-colors">Become a Teacher</a></li>
+            <li><a href="upcoming-events.html" class="hover:text-brand-red transition-colors">Upcoming Events</a></li>
+            <li><a href="free-learning-materials.html" class="hover:text-brand-red transition-colors">FREE Learning Materials</a></li>
+            <li><a href="contact.html" class="text-brand-red font-bold">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-l-2 border-brand-red pl-2">Community &amp; Partners</h4>
+          <ul class="space-y-2 text-xs text-gray-300">
+            <li><a href="arivakam-community.html" class="hover:text-brand-red transition-colors">Our Pictures &amp; Gallery</a></li>
+            <li><a href="photo-albums.html" class="hover:text-brand-red transition-colors">Photo Albums</a></li>
+            <li><a href="volunteer-with-us.html" class="hover:text-brand-red transition-colors">Volunteer With Us</a></li>
+            <li><a href="advertise-your-business.html" class="hover:text-brand-red transition-colors">Sponsor Our Events</a></li>
+            <li><a href="tamil-school-sponsors.html" class="hover:text-brand-red transition-colors">Our Sponsors</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-l-2 border-brand-red pl-2">Head Office</h4>
+          <div class="text-xs text-gray-300 space-y-2">
+            <p>Scarborough, ON M1H 2X1, Canada</p>
+            <p>Tel: 416-849-9890 | Fax: 416-613-1890</p>
+            <p>Email: <a href="mailto:info@arivakam.org" class="text-brand-red underline">info@arivakam.org</a></p>
+            <p class="pt-2 text-gray-400">Serving Toronto, Scarborough, Markham, Brampton, Mississauga, and Global Online Students.</p>
+          </div>
+        </div>
+      </div>
+            <div class="pt-8 flex flex-col sm:flex-row justify-between items-center text-xs text-gray-500 gap-4">
+        <div>2026 © Arivakam Tamil Cultural Academy. All Rights Reserved.</div>
+        <div class="flex gap-4">
+          <a href="contact.html" class="hover:text-white transition-colors">Contact Us</a>
+          <a href="privacy-policy.html" class="hover:text-white transition-colors">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ══════════════════════════════════════════════════
+       SCRIPTS
+  ══════════════════════════════════════════════════ -->
+  <script>
+    /* ── High-Performance Smooth Scroll (Lenis) ── */
+    const lenis = new Lenis({
+      duration: 0.85,
+      easing: t => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+      orientation: 'vertical',
+      smoothWheel: true,
+      wheelMultiplier: 1.05,
+      touchMultiplier: 1.5,
+    });
+    function raf(time) { lenis.raf(time); requestAnimationFrame(raf); }
+    requestAnimationFrame(raf);
+
+    const progressBar = document.getElementById('scroll-progress-bar');
+    const backToTop = document.getElementById('back-to-top');
+    const navbar = document.querySelector('nav');
+    const drawer = document.getElementById('mobile-drawer');
+    let lastScrollY = 0;
+
+    /* Unified zero-reflow scroll listener powered directly by Lenis */
+    lenis.on('scroll', ({ scroll, progress }) => {
+      // 1. Reading progress bar without DOM layout reflow
+      if (progressBar) {
+        progressBar.style.width = (progress * 100) + '%';
+      }
+
+      // 2. Back-to-Top button visibility
+      if (backToTop) {
+        if (scroll > 350) {
+          backToTop.classList.remove('opacity-0', 'pointer-events-none', 'translate-y-4');
+          backToTop.classList.add('opacity-100', 'translate-y-0');
+        } else {
+          backToTop.classList.add('opacity-0', 'pointer-events-none', 'translate-y-4');
+          backToTop.classList.remove('opacity-100', 'translate-y-0');
+        }
+      }
+
+      // 3. Smart Navbar hide/show
+      const isDrawerOpen = drawer && !drawer.classList.contains('hidden');
+      if (scroll > 100 && scroll > lastScrollY && !isDrawerOpen) {
+        navbar.classList.add('-translate-y-full');
+      } else {
+        navbar.classList.remove('-translate-y-full');
+      }
+      lastScrollY = scroll;
+    });
+
+    if (backToTop) {
+      backToTop.addEventListener('click', () => lenis.scrollTo(0, { duration: 1.0 }));
+    }
+
+    /* ── Mobile Hamburger ── */
+    const btn = document.getElementById('hamburger-btn');
+    if (btn && drawer) {
+      btn.addEventListener('click', () => drawer.classList.toggle('hidden'));
+    }
+
+    /* ── Scroll Reveal (IntersectionObserver) ── */
+    const revealEls = document.querySelectorAll('.reveal-on-scroll, .reveal-left, .reveal-right');
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.classList.add('is-visible');
+          revealObs.unobserve(e.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    revealEls.forEach(el => revealObs.observe(el));
+
+    /* ── FAQ Accordion Toggle ── */
+    function toggleFaq(btn) {
+      const content = btn.nextElementSibling;
+      const icon = btn.querySelector('.material-symbols-outlined');
+      const isHidden = content.classList.contains('hidden');
+      
+      // Close all FAQs first
+      document.querySelectorAll('#faq-section .content, section .space-y-4 > div > div:last-child').forEach(c => {
+        c.classList.add('hidden');
+      });
+      document.querySelectorAll('#faq-section button .material-symbols-outlined, section .space-y-4 button .material-symbols-outlined').forEach(i => {
+        i.classList.remove('rotate-180');
+      });
+
+      if (isHidden) {
+        content.classList.remove('hidden');
+        icon.classList.add('rotate-180');
+      }
+    }
+
+    /* ── Contact Form Submission Handler ── */
+    function handleContactSubmission(event) {
+      event.preventDefault();
+      const submitBtn = document.getElementById('submit-btn');
+      const successBanner = document.getElementById('contact-success');
+      
+      // Button loading state
+      submitBtn.disabled = true;
+      submitBtn.innerHTML = `
+        <span class="inline-block animate-spin w-4 h-4 border-2 border-white border-t-transparent rounded-full mr-2"></span>
+        <span>Sending Message...</span>
+      `;
+
+      setTimeout(() => {
+        submitBtn.innerHTML = `
+          <span class="material-symbols-outlined text-base">check</span>
+          <span>Message Delivered Successfully</span>
+        `;
+        submitBtn.classList.remove('bg-btn-red', 'hover:bg-btn-red-dark');
+        submitBtn.classList.add('bg-emerald-600');
+        
+        successBanner.classList.remove('hidden');
+        lenis.scrollTo(successBanner, { offset: -120 });
+      }, 900);
+    }
+  </script>
+</body>
+</html>
